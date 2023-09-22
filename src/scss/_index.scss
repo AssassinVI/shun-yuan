@@ -1,0 +1,582 @@
+@mixin title {
+    font-weight: 600;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: var(--ch_xl_text);
+}
+
+@mixin title-s-ch {
+    font-weight: 600;
+    font-family: 'Noto Serif TC', serif;
+    font-size: var(--ch_m_text);
+    letter-spacing: 0.05em;
+}
+
+@mixin title-s-en {
+    font-weight: 400;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: var(--ch_m_text);
+    color: #808080;
+    letter-spacing: 0.05em;
+}
+
+@mixin para-ch {
+    font-weight: 400;
+    font-family: 'Noto Serif TC', serif;
+    font-size: var(--ch_s_text);
+    letter-spacing: 0.05em;
+    color: #333333;
+}
+
+
+
+
+
+.index {
+    overflow: hidden;
+    height: 100vh;
+
+    //各cut共用高度
+    .banner,
+    .second-page,
+    .third-page,
+    .forth-page,
+    .fifth-page,
+    .sixth-page {
+        height: 100%;
+        transition: 1s;
+        //100vw : x = 21 : 9
+        //21x = 100vw*9
+        //x=100vw*9/21
+    }
+
+    //第二cut 跟第三cut 的導航列表的共用css
+
+
+    .title-box {
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: fit-content;
+        margin-bottom: 4vw;
+
+
+        img {
+            width: pxConvertor(51);
+            margin-right: 1.7vw;
+        }
+
+        h3 {
+            @include title();
+        }
+
+        &::after {
+            display: block;
+            content: "";
+            position: absolute;
+            left: 0vw;
+            bottom: -1vw;
+            width: 3VW;
+            height: 1px;
+            background-color: #000;
+        }
+    }
+
+    .nav {
+        width: 80%;
+
+        li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2vw;
+            padding-left: 2vw;
+            cursor: pointer;
+            position: relative;
+
+            p {
+                pointer-events: none;
+                transition: 0.5s;
+            }
+
+            & :nth-child(1) {
+                width: 8.5vw;
+                @include title-s-ch();
+            }
+
+            & :nth-child(2) {
+                @include title-s-en();
+
+            }
+
+            &::after {
+                display: block;
+                content: "";
+                width: 0.3vw;
+                height: 0.3vw;
+                background-color: $brown_color;
+                transform: rotate(45deg);
+                transition: 1s;
+                position: absolute;
+                bottom: 0;
+                top: 0;
+                margin: auto 0;
+                left: 0.5vw;
+            }
+
+            &::before {
+                display: block;
+                content: "";
+                width: 100%;
+                height: 1px;
+                background-color: #cbcbcb;
+                position: absolute;
+                left: 0;
+                bottom: -1vw;
+            }
+
+
+
+
+            &:hover::after {
+                transform: rotate(405deg);
+            }
+        }
+
+    }
+
+    //開頭video
+
+    .video-in {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        background-color: $white_color;
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .skip {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            width: 2vw;
+            height: 2vw;
+            right: 5vw;
+            bottom: 5vw;
+            background-color: $gold_color;
+            border-radius: 50%;
+            padding: 0.2vw 0.5vw;
+            cursor: pointer;
+            transition: 0.5s;
+
+            &:hover {
+                transform: translateY(15px);
+            }
+
+            p {
+                pointer-events: none;
+                font-size: 0.5vw;
+                color: #fff;
+
+            }
+        }
+
+        .full-screen {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            width: fit-content;
+            height: fit-content;
+            cursor: pointer;
+
+
+            img {
+                width: 10vw;
+                pointer-events: none;
+            }
+
+
+        }
+    }
+
+    >.swiper-container {
+        height: 100%;
+
+        .swiper-wrapper {
+            .swiper-slide {
+                position: relative;
+                z-index: 0;
+                pointer-events: none;
+                transition: opacity 0.05s;
+            }
+
+            // //第一cut的進退場畫面
+            // .swiper-slide-prev {
+
+            //     .banner {
+            //         opacity: 0;
+
+            //     }
+            // }
+
+            // //第二cut的進退場畫面
+            // .swiper-slide-prev {
+
+            //     .second-page {
+            //         opacity: 0;
+
+            //     }
+            // }
+
+            .swiper-slide-active {
+                z-index: 10;
+                pointer-events: auto;
+                // .second-page {
+                //     opacity: 1;
+
+                // }
+            }
+
+
+        }
+    }
+
+    //以下被swiper-container包住
+    //第一cut
+    .banner {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+
+        .imgBox {
+            width: 100%;
+            height: 100%;
+
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .logoBox {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: pxConvertor(214.01);
+            margin: 0 auto;
+            width: fit-content;
+            z-index: 15;
+
+            img {
+                width: pxConvertor(208.586);
+                height: auto;
+            }
+        }
+
+        .cloud {
+            position: absolute;
+            z-index: 1;
+            mix-blend-mode: screen;
+            opacity: 0.5;
+        }
+
+        .cloud1 {
+            right: 100%;
+            bottom: 0;
+            width: 80vw;
+            animation: flowRight 50s 3s linear forwards infinite;
+        }
+
+        .cloud2 {
+            left: 100%;
+            top: 0;
+            width: 120vw;
+            animation: flowLeft 55s 4s linear forwards infinite;
+        }
+        .cloud3 {
+            left: 100%;
+            top: 0;
+            width: 40vw;
+            animation: flowLeft2 40s  linear forwards infinite;
+        }
+    }
+
+    .second-page {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 92.5%;
+        margin: 0 auto 0 0;
+
+
+        .cover-logo {
+            display: flex;
+            position: relative;
+            width: 65%;
+            height: 100%;
+
+            >a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                transition: 0.3s;
+
+                img {
+                    height: auto;
+                }
+            }
+
+            .type1 {
+                svg {
+                    position: absolute;
+                    z-index: 10;
+                    pointer-events: none;
+                    width: pxConvertor(400);
+                    height: pxConvertor(400);
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    margin: auto;
+                    path{
+                        fill: none;
+                        stroke: #333333;
+                        stroke-dasharray: 2400;
+                        stroke-dashoffset: 2400;
+                    }
+                }
+
+                .box {
+                    position: relative;
+                    clip-path: url(#brand-logo);
+                    width: pxConvertor(400);
+                    height: pxConvertor(400);
+                    background-color: #000;
+                    overflow: hidden;
+                    img {
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: auto;
+                        height: 150%;
+                        scale: 1;
+                        animation: zoomIn_Out 3.5s linear forwards alternate infinite;
+                    }
+                }
+
+            }
+
+            .type2,
+            .type3 {
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    animation: zoomIn_Out_lite 5s linear forwards alternate infinite;
+                }
+            }
+
+            .type2 {
+                img {
+                    object-position: left center;
+                }
+            }
+
+            .type3 {
+                img {
+                    position: absolute;
+                    bottom: 4vw;
+                }
+            }
+
+        }
+
+        .section-nav {
+            width: 35%;
+        }
+
+    }
+
+    .third-page {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+        width: 92.5%;
+        margin: 0 0 0 auto;
+
+        .section-nav {
+            width: 30%;
+        }
+
+        .third-page-right {
+            position: relative;
+            width: 70%;
+            height: 100%;
+
+            a {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                width: 100%;
+                height: 100%;
+                transition: 0.4s;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    animation: zoomIn_Out_lite 5s linear forwards alternate infinite;
+                }
+
+
+            }
+        }
+    }
+
+    .forth-page {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 92.5%;
+        margin: 0 auto 0 0;
+        position: relative;
+
+        .forth-page-bg {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 74%;
+            height: 100%;
+
+            a {
+                width: 100%;
+                height: 100%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center bottom;
+                    animation: zoomIn_Out_lite 5s linear forwards alternate infinite;
+                }
+            }
+        }
+
+        .forth-page-para {
+            width: 26%;
+
+            p {
+                color: #666666;
+                font-size: pxConvertor(18);
+                font-family: "Microsoft JhengHei", serif;
+                line-height: 2;
+                letter-spacing: 0.05em;
+            }
+        }
+
+    }
+
+    .fifth-page {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 92.5%;
+        margin: 0 0 0 auto;
+        position: relative;
+
+        .section-nav {
+            width: 35%;
+        }
+
+        .fifth-page-right {
+            position: relative;
+            width: 65%;
+            height: 100%;
+
+            a {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                width: 100%;
+                height: 100%;
+                transition: 0.4s;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    animation: zoomIn_Out_lite 5s linear forwards alternate infinite;
+
+                }
+            }
+        }
+    }
+
+    .sixth-page {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 92.5%;
+        margin: 0 auto 0 0;
+        position: relative;
+
+        .sixth-page-left {
+            position: relative;
+            width: 65%;
+            height: 100%;
+
+            a {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                width: 100%;
+                height: 100%;
+                transition: 0.4s;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    animation: zoomIn_Out_lite 5s linear forwards alternate infinite;
+
+                }
+            }
+        }
+
+        .section-nav {
+            width: 35%;
+        }
+
+
+    }
+}

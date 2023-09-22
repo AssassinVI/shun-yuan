@@ -1,0 +1,139 @@
+.life-function {
+    position: relative;
+    width: 100%;
+    height: calc(100vw*(9/16));
+    overflow: hidden;
+
+    .banner-bg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .logo {
+        position: absolute;
+        left: 33.6vw;
+        top: 6.2vw;
+        width: 8vw;
+
+        img {
+            width: 100%;
+            color: #fff200a9;
+        }
+
+        .glow {
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            top: 8.1vw;
+            width: 25%;
+            height: 29.5vw;
+
+            >img {
+                height: 100%;
+            }
+        }
+    }
+
+
+
+    .cloud {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 5;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation-name: flow;
+            animation-duration: 50s;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+        }
+    }
+
+    .anchor {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+
+        .anchor-spot {
+            position: absolute;
+            cursor: pointer;
+            width: 3vw;
+            height: 3vw;
+            pointer-events: auto;
+
+            .thumbBox {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .anchor-spot1 {
+            //新興ai
+            top: 13vw;
+            left: 14.3vw;
+        }
+
+        .anchor-spot2 {
+            //國賓
+            top: 14vw;
+            left: 39vw;
+            width: 1.8vw;
+            height: 4.5vw;
+        }
+
+        .anchor-spot3 {
+            //捷運a9
+            top: 19.8vw;
+            left: 74.5vw;
+        }
+
+        .anchor-spot4 {
+            //三井
+            top: 21.3vw;
+            left: 52.4vw;
+        }
+
+        .anchor-spot5 {
+            //三井2
+            top: 21.2vw;
+            left: 59.8vw;
+        }
+
+        .anchor-spot6 {
+            //東森媒體
+            top: 19.7vw;
+            left: 65.7vw;
+        }
+    }
+}
+
+
+@keyframes glow {
+    0% {
+        bottom: 0;
+    }
+
+    100% {
+        bottom: 100%;
+    }
+}
+
+@keyframes flow {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(200%);
+    }
+}

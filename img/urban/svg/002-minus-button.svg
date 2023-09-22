@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_2" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.5 33.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #c2a357;
+        stroke-miterlimit: 10;
+        stroke-width: .75px;
+      }
+    </style>
+  </defs>
+  <g id="_文案" data-name="文案">
+    <g>
+      <rect class="cls-1" x=".38" y=".38" width="32.75" height="32.75"/>
+      <line class="cls-1" x1="7.32" y1="16.75" x2="26.18" y2="16.75"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,447 @@
+.calculate {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+
+
+    .calculator {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-grow: 1;
+        height: 100%;
+        padding-top: 5vw;
+        position: relative;
+
+
+        p,
+        span {
+            font-size: var(--ch_s_text);
+            letter-spacing: 0.06em;
+        }
+
+        .title {
+            position: relative;
+
+            h2 {
+                color: $gold_color;
+                font-size: var(--ch_l_text);
+                font-family: 'Cormorant Garamond', serif;
+                font-weight: 300;
+                letter-spacing: 0.05em;
+            }
+
+            &::after {
+                display: block;
+                content: "";
+                position: absolute;
+                width: 25%;
+                height: 1px;
+                background-color: $gold_color;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                top: -0.8vw;
+            }
+        }
+
+        .parameters {
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            margin: 4vw auto 0;
+            pointer-events: auto;
+            padding-bottom: 3vw;
+
+            p {
+                margin-bottom: 0.4vw;
+            }
+
+            p,
+            span {
+                font-weight: 600;
+            }
+
+            input {
+                border: none;
+                outline: none;
+                background-color: #f2f2f2;
+                font-size: var(--ch_m_text);
+                height: pxConvertor(52);
+                width: pxConvertor(217);
+                margin-right: 0.5vw;
+                padding-left: 0.5vw;
+            }
+
+
+        }
+
+        .button {
+            display: flex;
+            pointer-events: auto;
+            padding-bottom: 2.5vw;
+
+            >div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: pxConvertor(145);
+                height: pxConvertor(47);
+                border: 1px solid $gold_color;
+                cursor: pointer;
+                margin-left: 0.5vw;
+
+                p {
+                    transition: 0.3s;
+                }
+
+                &:hover {
+                    p {
+                        transform: scale(0.8);
+                    }
+                }
+
+            }
+
+            &> :nth-child(1) {
+                background-color: $gold_color;
+                margin: 0;
+
+                p {
+                    color: #fff;
+                }
+
+            }
+
+
+        }
+
+        .result {
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            padding: 0 10vw;
+            background-color: #f2f2f2;
+            height: pxConvertor(600);
+
+            >div {
+                display: flex;
+                flex-direction: column;
+                height: 80%;
+                margin: auto 0;
+
+                .box {
+                    display: flex;
+                    justify-content: space-between;
+
+                    p {
+                        white-space: nowrap;
+
+                        &:nth-child(1) {
+                            flex: 0 0 28%;
+                        }
+
+                    }
+
+                    span {
+                        display: inline-block;
+                        width: pxConvertor(180);
+                        border-bottom: 1px solid #1c1d1d;
+                        margin: 0 1vw;
+                        text-align: center;
+                        padding-bottom: 0.5vw;
+                    }
+
+                    &:not(:last-child) {
+
+                        margin-bottom: 1.5vw;
+                    }
+                }
+
+
+            }
+
+
+        }
+
+        .printBox {
+            display: none;
+            position: fixed;
+            bottom: 45px;
+            left: 35px;
+            width: 92.5%;
+
+            .temporary-payment {
+                position: absolute;
+                right: 24px;
+                top: -252px;
+                font-weight: 600;
+            }
+
+            p {
+                font-size: 18px !important;
+                text-align: justify;
+            }
+
+            .ps {
+                font-size: 16px !important;
+                line-height: 2;
+            }
+
+            .writeBox {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                margin-top: 30px;
+
+                .box {
+                    display: flex;
+                    align-items: flex-end;
+
+                    p {
+                        font-size: 16px !important;
+                        margin-right: 10px;
+                    }
+
+                    .write-line {
+                        width: 150px;
+                        height: 1.5px;
+                        background-color: #000;
+                    }
+                }
+            }
+        }
+
+
+
+        .tobe {
+            display: flex;
+            justify-content: flex-end;
+            pointer-events: auto;
+            padding: 3vw;
+            width: 100%;
+            position: absolute;
+            right: 1vw;
+            top: 5.5vw;
+
+            &> :nth-child(1) {
+                margin-right: 1vw;
+            }
+
+            label {
+                font-size: 0.8vw;
+                margin-right: 0.56vw;
+            }
+
+            input {
+                width: 4vw;
+                font-size: 0.8vw;
+                text-align: center;
+                background-color: transparent;
+                outline: none;
+                border: none;
+                border-bottom: 1px solid #000;
+                padding: 5px 0;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+
+    .imgBox {
+        flex: 0 0 pxConvertor(502);
+        height: 100%;
+        overflow: hidden;
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .keyboard {
+
+        li {
+            &:hover {
+                background-color: $gold_color;
+                color: #fff !important;
+            }
+        }
+
+    }
+}
+
+@media print {
+    body {
+        -webkit-print-color-adjust: exact;
+    }
+
+    .header {
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: 10px;
+
+        img {
+            width: 100px;
+            opacity: 1 !important;
+        }
+    }
+
+    .calculate {
+
+        >.imgBox {
+            display: none;
+        }
+
+        .calculator {
+            padding-top: 90px;
+
+            p,
+            span {
+                font-size: 20px;
+                letter-spacing: 0.06em;
+
+            }
+
+            .parameters {
+                flex-wrap: wrap;
+
+                .box {
+                    flex: 0 0 50%;
+                    margin-bottom: 10px;
+
+                    p {
+                        margin-bottom: 8px;
+                    }
+
+                    .unitBox {
+                        flex-wrap: nowrap;
+
+                        span {
+                            white-space: nowrap;
+                        }
+                    }
+                }
+
+                &> :nth-child(even) {
+                    padding-left: 19.8px;
+                }
+
+                input {
+                    font-size: 20px;
+                    width: 230px;
+                    height: 45px;
+                    margin-right: 10px;
+                    background-color: #e7e7e7;
+                    padding-left: 10px;
+                }
+            }
+
+            .title {
+                display: none;
+
+                &::after {
+                    display: none;
+                }
+            }
+
+            .button {
+                display: none;
+            }
+
+            .result {
+                height: 30vh;
+                background-color: #fff;
+                border-top: 1.5px solid #e7e7e7;
+                padding: 0;
+
+                >div {
+                    flex: 0 0 50%;
+
+                    p,
+                    span {
+                        font-size: 18px;
+                        font-weight: 600;
+                    }
+
+                    .box {
+                        margin-bottom: 30px !important;
+                        align-items: center;
+
+                        span {
+                            border: none;
+                            background-color: #e7e7e7;
+                            width: 160px;
+                            padding: 3px 0;
+                        }
+
+                        &> :nth-child(1) {
+                            flex: 0 0 30% !important;
+                        }
+
+                        &> :nth-child(3) {
+                            text-align: center;
+                            flex: 0 0 15% !important;
+                        }
+                    }
+
+                }
+
+                .left {
+                    padding-right: 15px;
+                }
+
+                .right {
+                    padding-left: 15px;
+                }
+            }
+
+            .printBox {
+                display: block;
+            }
+
+
+        }
+
+        .keyboard {
+            display: none !important;
+        }
+
+        .tobe {
+            padding: 5px;
+            right: 5px;
+            top: 50px !important;
+
+            &> :nth-child(1) {
+                margin-right: 10px;
+            }
+
+            label {
+                font-size: 14px !important;
+                margin-right: 5px;
+            }
+
+            input {
+                width: 50px !important;
+                font-size: 14px !important;
+                border: none !important;
+                padding: 5px 0;
+            }
+        }
+    }
+
+
+
+    @page {
+        margin: 1cm;
+        margin-top: 0cm;
+        margin-bottom: 0;
+        size: A4 portrait;
+
+    }
+}

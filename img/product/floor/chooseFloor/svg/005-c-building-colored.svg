@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_2" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 356 931.27">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #c2a357;
+        opacity: .5;
+      }
+    </style>
+  </defs>
+  <g id="_圖層_8" data-name="圖層 8">
+    <g>
+      <rect class="cls-1" y="899.08" width="355.29" height="32.2"/>
+      <rect class="cls-1" x="1.25" y="830.53" width="313.13" height="32.2"/>
+      <rect class="cls-1" x="1.87" y="794.18" width="313.13" height="36.35"/>
+      <rect class="cls-1" x="2.87" y="764.18" width="313.13" height="29.82"/>
+      <rect class="cls-1" x=".71" y="862.73" width="355.29" height="36.35"/>
+      <rect class="cls-1" x="2.33" y="364" width="313.13" height="264"/>
+      <rect class="cls-1" x="1.87" y="325" width="313.13" height="39"/>
+      <rect class="cls-1" x="1.87" y="629" width="313.13" height="135"/>
+      <rect class="cls-1" x="3.12" y="190" width="311.88" height="135"/>
+      <rect class="cls-1" x="2.87" y="123" width="311.88" height="32.77"/>
+      <rect class="cls-1" x="2.87" y="98" width="311.88" height="25.77"/>
+      <rect class="cls-1" x="2.87" y="155" width="311.88" height="34.77"/>
+      <rect class="cls-1" x="86" y="32.91" width="162" height="36.35"/>
+      <rect class="cls-1" x="2.12" y="69.3" width="311.88" height="29.08"/>
+      <rect class="cls-1" x="86.94" width="161.06" height="32.91"/>
+    </g>
+  </g>
+</svg>

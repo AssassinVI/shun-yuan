@@ -1,0 +1,1297 @@
+.product {
+    position: relative;
+    width: 100%;
+    height: calc(100vw*(9/16));
+
+    .exterior {
+        display: flex;
+        width: 70%;
+        height: 100%;
+        margin: 0 auto;
+        justify-content: space-between;
+        align-items: center;
+
+        .left {
+            position: relative;
+            width: pxConvertor(769.04);
+            height: pxConvertor(993.45);
+
+            img {
+                transition: 0.6s;
+            }
+        }
+
+        .right {
+            width: 33%;
+            padding: 2vw;
+            pointer-events: auto;
+
+            .titleBox {
+                position: relative;
+                margin-bottom: 2.5vw;
+
+                h2 {
+                    letter-spacing: 0.05em;
+
+                    span {
+                        color: $gold_color;
+                        font-size: var(--ch_l_text);
+                        font-weight: 300;
+                        font-family: 'Cormorant Garamond', serif;
+                    }
+
+
+                }
+
+                .line {
+                    position: absolute;
+                    left: 0;
+                    top: -1vw;
+                    width: 3.5vw;
+                    height: 1px;
+                    background-color: $gold_color;
+                }
+            }
+
+            ul {
+                li {
+                    padding: 1vw 0;
+                    border-bottom: 1px solid #cbcbcb;
+                    cursor: pointer;
+
+                    &:first-child {
+                        border-top: 1px solid #cbcbcb;
+                    }
+
+                    img {
+                        margin-right: 1vw;
+                    }
+
+                    p {
+                        font-size: var(--ch_s_text);
+                        font-weight: 700;
+
+                    }
+                }
+            }
+        }
+    }
+
+    .planet {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 94%;
+        margin: 0 auto 0 0;
+        height: 100%;
+        position: relative;
+
+        .left {
+            padding-left: 4vw;
+
+            .titleBox {
+                position: relative;
+                margin-bottom: 2.5vw;
+
+                h2 {
+                    letter-spacing: 0.12em;
+
+                    span {
+                        color: $gold_color;
+                        font-size: var(--ch_l_text);
+                        font-weight: 300;
+                        font-family: 'Cormorant Garamond', serif;
+                    }
+
+
+                }
+
+                .line {
+                    position: absolute;
+                    left: 0;
+                    top: -1vw;
+                    width: 3.5vw;
+                    height: 1px;
+                    background-color: $gold_color;
+                }
+            }
+
+            h4 {
+                font-size: var(--ch_m_text);
+                font-weight: 600;
+                margin-bottom: 1vw;
+                letter-spacing: 0.1em;
+            }
+
+            p {
+                font-size: var(--ch_s_text);
+                color: #333333;
+                letter-spacing: 0.1em;
+                width: pxConvertor(474.2);
+                text-align: justify;
+                line-height: 2;
+                font-family: "Microsoft JhengHei", serif;
+            }
+
+            >img {
+                width: pxConvertor(365.9);
+                height: auto;
+            }
+        }
+
+        .right {
+            width: pxConvertor(1155.5);
+            height: pxConvertor(910);
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .nav {
+            display: flex;
+            position: absolute;
+            right: -2vw;
+            top: 0vw;
+            padding: 2vw;
+
+            li {
+                font-weight: 600;
+                font-size: var(--ch_m_text);
+                letter-spacing: 0.1em;
+                cursor: pointer;
+            }
+
+            &> :not(:last-child) {
+                position: relative;
+                margin-right: 1vw;
+                padding-right: 1vw;
+
+                &::after {
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    right: 0vw;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto 0;
+                    width: 1px;
+                    height: 60%;
+                    background-color: #000;
+                }
+            }
+        }
+
+        .zoom {
+            position: absolute;
+            flex-direction: column;
+            right: -3vw;
+            bottom: 5vw;
+
+            &> :nth-child(1) {
+                margin-bottom: 0.8vw;
+            }
+
+        }
+    }
+
+    .cafe {
+        display: flex;
+        justify-content: space-between;
+        width: 95%;
+        height: 100%;
+        margin: 0 0 0 auto;
+        align-items: center;
+
+        .left {
+            width: pxConvertor(520);
+
+            img {
+                width: pxConvertor(209.9);
+            }
+
+            .paraBox {
+                h4 {
+                    font-size: var(--ch_m_text);
+                    font-weight: 600;
+                    margin-bottom: 1vw;
+                    letter-spacing: 0.1em;
+                    margin: 2vw 0 1vw;
+                }
+
+                p {
+                    font-size: var(--ch_s_text);
+                    color: #333333;
+                    letter-spacing: 0.1em;
+                    font-weight: 500;
+                    width: 100%;
+                    text-align: justify;
+                    line-height: 2;
+                    font-family: "Microsoft JhengHei", serif;
+                }
+
+                &> :nth-child(3) {
+                    margin-top: 1.7vw;
+                }
+            }
+
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: pxConvertor(1116);
+            height: 100%;
+
+            .imgBox {
+                position: relative;
+                z-index: 2;
+                width: pxConvertor(1016);
+                height: pxConvertor(674);
+
+                >img {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .bg {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 0;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    .floor-container {
+        width: 100%;
+        height: 100%;
+
+        .chooseBuilding {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+
+            .rotatingBox {
+                position: relative;
+                width: pxConvertor(859);
+                height: pxConvertor(1003);
+                margin-left: pxConvertor(363);
+
+                .imgBox {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    transition: opacity 0.6s, transform 0.8s;
+                    //前置
+                    opacity: 0;
+                    z-index: 0;
+
+                    img {
+                        height: 100%;
+                        width: auto;
+                        filter: drop-shadow(0 0 0.001px #000);
+                    }
+
+                    .left,
+                    .right {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 50%;
+                        height: 100%;
+                        pointer-events: auto;
+                        cursor: pointer;
+                    }
+
+                    .right {
+                        left: 50%;
+                    }
+                }
+
+
+            }
+
+            .right {
+                margin-right: pxConvertor(120);
+
+                .imgBox {
+                    position: relative;
+                    width: pxConvertor(323.6);
+                    height: pxConvertor(196);
+
+                    img {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        opacity: 0;
+                        transition: 0.6s;
+                    }
+                }
+
+                .nav-btn {
+                    display: flex;
+                    padding: 2vw 5vw 5vw;
+                    pointer-events: auto;
+                    margin-left: 2vw;
+
+                    .right,
+                    .left {
+                        width: pxConvertor(32.6464);
+                        cursor: pointer;
+
+                        img {
+                            display: block;
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+
+                    .right {
+                        transform: rotateY(180deg);
+                        margin-left: 1vw;
+                    }
+                }
+            }
+
+        }
+
+        .chooseFloor {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+
+            .buildingBox {
+                position: relative;
+                height: 90%;
+                pointer-events: auto;
+                cursor: pointer;
+
+                img {
+                    height: 100%;
+                    width: auto;
+                }
+
+                .building-svg {
+                    position: absolute;
+                }
+
+            }
+
+            .buildingBox-A,
+            .buildingBox-B {
+                margin-left: 14vw;
+
+                .building-svg {
+                    left: 12vw;
+                    height: 95.8%;
+                    bottom: 0.5vw;
+                }
+            }
+
+            .buildingBox-C {
+                .building-svg {
+                    left: 2.2vw;
+                    height: 97%;
+                    bottom: 0.28vw;
+                }
+            }
+
+            .buildingBox-B {
+                margin-left: 0;
+                margin-right: 20vw;
+                transform: rotateY(180deg);
+            }
+
+            .titleBox {
+                position: absolute;
+                left: 67vw;
+
+                h1 {
+                    font-size: pxConvertor(72);
+                    font-weight: 600;
+                    color: $gold_color;
+                    letter-spacing: 0.1em;
+
+                    span {
+                        font-size: pxConvertor(27);
+
+                    }
+                }
+            }
+        }
+
+
+
+    }
+
+    .floorNav {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        left: 22vw;
+        width: pxConvertor(317.5);
+        height: pxConvertor(774.2);
+        z-index: 15;
+
+        .floorBox {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow-y: scroll;
+            pointer-events: auto;
+            padding: 0 pxConvertor(100);
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            .box {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: pxConvertor(56);
+                background-color: #f2f2f2;
+                cursor: pointer;
+                transition: 0.15s;
+
+                p {
+                    font-size: pxConvertor(24);
+                    color: #1a1a1a;
+                    font-weight: 700;
+                    transition: 0.15s;
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: pxConvertor(15);
+                }
+
+                &:hover {
+                    background-color: $gold_color;
+
+                    p {
+                        color: #fff;
+                    }
+                }
+
+            }
+        }
+
+        .top,
+        .bottom {
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            width: 100%;
+            height: 4vw;
+            left: 0;
+            pointer-events: auto;
+            cursor: pointer;
+
+            img {
+                width: pxConvertor(31);
+            }
+        }
+
+        .top {
+            top: -4vw;
+        }
+
+        .bottom {
+            bottom: -4vw;
+        }
+
+
+    }
+
+    .floor-plan {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 87.5%;
+        height: 100%;
+        margin: 0 auto;
+
+        >div {
+            height: pxConvertor(870);
+        }
+
+        .left {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 30%;
+
+            .floor-plan-title {
+                position: relative;
+                width: 100%;
+                margin-bottom: 3.5vw;
+
+
+
+                h2 {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    top: 0;
+                    color: $gold_color;
+                    font-size: pxConvertor(21);
+                    letter-spacing: 0.1em;
+                    width: fit-content;
+
+                    .building {
+                        display: inline-block;
+
+
+                        .dong {
+                            font-size: pxConvertor(21);
+                            font-weight: 400;
+                        }
+                    }
+
+                    &::after,
+                    &::before {
+                        display: block;
+                        content: "";
+                        position: absolute;
+                        bottom: 1vw;
+                        right: -0.7vw;
+                        width: 1px;
+                        height: 1vw;
+                        background-color: $gold_color;
+                    }
+
+                    &::before {
+                        right: auto;
+                        left: -0.7vw;
+                    }
+                }
+
+
+                span {
+                    font-size: pxConvertor(72);
+                    font-weight: 600;
+                    letter-spacing: 0.1em;
+                }
+
+
+            }
+
+            .floorNav {
+                position: relative;
+                left: auto;
+                top: auto;
+                bottom: auto;
+                right: auto;
+                height: pxConvertor(550);
+            }
+        }
+
+        .right {
+            position: relative;
+            width: pxConvertor(1150);
+            height: pxConvertor(812);
+
+            .floor-plan-img {
+                width: 100%;
+                height: 100%;
+
+                .imgBox {
+                    width: 100%;
+                    height: 100%;
+
+                    .box {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+
+                        .container {
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            width: 100%;
+                            height: 100%;
+
+                            .anchor-area {
+                                width: 100%;
+                                height: 100%;
+
+                                >img {
+                                    display: block;
+                                    width: 100%;
+                                    height: 100%;
+                                }
+
+                                >div {
+                                    position: absolute;
+                                    left: 0;
+                                    top: 0;
+                                    width: 3.1vw;
+                                    height: 3.1vw;
+
+                                    .thumbBox {
+                                        position: relative;
+                                        z-index: 1;
+                                        padding: 1vw;
+                                    }
+
+                                    .radiation {
+                                        position: absolute;
+                                        left: 0;
+                                        top: 1vw;
+                                        right: 0;
+                                        margin: 0 auto;
+                                        width: 1vw;
+                                        height: 1vw;
+                                        z-index: 0;
+
+                                        .circle {
+                                            position: absolute;
+                                            left: 0;
+                                            top: 0;
+                                            width: 100%;
+                                            height: 100%;
+                                            border-radius: 50%;
+                                            background-color: #4168717c;
+                                            animation-name: radiation;
+                                            animation-duration: 1.35s;
+                                            animation-iteration-count: infinite;
+                                            animation-timing-function: linear;
+
+
+                                            &:nth-child(2) {
+                                                animation-delay: 0.25s;
+                                            }
+
+                                            &:nth-child(3) {
+                                                animation-delay: 0.5s;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .entry-gate {
+                                    left: 32.9vw;
+                                    top: 9vw;
+                                }
+
+                                .lobby {
+                                    left: 32.9vw;
+                                    top: 13vw;
+                                }
+
+                                .ab-center {
+                                    left: 43vw;
+                                    top: 24vw;
+                                }
+
+                                .elevator-first-floor-A {
+                                    left: 43vw;
+                                    top: 28vw;
+                                }
+
+                                .elevator-first-floor-B {
+                                    left: 43vw;
+                                    top: 20.5vw;
+                                }
+
+                                .elevator-first-floor-C {
+                                    left: 19.2vw;
+                                    top: 13.8vw;
+                                }
+
+                                .cafe-1f {
+                                    left: 15vw;
+                                    top: 25vw;
+                                }
+
+                                .mail-area {
+                                    left: 28.2vw;
+                                    top: 13.7vw;
+                                }
+
+                                .meeting-room {
+                                    left: 41.8vw;
+                                    top: 16.5vw;
+                                }
+
+                                .art1 {
+                                    left: 14vw;
+                                    top: 34.5vw;
+                                }
+
+                                .art2 {
+                                    left: 39.6vw;
+                                    top: 7vw;
+                                }
+
+                                .gym {
+                                    left: 28.5vw;
+                                    top: 29.5vw;
+                                }
+
+                                .children-game {
+                                    left: 37vw;
+                                    top: 29.5vw;
+                                }
+
+                                .office {
+                                    left: 14vw;
+                                    top: 16.5vw;
+                                }
+
+                                .corridor {
+                                    left: 38.6vw;
+                                    top: 21vw;
+                                }
+
+                                .cafe {
+                                    left: 11vw;
+                                    top: 23vw;
+                                }
+
+                                .pool {
+                                    left: 26vw;
+                                    top: 30vw;
+                                }
+
+                                .pool-chat {
+                                    left: 38.7vw;
+                                    top: 25.8vw;
+                                }
+
+                                .pool-seat {
+                                    left: 20vw;
+                                    top: 27.5vw;
+                                }
+
+                                .chat-banquet {
+                                    left: 40.7vw;
+                                    top: 7.5vw;
+                                }
+
+                                .elevator-base-floor-A {
+                                    left: 46.5vw;
+                                    top: 26.2vw;
+                                }
+
+                                .elevator-base-floor-B {
+                                    left: 46.5vw;
+                                    top: 21vw;
+                                }
+
+                                .elevator-base-floor-C {
+                                    left: 14vw;
+                                    top: 11vw;
+                                }
+
+                                .elevator-standard-floor-B {
+                                    left: 47.2VW;
+                                    top: 16vw;
+                                }
+
+                                .sky-garden {
+                                    left: 30.7vw;
+                                    top: 8vw;
+                                }
+
+                                .sky-garden2 {
+                                    left: 10vw;
+                                    top: 23vw;
+                                }
+
+                                >.thumbBox {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    position: absolute;
+                                    left: 0vw;
+                                    bottom: 1.5vw;
+                                    top: auto;
+                                    border: 1px solid $gold_color;
+                                    width: 7vw;
+
+                                    p {
+                                        font-size: var(--ch_s_text);
+                                        height: 1.5vw;
+                                        text-align: start;
+                                        color: $gold_color;
+                                    }
+                                }
+
+                                .sky-bar-A {
+                                    left: 29vw;
+                                    top: 17vw;
+                                }
+
+                                .ktv-A {
+                                    left: 33.8vw;
+                                    top: 25vw;
+                                }
+
+                                .sky-bar-B {
+                                    left: 28.5vw;
+                                    top: 21vw;
+                                }
+
+                                .ktv-B {
+                                    left: 34.5vw;
+                                    top: 12.5vw;
+                                }
+
+                                .sky-bar-C {
+                                    left: 28.5vw;
+                                    top: 22.5vw;
+                                }
+
+                                .ktv-C {
+                                    left: 31.8vw;
+                                    top: 11vw;
+                                }
+
+
+                                //家配圖
+                                .a1-standard {
+                                    left: 40vw;
+                                    top: 10vw;
+                                }
+
+                                .a2-standard {
+                                    left: 45.5vw;
+                                    top: 20vw;
+                                }
+
+                                .a3-standard {
+                                    left: 45.5vw;
+                                    top: 27vw;
+                                }
+
+                                .a5-standard {
+                                    left: 35vw;
+                                    top: 28vw;
+                                }
+
+                                .a6-standard {
+                                    left: 22.5vw;
+                                    top: 28vw;
+                                }
+
+                                .a7-standard {
+                                    left: 10vw;
+                                    top: 26vw;
+                                }
+
+                                .a8-standard {
+                                    left: 14vw;
+                                    top: 22vw;
+                                }
+
+                                .a9-standard {
+                                    left: 14vw;
+                                    top: 10vw;
+                                }
+
+                                //B棟
+                                .b1-standard {
+                                    left: 47vw;
+                                    top: 27.5vw;
+                                }
+
+
+                                .b2-standard {
+                                    left: 46vw;
+                                    top: 17vw;
+                                }
+
+
+                                .b3-standard {
+                                    left: 43.5vw;
+                                    top: 11.5vw;
+                                }
+
+                                .b5-standard {
+                                    left: 36vw;
+                                    top: 11vw;
+                                }
+
+                                .b6-standard {
+                                    left: 22.5vw;
+                                    top: 11vw;
+                                }
+
+                                .b7-standard {
+                                    left: 15vw;
+                                    top: 9vw;
+                                }
+
+
+                                .b8-standard {
+                                    left: 14vw;
+                                    top: 17vw;
+                                }
+
+                                .b9-standard {
+                                    left: 15vw;
+                                    top: 27.5vw;
+                                }
+
+                                //C棟
+                                .c1-standard {
+                                    left: 14.6vw;
+                                    top: 3vw;
+                                }
+
+
+                                .c2-standard {
+                                    left: 21.9vw;
+                                    top: 8.5vw;
+                                }
+
+
+                                .c3-standard {
+                                    left: 33.5vw;
+                                    top: 8.5vw;
+                                }
+
+                                .c5-standard {
+                                    left: 43vw;
+                                    top: 8.5vw;
+                                }
+
+                                .c6-standard {
+                                    left: 42.2vw;
+                                    top: 35vw;
+                                }
+
+                                .c7-standard {
+                                    left: 33vw;
+                                    top: 35vw;
+                                }
+
+
+                                .c8-standard {
+                                    left: 21.8vw;
+                                    top: 35vw;
+                                }
+
+                                .c9-standard {
+                                    left: 12.3vw;
+                                    top: 31vw;
+                                }
+
+                                .c1-18-21 {
+                                    left: 25vw;
+                                    top: 6vw;
+                                }
+
+                                .c2-18-21 {
+                                    left: 32vw;
+                                    top: 6vw;
+                                }
+
+                                .c5-18-21 {
+                                    left: 25vw;
+                                    top: 33vw;
+                                }
+
+                                .c3-18-21 {
+                                    left: 32vw;
+                                    top: 33vw;
+                                }
+                            }
+                        }
+
+
+
+                        p {
+                            position: absolute;
+                            width: fit-content;
+                            height: 3vw;
+                            left: 0;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            margin: auto;
+                            text-align: center;
+                            font-size: 1.5vw;
+                            font-weight: 600;
+                            z-index: 10;
+                        }
+                    }
+                }
+
+
+
+
+
+                .zoom {
+                    position: absolute;
+                    right: -3vw;
+                    flex-direction: column;
+                    bottom: 1.5vw;
+
+                    img {
+                        display: block;
+
+                        &:nth-child(1) {
+                            margin-bottom: 0.8vw;
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+}
+
+
+//react transition group 套件
+.fade-enter {
+    opacity: 0;
+    transform: translateX(-10%);
+    /* 退场动画效果，根据需要进行调整 */
+}
+
+.fade-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    /* 入场动画效果，根据需要进行调整 */
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.fade-exit {
+    opacity: 1;
+    transform: translateX(0);
+    /* 退场动画效果，根据需要进行调整 */
+}
+
+.fade-exit-active {
+    opacity: 0;
+    transform: translateX(10%);
+    /* 入场动画效果，根据需要进行调整 */
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+
+.building-svg {
+    .building-cls {
+        fill: transparent;
+        opacity: 0.5;
+        transition: 0.6s;
+
+        &:hover {
+            fill: #c2a357;
+        }
+    }
+}
+
+.fancyBox {
+    .floorPlan-fancy {
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+
+        >img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .title {
+            position: absolute;
+            right: 0;
+            bottom: 2vw;
+            width: 18vw;
+            padding: 1vw 0;
+            background-color: #000000af;
+            border-radius: 10px 0 0 10px;
+
+            p {
+                width: 100%;
+                text-align: center;
+                font-size: var(--ch_s_text);
+                color: #fff;
+                letter-spacing: 0.1em;
+            }
+        }
+
+        .navBox {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            padding: 0 1.5vw;
+            pointer-events: auto;
+
+            >div {
+                pointer-events: auto;
+                cursor: pointer;
+                padding: 1.5vw;
+
+                img {
+                    pointer-events: none;
+                    width: 2.5vw;
+                    height: auto;
+                    filter: drop-shadow(0 0 2.5px #000) brightness(20);
+                }
+
+
+            }
+
+
+            .prev {
+                transform: rotateY(180deg);
+
+            }
+        }
+    }
+
+    .funiture-fancy {
+        width: 85%;
+        height: 100%;
+        margin: 0 auto;
+        justify-content: space-between;
+        align-items: center;
+
+        .left {
+            width: 20%;
+
+            .titleBox {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                margin-bottom: 5vw;
+                border: 1px solid $gold_color;
+                border-top: none;
+                border-bottom: none;
+
+                h2,
+                h4 {
+                    color: $gold_color;
+
+                    font-weight: 400;
+                    letter-spacing: 0.1em;
+                }
+
+                h2 {
+                    font-size: pxConvertor(36);
+                    line-height: 1;
+                    margin-bottom: 0.6vw;
+
+                    span {
+                        font-size: pxConvertor(60);
+                        font-weight: 300;
+                        margin-right: 0.6vw;
+                        line-height: 0;
+                    }
+                }
+
+                h4 {
+                    font-size: pxConvertor(21);
+                }
+            }
+
+            svg {
+                width: 100%;
+            }
+
+            p {
+                font-size: pxConvertor(20);
+                color: $gold_color;
+                letter-spacing: 0.1em;
+                width: fit-content;
+                margin: 2.5vw auto 0;
+            }
+        }
+
+        .right {
+            position: relative;
+            width: pxConvertor(1087.8);
+            height: pxConvertor(766);
+
+            .imgBox {
+                width: 100%;
+                height: 100%;
+
+                .box {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+
+                    img {
+                        height: 80%;
+                        width: auto;
+                    }
+                }
+            }
+
+            .zoom {
+                position: absolute;
+                flex-direction: column;
+                right: -3.5vw;
+                bottom: 0;
+
+                img {
+                    display: block;
+
+                    &:nth-of-type(1) {
+                        margin-bottom: 0.75vw;
+                    }
+                }
+            }
+        }
+
+        >p {
+            position: absolute;
+            right: 10%;
+            bottom: 2.5vw;
+            font-size: pxConvertor(18);
+            letter-spacing: 0.1em;
+            font-weight: 600;
+        }
+    }
+}

@@ -1,0 +1,209 @@
+@mixin tablet {
+    @media(max-width:1200px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media(max-width:500px) {
+        @content;
+    }
+}
+
+@import "_config";
+@import "_index";
+@import "_lifefunction";
+@import "_team";
+@import "_urban";
+@import "_basicContent";
+@import "_calculate";
+@import "_product";
+@import "_news";
+@import "_equipment";
+@import "_vr720";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: $white_color;
+}
+
+.back_btn{
+    position: absolute;
+    z-index: 10;
+    top: 1%;
+    right: 1%;
+    cursor: pointer;
+}
+
+.react-pdf__Page {
+    .annotationLayer {
+        display: none;
+    }
+
+    .react-pdf__Page__textContent {
+        display: none;
+    }
+
+    canvas {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+.information .react-pdf__Page__canvas {
+    width: 88% !important;
+    margin: 0 auto;
+}
+
+.fadeIn {
+    opacity: 0;
+
+}
+
+.fadeOut {
+    opacity: 1;
+}
+
+@keyframes more {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(1vw);
+        opacity: 0
+    }
+
+    51% {
+        transform: translateX(-1vw);
+        opacity: 0
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1
+    }
+}
+
+@keyframes more2 {
+    0% {
+        transform: translateX(0) rotate(35deg);
+    }
+
+    50% {
+        transform: translateX(1vw) rotate(35deg);
+        opacity: 0
+    }
+
+    51% {
+        transform: translateX(-1vw) rotate(35deg);
+        opacity: 0
+    }
+
+    100% {
+        transform: translateX(0) rotate(35deg);
+        opacity: 1
+    }
+}
+
+@keyframes fadeInAnimation {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes radiation {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(2.5);
+    }
+}
+
+
+@keyframes treeShadow {
+    0% {
+        opacity: 1;
+        rotate: 0;
+        scale: 1;
+    }
+
+    50% {
+        opacity: 0.2;
+        rotate: 6deg;
+        scale: 0.95;
+    }
+
+    75% {
+        opacity: 0.4;
+        rotate: 2deg;
+        scale: 0.975;
+    }
+
+    100% {
+        opacity: 1;
+        rotate: 0;
+        scale: 1;
+    }
+}
+
+@keyframes flowRight {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(200vw);
+    }
+}
+
+@keyframes flowLeft {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-230vw);
+    }
+}
+@keyframes flowLeft2 {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-180vw);
+    }
+}
+
+@keyframes zoomIn_Out {
+    0% {
+        scale: 1
+    }
+
+    100% {
+        scale: 1.2;
+    }
+}
+
+@keyframes zoomIn_Out_lite {
+    0% {
+        scale: 1
+    }
+
+    100% {
+        scale: 1.07;
+    }
+}

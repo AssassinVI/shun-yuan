@@ -1,0 +1,731 @@
+.urban {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: calc(100vw*(9/16));
+
+    &-left {
+        position: relative;
+        width: fit-content;
+        margin-right: 3.5vw;
+
+        .urban-bg {
+
+            >.imgBox {
+                width: pxConvertor(1339.76);
+                height: pxConvertor(913.0113);
+
+
+                .box {
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        filter: brightness(0.94);
+                    }
+
+                    >div {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 2;
+                        pointer-events: auto;
+                        transition: opacity 0.6s;
+
+                        .dot {
+                            position: absolute;
+                            width: pxConvertor(21.5672);
+                            height: pxConvertor(30.8963);
+
+                            cursor: pointer;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                z-index: 11;
+                            }
+
+                            .imgBox {
+                                position: absolute;
+                                right: -7.25vw;
+                                margin: 0 auto;
+                                bottom: 5vw;
+                                width: pxConvertor(300);
+                                opacity: 0;
+                                pointer-events: none;
+                                transition: 1s;
+                                z-index: 10;
+
+                                &::after {
+                                    display: block;
+                                    content: "";
+                                    width: 1px;
+                                    height: 0%;
+                                    background-color: #666666;
+                                    position: absolute;
+                                    left: 0;
+                                    right: 0;
+                                    margin: 0 auto;
+                                    top: 8.7vw;
+                                    transition: 0.6s;
+                                    transition-delay: 0.4s;
+                                    z-index: 2;
+                                    opacity: 0;
+                                }
+
+                                &::before {
+                                    display: none;
+                                    content: "";
+                                    width: 0%;
+                                    height: 1px;
+                                    background-color: #666666;
+                                    position: absolute;
+                                    transition: 0.6s;
+                                    transition-delay: 0.4s;
+                                    z-index: 2;
+                                    opacity: 0;
+                                    left: -7vw;
+                                    top: 0;
+                                    bottom: 0;
+                                    margin: auto 0;
+                                }
+
+                                img {
+                                    position: relative;
+                                    z-index: 3;
+                                    display: block;
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                }
+
+                            }
+
+                            &:hover {
+
+
+                                >.imgBox {
+                                    opacity: 1;
+                                    transform: translateY(-0.5vw);
+                                    transition-timing-function: ease-out;
+
+                                    &::after {
+                                        height: 8.4vw;
+                                        opacity: 1;
+                                        animation-name: anchorDotFlow;
+                                        animation-duration: 1.5s;
+                                        animation-timing-function: linear;
+                                        animation-fill-mode: forwards;
+                                        animation-iteration-count: infinite;
+                                    }
+
+                                    &::before {
+                                        width: 8.4vw;
+                                        opacity: 1;
+
+                                    }
+                                }
+
+                                >img {
+                                    animation-name: anchorDotFlow;
+                                    animation-duration: 1.5s;
+                                    animation-timing-function: linear;
+                                    animation-fill-mode: forwards;
+                                    animation-iteration-count: infinite;
+                                }
+
+                                .thumbBox>img {
+                                    animation-name: anchorDotFlow;
+                                    animation-duration: 1.5s;
+                                    animation-timing-function: linear;
+                                    animation-fill-mode: forwards;
+                                    animation-iteration-count: infinite;
+                                }
+                            }
+
+
+                        }
+                    }
+
+                    .transportation {
+                        &> :nth-child(1) {
+                            //捷運a9
+                            left: 10.5vw;
+                            bottom: 2vw;
+                        }
+
+                        &> :nth-child(2) {
+                            //轉運站
+                            left: 11vw;
+                            bottom: 3.8vw;
+                        }
+
+                        &> :nth-child(3) {
+                            //交流道
+                            left: 22vw;
+                            bottom: 3.4vw;
+                        }
+                    }
+
+                    .construction {
+                        &> :nth-child(1) {
+                            //新興ai
+                            display: none;
+                            left: 20.8vw;
+                            top: 11vw;
+                        }
+
+                        &> :nth-child(2) {
+                            //國家檔案館
+                            left: 29.5vw;
+                            top: 32.2vw;
+                        }
+
+                        &> :nth-child(3) {
+                            //林口新創
+                            left: 31.5vw;
+                            bottom: 20vw;
+                        }
+
+                        &> :nth-child(4) {
+                            //105世道
+                            left: 36.5vw;
+                            top: 0.4vw;
+                        }
+
+                        &> :nth-child(5) {
+                            //元智大學
+                            left: 42.6vw;
+                            top: 10.2vw;
+                        }
+                    }
+
+                    .nationSchool {
+                        &> :nth-child(1) {
+                            //小木屋
+                            left: 13.8vw;
+                            bottom: 14.4vw;
+
+
+                        }
+
+                        &> :nth-child(2) {
+                            //夏哲森
+                            left: 18.5vw;
+                            bottom: 15.8vw;
+                        }
+
+                        &> :nth-child(3) {
+                            //奇異鳥
+                            left: 25.5vw;
+                            bottom: 10.8vw;
+                        }
+
+                        &> :nth-child(4) {
+                            //夏恩
+                            left: 49.7vw;
+                            bottom: 14.2vw;
+                        }
+
+                        &> :nth-child(5) {
+                            //馬里遜
+                            left: 51.4vw;
+                            bottom: 14.2vw;
+                        }
+
+                        &> :nth-child(6) {
+                            //康橋國際
+                            left: 55.3vw;
+                            bottom: 15.8vw;
+                        }
+
+                        &> :nth-child(7) {
+                            //師大林口
+                            left: 65.6vw;
+                            bottom: 6vw;
+
+                            .imgBox {
+                                right: 0vw;
+
+                                &::after {
+                                    left: auto;
+                                    right: 0.6vw;
+                                }
+                            }
+                        }
+
+                        &> :nth-child(8) {
+                            //奇異鳥國小部
+                            left: 18.4vw;
+                            bottom: 21.1vw;
+                        }
+
+                        &> :nth-child(9) {
+                            //新北美國
+                            left: 22.1vw;
+                            bottom: 24.2vw;
+                        }
+
+                        &> :nth-child(10) {
+                            //和柯
+                            left: 40.2vw;
+                            bottom: 41.5vw;
+
+                            .imgBox {
+                                bottom: -6vw;
+                                right: auto;
+                                left: 8vw;
+
+                                &::after {
+                                    display: none;
+                                }
+
+                                &::before {
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+
+                    .qualitySchool {
+                        &> :nth-child(1) {
+                            //新林國小
+                            left: 7.2vw;
+                            bottom: 8.5vw;
+                        }
+
+                        &> :nth-child(2) {
+                            //南勢國小
+                            left: 6.6vw;
+                            bottom: 17vw;
+
+                            .imgBox {
+                                right: auto;
+                                left: -6vw;
+
+                                &::after {
+                                    left: -2.5vw;
+                                }
+                            }
+                        }
+
+                        &> :nth-child(3) {
+                            //南勢國中
+                            left: 12.5vw;
+                            bottom: 18.3vw;
+                        }
+
+                        &> :nth-child(4) {
+                            //麗林國小
+                            left: 21.2vw;
+                            bottom: 6.3vw;
+                        }
+
+                        &> :nth-child(5) {
+                            //崇林國小
+                            left: 24.3vw;
+                            bottom: 4.5vw;
+                        }
+
+                        &> :nth-child(6) {
+                            //林口國中
+                            left: 34.1vw;
+                            bottom: 20.2vw;
+                        }
+
+                        &> :nth-child(7) {
+                            //頭湖國小
+                            left: 26.4vw;
+                            bottom: 29.1vw;
+                        }
+                    }
+
+                    .environment {
+                        &> :nth-child(1) {
+                            //第二運動公園
+                            left: 20vw;
+                            bottom: 22vw;
+                        }
+
+                        &> :nth-child(2) {
+                            //力行公園
+                            left: 22.1vw;
+                            bottom: 21.2vw;
+                        }
+
+                        &> :nth-child(3) {
+                            //翰林公園
+                            left: 27vw;
+                            bottom: 27vw;
+                        }
+
+                        &> :nth-child(4) {
+                            //第一運動公園
+                            left: 31.8vw;
+                            bottom: 16vw;
+                        }
+
+                        &> :nth-child(5) {
+                            //文林公園
+                            left: 31.3vw;
+                            bottom: 36.9vw;
+
+                            .imgBox {
+                                bottom: -6vw;
+                                right: auto;
+                                left: 8vw;
+
+                                &::after {
+                                    display: none;
+                                }
+
+                                &::before {
+                                    display: block;
+                                }
+                            }
+                        }
+
+                        &> :nth-child(6) {
+                            //一品公園
+                            left: 42.6vw;
+                            bottom: 31vw;
+
+                            .imgBox {
+                                bottom: -6vw;
+                                right: auto;
+                                left: 8vw;
+
+                                &::after {
+                                    display: none;
+                                }
+
+                                &::before {
+                                    display: block;
+                                }
+                            }
+                        }
+
+                        &>:nth-child(7) {
+                            //立言公園
+                            left: 12.5vw;
+                            bottom: 13.8vw;
+                        }
+
+                        &>:nth-child(8) {
+                            //扶輪公園
+                            left: 20.5vw;
+                            bottom: 14vw;
+                        }
+                    }
+
+                    .glow {
+                        z-index: 0;
+                        width: 2.5vw;
+                        height: 6.5vw;
+                        left: 15.2vw;
+                        top: 25.6vw;
+
+                        img {
+                            display: none;
+                        }
+                    }
+                }
+
+            }
+
+
+            .zoom {
+                display: flex;
+                position: absolute;
+                right: -8.7vw;
+                bottom: 1.3vw;
+
+                & :nth-child(1) {
+                    margin-right: 0.6vw;
+                }
+            }
+        }
+    }
+
+    &-right {
+        width: fit-content;
+
+        .urban-para {
+            width: pxConvertor(415);
+
+            .title-box {
+                display: flex;
+                align-items: center;
+                position: relative;
+                width: fit-content;
+                margin-bottom: 1.5vw;
+
+
+                img {
+                    width: 2.7vw;
+                    margin-right: 1.7vw;
+                }
+
+                h3 {
+                    @include title();
+                }
+
+            }
+
+            .paraBox {
+                position: relative;
+                margin-bottom: 5vw;
+
+
+                p {
+                    font-size: var(--ch_s_text);
+                    color: #666666;
+                    font-weight: 500;
+                    font-family: "Microsoft JhengHei", serif;
+                    line-height: 2.2;
+                    letter-spacing: 0.1em;
+
+                }
+
+                &::after {
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: -3vw;
+                    width: 3VW;
+                    height: 1px;
+                    background-color: $gold_color ;
+                    transform-origin: left center;
+                    transform: rotate(-38deg);
+                }
+            }
+
+            .section-nav {
+                .nav {
+                    width: 100%;
+                    pointer-events: auto;
+                    padding-bottom: 1vw;
+
+                    li {
+                        display: flex;
+                        margin-bottom: 2vw;
+                        padding-left: 2vw;
+                        cursor: pointer;
+                        position: relative;
+                        pointer-events: auto;
+
+                        p {
+                            pointer-events: none;
+                            transition: bottom 0.5s, opacity 0.5s, transform 0.5s;
+                            white-space: nowrap;
+                        }
+
+                        & :nth-child(1) {
+                            position: absolute;
+                            left: 2vw;
+                            bottom: -1.5vw;
+                            opacity: 0;
+                            font-size: var(--ch_m_text);
+                            color: #666666;
+                            font-weight: 300;
+                            letter-spacing: 0.05em;
+
+                        }
+
+                        & :nth-child(2) {
+                            font-size: var(--ch_m_text);
+                            color: #666666;
+                            font-weight: 300;
+                            letter-spacing: 0.02em;
+                            font-family: 'Cormorant Garamond', serif;
+                        }
+
+                        &::after {
+                            display: block;
+                            content: "";
+                            width: 0.3vw;
+                            height: 0.3vw;
+                            background-color: $gold_color;
+                            transform: rotate(45deg);
+                            transition: 1s;
+                            position: absolute;
+                            bottom: 0;
+                            top: 0;
+                            margin: auto 0;
+                            left: 0.5vw;
+
+                        }
+
+                        &::before {
+                            display: block;
+                            content: "";
+                            width: 100%;
+                            height: 1px;
+                            background-color: #cccccc;
+                            position: absolute;
+                            left: 0;
+                            bottom: -1vw;
+                        }
+
+                        &:hover {
+                            & :nth-child(1) {
+                                color: $gold_color;
+                                opacity: 1;
+                                bottom: 0;
+                            }
+
+                            & :nth-child(2) {
+                                color: $gold_color;
+                                transform: translateY(-1.2vw);
+                                opacity: 0;
+                            }
+                        }
+
+                        &:hover::after {
+                            transform: rotate(405deg);
+                        }
+                    }
+
+                }
+            }
+        }
+
+    }
+}
+
+.fancyBox {
+    height: calc(100vw*(9/16));
+
+    .mrt {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+        .mrt-route {
+            position: relative;
+            width: pxConvertor(1595.25);
+            height: pxConvertor(910.311);
+
+            >div {
+                position: absolute;
+                width: 2.9vw;
+                height: 2.9vw;
+                border-radius: 50%;
+                cursor: pointer;
+                top: 16.76vw;
+
+                .thumbBox {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .spot-anchor1 {
+                //台北車站
+                right: 5.75vw;
+            }
+
+            .spot-anchor2 {
+                //三重
+                right: 9.05vw;
+            }
+
+            .spot-anchor3 {
+                //新北產業園區
+                right: 12.3vw;
+            }
+
+            .spot-anchor4 {
+                //體育大學
+                right: 25.3vw;
+            }
+
+            .spot-anchor5 {
+                //桃園航空城
+                right: 41.5vw;
+                width: 10vw;
+                border-radius: none;
+            }
+        }
+
+        .mrt-map {
+            position: absolute;
+            right: 6vw;
+            bottom: 6vw;
+            padding: 0.5vw 1vw;
+            border: 1px solid #1a1a1a;
+            cursor: pointer;
+
+            p {
+                font-size: pxConvertor(21);
+                font-weight: 600;
+                letter-spacing: 0.1em;
+                pointer-events: none;
+            }
+        }
+
+        .taipei-mrt-route {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+
+            .imgBox {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+
+                .box {
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+
+                    >img {
+                        height: 100%;
+                    }
+                }
+
+            }
+
+            .zoom {
+                flex-direction: column;
+                position: absolute;
+                pointer-events: auto;
+                right: 5vw;
+                bottom: 1.5vw;
+                z-index: 20;
+
+                img {
+                    display: block;
+                }
+
+                & :nth-child(1) {
+                    margin-bottom: 0.6vw;
+                }
+            }
+        }
+    }
+
+
+}
+
+@keyframes anchorDotFlow {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-0.5vw);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
