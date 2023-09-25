@@ -52,7 +52,7 @@ function Modal({ setOpen, children }) {
 
         position: "absolute",
         backgroundColor: "#c3a457",
-        width: "100%", height: "1px",
+        width: "80%", height: "2px",
         top: 0,
         right: 0,
         bottom: 0,
@@ -73,7 +73,7 @@ function Modal({ setOpen, children }) {
 
         }}>
             {children}
-            <div className="close" style={{ position: "absolute", right: "4vw", top: "2vw", cursor: "pointer", width: "2vw", height: "2vw" }} onClick={() => {
+            <div className="close" style={{ position: "absolute", right: "4vw", top: "2vw", cursor: "pointer", width: "3vw", height: "3vw" }} onClick={() => {
                 setTrans(false);
                 setTimeout(() => {
                     setOpen(false);

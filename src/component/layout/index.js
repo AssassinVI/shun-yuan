@@ -6,7 +6,7 @@ import FixedBackground from './fixedBackground';
 export default function Layout() {
     return (
         <>
-            <MoveBack z={20} />
+            {/* <MoveBack z={20} /> */}
             {/* <Header /> */}
             <Menu />
             <FixedBackground />

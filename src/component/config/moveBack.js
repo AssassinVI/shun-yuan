@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { closeVideo } from '../redux/action/videoToggle'
+import { slideChangeAction } from "../redux/action/slideChange";
 
 const MoveBack = ({ z }) => {
     const dispatch = useDispatch();
@@ -12,10 +13,11 @@ const MoveBack = ({ z }) => {
     const innerPage = ["/team/portfolio", "/product/floor/choosefloor", "/product/floorPlan"]
 
     const handleClick = function () {
-        dispatch(closeVideo())
+        //dispatch(closeVideo())
         if (innerPage.includes(path)) {
             navigate(-1);
         } else {
+            dispatch(slideChangeAction(-1));
             navigate("/");
         }
         console.log(url);
@@ -31,7 +33,7 @@ const MoveBack = ({ z }) => {
 
         // </section>
         <div className='back_btn' onClick={handleClick} style={{visibility: url == "/" ? "hidden" : "visible"}}>
-            Ｘ
+            <i className='fa-solid fa-xmark'></i>
         </div>
     )
 }

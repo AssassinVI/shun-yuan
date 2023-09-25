@@ -232,7 +232,7 @@ function Option({ title, item, setOpen, extend, handleClick, index }) {
                         item.id == null
                           ? "#fff"
                           : location.pathname == item.id
-                          ? "#747474"
+                          ? "#9adff5"
                           : "#fff",
                     }}
                   >

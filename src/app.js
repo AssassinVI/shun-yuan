@@ -69,9 +69,10 @@ function Content() {
         }
     }, [transitionStage])
     return (
+        // style={location.pathname !== "/" ? { width: "100%", height: "100vh", position: "relative", pointerEvents: transitionStage == "fadeOut" ? "auto" : "none", zIndex: 21 } : { width: "100%", height: "100vh", }}
         <div
             className={`${transitionStage}`}
-            style={location.pathname !== "/" ? { width: "100%", height: "100vh", position: "relative", pointerEvents: transitionStage == "fadeOut" ? "auto" : "none", zIndex: 21 } : { width: "100%", height: "100vh", }}
+            style={location.pathname !== "/" ? { width: "100%", height: "100vh", position: "relative",  zIndex: 21 } : { width: "100%", height: "100vh", }}
         >
             <Routes location={displayLocation}>
                 <Route path="/" element={<Home />} />

@@ -1,9 +1,38 @@
 .vr720{
 
+    .vr720_btn{
+        position: absolute;
+        z-index: 1;
+        top: 3vw;
+        right: 5vw;
+        padding: 0.7vw 3vw;
+        font-size: 1.5vw;
+        letter-spacing: 0.1em;
+        border: 1px solid #fff;
+        color: #fff;
+        border-radius: 50px;
+    }
+
     .map_box{
-        width: 100%;
-        img{
-            width: 100%;
+        position: relative;
+        .img_box{
+            overflow: hidden;
+            height: 100vh;
+
+            @include tablet{
+                overflow-x: auto;
+                height: auto;
+            }
+
+            img{
+                width: 100%;
+
+                @include tablet{
+                    width: 177.7vh;
+                    height: 100vh;
+                }
+            }
         }
+        
     }
 }
