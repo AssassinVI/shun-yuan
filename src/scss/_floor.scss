@@ -1,0 +1,563 @@
+.floor{
+    width: 100%;
+    height: 100vh;
+    .floor_box{
+        position: relative;
+        height: 100%;
+
+        .logo{
+            position: absolute;
+            top: 3%;
+            left: 3%;
+            width: 9vw;
+        }
+
+        .title_box{
+            position: absolute;
+            right: 4%;
+            top: 3%;
+            display: flex;
+            align-items: center;
+
+            h1{
+                font-size: 5.5vw;
+                line-height: 1;
+                font-family: 'Cormorant Infant';
+                font-weight: 400;
+                color: $main_color;
+            }
+            div{
+                margin-left: 1.5vw;
+
+                p{
+                    font-size: 1.4vw;
+                    letter-spacing: 0.1em;
+                    color: $main_color;
+                }
+                h2{
+                    font-size: 2.5vw;
+                    line-height: 1;
+                    font-family: 'Cormorant Garamond';
+                    font-weight: 400;
+                    letter-spacing: 0.05em;
+                    color: $main_color;
+                }
+            }
+        }
+
+        .map{
+            display: flex;
+            align-items: center;
+            height: 100%;
+            
+            .left{
+              flex: 1 1 18%;
+            }
+            .right{
+
+                position: relative;
+                width: 100%;
+                height: 75%;
+                flex: 1 1 75%;
+
+                @include tablet{
+                    height: 75%;
+                    flex: 1 1 90%;
+                }
+
+                .floor-plan-img {
+                    width: 100%;
+                    height: 100%;
+                    
+                    padding-right: 15vw;
+
+                    @include tablet{
+                        padding-right: 9vw;
+                    }
+    
+                    .imgBox {
+                        width: 100%;
+                        height: 100%;
+    
+                        .box {
+                            position: relative;
+                            width: 100%;
+                            height: 100%;
+    
+                            .container {
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+    
+                                .anchor-area {
+                                    width: 100%;
+                                    height: auto;
+                                    
+    
+                                    >img {
+                                        display: block;
+                                        width: 100%;
+                                        height: auto;
+                                    }
+    
+                                    >div {
+                                        position: absolute;
+                                        left: 0;
+                                        top: 0;
+                                        width: 5%;
+                                        height: 7%;
+    
+                                        .thumbBox {
+                                            position: relative;
+                                            z-index: 1;
+                                            padding: 1vw;
+                                        }
+    
+                                        .radiation {
+                                            position: absolute;
+                                            left: 0;
+                                            top: 1vw;
+                                            right: 0;
+                                            margin: 0 auto;
+                                            width: 1.5vw;
+                                            height: 1.5vw;
+                                            z-index: 0;
+    
+                                            .circle {
+                                                position: absolute;
+                                                left: 0;
+                                                top: 0;
+                                                width: 100%;
+                                                height: 100%;
+                                                border-radius: 50%;
+                                                background-color: #e51c1c7c;
+                                                animation-name: radiation;
+                                                animation-duration: 1.35s;
+                                                animation-iteration-count: infinite;
+                                                animation-timing-function: linear;
+    
+    
+                                                &:nth-child(2) {
+                                                    animation-delay: 0.25s;
+                                                }
+    
+                                                &:nth-child(3) {
+                                                    animation-delay: 0.5s;
+                                                }
+                                            }
+                                        }
+                                    }
+    
+                                    .entry-gate {
+                                        left: 45.6%;
+                                        top: 36%;
+                                    }
+    
+                                    .kitchen {
+                                        left: 23%;
+                                        top: 35%;
+                                    }
+    
+                                    .gym{
+                                        left: 29%;
+                                        top: 56.1%;
+                                    }
+    
+                                    .space-1f {
+                                        left: 48%;
+                                        top: 22%;
+                                    }
+    
+    
+                                    //家配圖
+                                    .a1-standard {
+                                        left: 7.6%;
+                                        top: 40.7%;
+                                    }
+    
+                                    .a2-standard {
+                                        left: 36.3%;
+                                        top: 42.2%;
+                                    }
+    
+                                    .a3-standard {
+                                        left: 19.5%;
+                                        top: 56.5%;
+                                    }
+    
+                                    .b1-standard {
+                                        left: 81.3%;
+                                        top: 31%;
+                                    }
+    
+                                    .b2-standard {
+                                        left: 59%;
+                                        top: 43%;
+                                    }
+    
+                                    .b3-standard {
+                                        left: 75%;
+                                        top: 56%;
+                                    }
+                                    
+                                }
+                            }
+    
+    
+    
+                            p {
+                                position: absolute;
+                                width: fit-content;
+                                height: 3vw;
+                                left: 0;
+                                top: 0;
+                                right: 0;
+                                bottom: 0;
+                                margin: auto;
+                                text-align: center;
+                                font-size: 1.5vw;
+                                font-weight: 600;
+                                z-index: 10;
+                            }
+                        }
+                    }
+
+    
+                    .zoom {
+                        position: absolute;
+                        right: 1.2vw;
+                        flex-direction: column;
+                        bottom: 7.5vw;
+
+                        @include tablet{
+                            bottom: 12.5vw;
+                        }
+    
+                        img {
+                            display: block;
+    
+                            &:nth-child(1) {
+                                margin-bottom: 0.8vw;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .remark{
+            position: absolute;
+            right: 4%;
+            bottom: 3%;
+            color: #000;
+            font-size: 1.1vw;
+            letter-spacing: 0.1em;
+        }
+    }
+
+
+    .floorNav {
+        position: absolute;
+        top: 0;
+        bottom: -7vw;
+        margin: auto 0;
+        left: 1vw;
+        width: 12vw;
+        height: 27vw;
+        z-index: 15;
+
+        @include tablet{
+            height: 38vw;
+            bottom: 0;
+        }
+
+        .floorBox {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow-y: scroll;
+            pointer-events: auto;
+            padding: 0 2vw;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            .box {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: pxConvertor(56);
+                background-color: #f2f2f2;
+                cursor: pointer;
+                transition: 0.15s;
+
+                p {
+                    font-size: 1.2vw;
+                    color: #1a1a1a;
+                    font-weight: 700;
+                    transition: 0.15s;
+
+                    @include tablet{
+                        font-size: 1.6vw;
+                    }
+                }
+
+                &:not(:last-child) {
+
+                    margin-bottom: 0.5vw;
+
+                    @include tablet{
+                        margin-bottom: 1vw;
+                    }
+                    
+                }
+
+                &:hover {
+                    background-color: $gold_color;
+
+                    p {
+                        color: #fff;
+                    }
+                }
+
+            }
+        }
+
+        .top,
+        .bottom {
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            width: 100%;
+            height: 3vw;
+            left: 0;
+            pointer-events: auto;
+            cursor: pointer;
+
+            img {
+                width: 2.2vw;
+            }
+        }
+
+        .top {
+            top: -4vw;
+        }
+
+        .bottom {
+            bottom: -4vw;
+        }
+    }
+}
+
+#floor_Standard{
+
+
+    rect{
+        fill: none;
+        stroke: #306374;
+        stroke-miterlimit: 10;
+    }
+
+    .A1 {
+        fill: #fff;
+    }
+    .A1_rect {
+        fill: #306374;
+    }
+
+    text {
+        font-family: MinionConceptRoman-Medium, 'Minion Variable Concept';
+        font-size: 36px;
+        font-variation-settings: 'wght' 500, 'opsz' 11;
+        fill: #306374;
+    }
+
+}
+
+
+
+.fancyBox {
+    .floorPlan-fancy {
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+
+        >img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .title {
+            position: absolute;
+            right: 0;
+            bottom: 2vw;
+            width: 18vw;
+            padding: 1vw 0;
+            background-color: #000000af;
+            border-radius: 10px 0 0 10px;
+
+            p {
+                width: 100%;
+                text-align: center;
+                font-size: var(--ch_s_text);
+                color: #fff;
+                letter-spacing: 0.1em;
+            }
+        }
+
+        .navBox {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 96%;
+            height: 100%;
+            z-index: 10;
+            padding: 0 1.5vw;
+            pointer-events: auto;
+
+            >div {
+                pointer-events: auto;
+                cursor: pointer;
+                padding: 1.5vw;
+
+                img {
+                    pointer-events: none;
+                    width: 2.5vw;
+                    height: auto;
+                    filter: drop-shadow(0 0 2.5px #000) brightness(20);
+                }
+
+
+            }
+
+
+            .prev {
+                transform: rotateY(180deg);
+
+            }
+        }
+    }
+
+    .funiture-fancy {
+        width: 85%;
+        height: 100%;
+        margin: 0 auto;
+        justify-content: space-between;
+        align-items: center;
+
+        .left {
+            width: 20%;
+            position: relative;
+
+            .titleBox {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                margin-bottom: 5vw;
+                border: 1px solid $main_color;
+                padding: 3vw 2vw;
+
+
+                h2,
+                h4 {
+                    color: $main_color;
+                    font-weight: 400;
+                    letter-spacing: 0.1em;
+                }
+
+                h2 {
+                    font-size: pxConvertor(36);
+                    margin-bottom: 0.6vw;
+
+                    span {
+                        font-size: 3.5vw;
+                        font-weight: 600;
+                        line-height: 1;
+                    }
+                }
+
+                h4 {
+                    font-size: 1.8vw;
+                    letter-spacing: 0.15em;
+                    font-weight: 600;
+                }
+            }
+
+            .s_line{
+                width: 25%;
+                height: 1px;
+                background-color: $main_color;
+                margin-top: 1.5vw;
+            }
+
+            svg {
+                width: 100%;
+            }
+
+        
+        }
+
+        .right {
+            position: relative;
+            width: pxConvertor(1087.8);
+            height: 50vw;
+            padding-right: 6vw;
+
+            .imgBox {
+                width: 100%;
+                height: 100%;
+
+                .box {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+
+                    img {
+                        height: 80%;
+                        width: auto;
+                    }
+                }
+            }
+
+            .zoom {
+                position: absolute;
+                flex-direction: column;
+                right: -6.3vw;
+                bottom: 13vw;
+
+                img {
+                    display: block;
+
+                    &:nth-of-type(1) {
+                        margin-bottom: 0.75vw;
+                    }
+                }
+            }
+        }
+
+        >p {
+            position: absolute;
+            right: 10%;
+            bottom: 2.5vw;
+            font-size: pxConvertor(18);
+            letter-spacing: 0.1em;
+            font-weight: 600;
+        }
+    }
+}

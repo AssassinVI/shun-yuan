@@ -4,6 +4,12 @@ import { useEffect, useState, useLayoutEffect } from 'react';
 import Home from './component/index';
 import News from './component/news';
 import Vr720 from './component/vr720';
+import Life from './component/life';
+import Exterior from './component/exterior';
+import Floor from './component/floor';
+import FloorShot from './component/floorShot';
+import Materials from './component/materials';
+
 import Layout from './component/layout';
 import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import gsap from 'gsap';
@@ -78,8 +84,13 @@ function Content() {
                 <Route path="/" element={<Home />} />
                 <Route path="/news" element={<News />} />
                 <Route path="/vr720" element={<Vr720 />} />
-                {/* <Route path="/lifefunction" element={<LifeFunction />} />
-                <Route path="/team/*" element={<Team />} />
+                <Route path="/life" element={<Life />} />
+                <Route path="/Exterior" element={<Exterior />} />
+                <Route path="/floor" element={<Floor />} />
+                <Route path="/floorShot" element={<FloorShot />} />
+                <Route path="/materials" element={<Materials />} />
+                {/* 
+                
                 <Route path="/urban" element={<Urban />} />
                 <Route path="/calculator" element={<Calculate />} />
                 <Route path="/product/*" element={<Product />} />

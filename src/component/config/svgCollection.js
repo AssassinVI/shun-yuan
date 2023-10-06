@@ -1,6 +1,34 @@
 import React from 'react';
 import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+
+
+export function PatternDiagramStandardNEW ({data}) {
+
+    const pattern = data.title;
+    return (
+        <svg id="floor_Standard" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 346 156.32">
+            <g id="_圖層_1-2" data-name="圖層 1">
+                <g>
+                <rect className="A1_rect" style={{fill: pattern== 'A1' ? '#306374':'#fff' }} x=".5" y=".5" width="105.91" height="75.97"/>
+                <rect className="A2_rect" style={{fill: pattern== 'A2' ? '#306374':'#fff' }} x="109.43" y=".5" width="61.13" height="75.97"/>
+                <rect className="A3_rect" style={{fill: pattern== 'A3' ? '#306374':'#fff' }} x=".5" y="79.85" width="105.91" height="75.97"/>
+                <rect className="B1_rect" style={{fill: pattern== 'B1' ? '#306374':'#fff' }} x="239.59" y=".5" width="105.91" height="75.97" transform="translate(585.09 76.97) rotate(-180)"/>
+                <rect className="B2_rect" style={{fill: pattern== 'B2' ? '#306374':'#fff' }} x="175.45" y=".5" width="61.13" height="75.97" transform="translate(412.02 76.97) rotate(-180)"/>
+                <rect className="B3_rect" style={{fill: pattern== 'B3' ? '#306374':'#fff' }} x="239.59" y="78.73" width="105.91" height="75.97" transform="translate(585.09 233.44) rotate(-180)"/>
+                <text className="A1" style={{fill: pattern== 'A1' ? '#fff':'#306374' }} transform="translate(34.08 49.89)"><tspan x="0" y="0">A1</tspan></text>
+                <text className="A3" style={{fill: pattern== 'A3' ? '#fff':'#306374' }} transform="translate(33.08 127.89)"><tspan x="0" y="0">A3</tspan></text>
+                <text className="B3" style={{fill: pattern== 'B3' ? '#fff':'#306374' }} transform="translate(270.58 127.89)"><tspan x="0" y="0">B3</tspan></text>
+                <text className="B1" style={{fill: pattern== 'B1' ? '#fff':'#306374' }} transform="translate(270.58 49.89)"><tspan x="0" y="0">B1</tspan></text>
+                <text className="A2" style={{fill: pattern== 'A2' ? '#fff':'#306374' }} transform="translate(119.08 49.89)"><tspan x="0" y="0">A2</tspan></text>
+                <text className="B2" style={{fill: pattern== 'B2' ? '#fff':'#306374' }} transform="translate(185.08 49.89)"><tspan x="0" y="0">B2</tspan></text>
+                </g>
+            </g>
+        </svg>
+    )
+}
+
+
 export function BrandLogo(props) {
     return (
         <svg
@@ -1707,6 +1735,7 @@ const PatternDiagramStandard = ({ data }) => {
         </svg>
     )
 }
+
 const PatternDiagram18To21 = ({ data }) => {
     const pattern = data.title.split(",")[0]
     return (

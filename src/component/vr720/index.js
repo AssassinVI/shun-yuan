@@ -1,4 +1,5 @@
 import React, {useRef, useEffect} from 'react'
+import Glow from '../config/glow'
 import FancyBox from "@/src/component/config/fancyBox"
 
 export default function Vr720() {
@@ -21,7 +22,11 @@ export default function Vr720() {
 
             <div className='map_box'>
                 <div className='img_box' ref={vr720Ref}>
-                    <img src={require('../../../img/vr720/map@2x.jpg').default} />
+                    <div className='map'>   
+                        <Glow number={40} color={"#fff"} />
+                        <img  src={require('../../../img/vr720/map@2x.jpg').default} />
+                    </div>
+                    
                 </div>
             </div>
         </section>

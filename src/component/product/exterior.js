@@ -85,7 +85,7 @@ export default function Exterior() {
                     })}
                 </ul>
             </div>
-            <img src={require("../../../img/index/svg/002-slogan.svg")} style={{ position: "absolute", right: "1.5vw", bottom: 0, width: "38.5%", height: "auto" }} />
+            {/* <img src={require("../../../img/index/svg/002-slogan.svg")} style={{ position: "absolute", right: "1.5vw", bottom: 0, width: "38.5%", height: "auto" }} /> */}
         </section>
     )
 }

@@ -24,12 +24,23 @@
                 height: auto;
             }
 
-            img{
-                width: 100%;
+            .map{
 
+                position: relative;
+
+                img{
+                    width: 100%;
+                }
+                
                 @include tablet{
                     width: 177.7vh;
                     height: 100vh;
+                }
+
+                .glow{
+                    top: 23%;
+                    left: 55.5%;
+                    height: 51vh;
                 }
             }
         }

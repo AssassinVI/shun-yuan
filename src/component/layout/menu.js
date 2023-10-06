@@ -67,7 +67,7 @@ function MenuContent({ open, setOpen }) {
           slide: 2,
         },
         {
-          id: "/lifefunction", //"/lifefunction",
+          id: "/life", //"/lifefunction",
           ch: "生活綠洲",
           slide: 2,
         },
@@ -80,22 +80,17 @@ function MenuContent({ open, setOpen }) {
       },
       item: [
         {
-          id: "/t1",
+          id: "/exterior",
           ch: "雋雅外觀",
           slide: 3,
         },
         {
-          id: "/t2",
+          id: "/floor",
           ch: "全區配置",
           slide: 3,
         },
         {
-          id: "/t3",
-          ch: "風光家居",
-          slide: 3,
-        },
-        {
-            id: "/t4",
+            id: "/floorShot",
             ch: "樓層空拍",
             slide: 3,
         },
@@ -113,7 +108,7 @@ function MenuContent({ open, setOpen }) {
           slide: 4,
         },
         {
-            id: "/p2",
+            id: "/materials",
             ch: "五感建材",
             slide: 4,
         },
@@ -131,7 +126,7 @@ function MenuContent({ open, setOpen }) {
       },
       item: [
         {
-          id: "/news",
+          id: "/n1",
           ch: "區域個案",
           slide: 5,
         },

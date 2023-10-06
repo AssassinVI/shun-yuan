@@ -4,7 +4,6 @@ export default function FancyBox({ thumbUrl, text, children }) {
     const [open, setOpen] = useState(false);
 
 
-
     const imgStyle = {
         width: "100%",
         height: "100%",
@@ -51,7 +50,7 @@ function Modal({ setOpen, children }) {
     const closeStyle = {
 
         position: "absolute",
-        backgroundColor: "#c3a457",
+        backgroundColor: "#306374",
         width: "80%", height: "2px",
         top: 0,
         right: 0,
@@ -73,7 +72,7 @@ function Modal({ setOpen, children }) {
 
         }}>
             {children}
-            <div className="close" style={{ position: "absolute", right: "4vw", top: "2vw", cursor: "pointer", width: "3vw", height: "3vw" }} onClick={() => {
+            <div className="close" style={{ position: "absolute", right: "4vw", top: "2vw", cursor: "pointer", width: "3vw", height: "3vw", zIndex: 10 }} onClick={() => {
                 setTrans(false);
                 setTimeout(() => {
                     setOpen(false);
