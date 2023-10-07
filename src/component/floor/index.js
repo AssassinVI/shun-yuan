@@ -21,7 +21,7 @@ export default function Floor() {
       <div className="floor_box">
         <img
           className="logo"
-          src={require("../../../img/life/2x/logo@2x.png").default}
+          src={require("../../../img/config/logo@2x.png").default}
         />
         <div className="title_box">
           <h1>{floor}</h1>

@@ -252,7 +252,7 @@ export default function Life() {
         <div className="left">
           <img
             className="logo"
-            src={require("../../../img/life/2x/logo@2x.png").default}
+            src={require("../../../img/config/logo@2x.png").default}
           />
           <img
             className="txt1"
@@ -265,7 +265,7 @@ export default function Life() {
                 <button type="button" key={`item${index}`} onClick={() => {setType(item.type)}}  >
                   <img
                     className="icon"
-                    src={require("../../../img/life/2x/list_icon.png").default}
+                    src={require("../../../img/config/list_icon.png").default}
                     style={{ transform: type == item.type ? "rotate(180deg)" : "rotate(0deg)" }} 
                   />
                   <span className="title" style={{ transform: type == item.type ? "translateX(15px)" : "translateX(0px)" }} >{item.title}</span>
@@ -284,7 +284,7 @@ export default function Life() {
             >
               <img
                 className="map"
-                src={require("../../../img/life/2x/map@2x.png").default}
+                src={require("../../../img/life/map@2x.png").default}
               />
 
               {map_list.map((item, index) => {

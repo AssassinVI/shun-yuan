@@ -53,6 +53,37 @@ $ch_p_font:'Microsoft JhengHei';
     }
 }
 
+
+.fancyBox.sp2{
+    background-color: #7f8080da !important;
+
+    .content_box{
+        position: absolute;
+        right: 0;
+        width: 70%;
+        height: 100%;
+        background-color: #fff;
+
+        .all_box{
+            img{
+                width: 100%;
+                display: block;
+            }
+        }
+
+        .close_btn{
+            position: absolute;
+            left: -7vw;
+            width: 7vw;
+            height: 7vw;
+            padding: 1.4vw;
+            background-color: #306677;
+            border: none;
+        }
+    }
+}
+
+
 .back_btn{
     position: absolute;
     z-index: 100;

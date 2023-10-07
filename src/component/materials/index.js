@@ -5,7 +5,6 @@ import CloudEffect from '../config/cloudEffect';
 
 export default function Materials() {
 
-
     const animateRef = useRef(null);
 
     useLayoutEffect(() => {
@@ -26,7 +25,7 @@ export default function Materials() {
     return (
         <section className="materials" ref={animateRef}>
             <div className='box'>
-                <img className="logo" src={require("../../../img/life/2x/logo@2x.png").default} />
+                <img className="logo" src={require("../../../img/config/logo@2x.png").default} />
                 <div className='txt_box'>
                   <h2>CONSTRUCTION<br/>EQUIPMENT</h2>
                   <p>現代簡約造型風格，講究沈穩優雅品味，深淺色系建材運用及垂直線條分割，增加立面高聳感，適度調和深淺色調搭配，產生層次感。</p>
@@ -35,30 +34,29 @@ export default function Materials() {
                   <div className='box1 box'>
                     <img className='logo' src={require("@/img/materials/logo_m_1.svg")} />
                     <FancyBox2 thumbUrl={require("@/img/materials/img_m_1.jpg").default}>
-                        <div className='content_box'>
-                         <button className='close_btn'><img src={require("@/img/config/close_icon.svg")} /></button>
-                          <div className='all_box'>
-                            <img src={require("@/img/materials/img_m_1.jpg").default} />
-                            <div className='flex_box'>
-                                <div className='left'><img src={require("@/img/materials/txt1_1@2x.png").default} /></div>
-                                <div className='right'><img src={require("@/img/materials/txt1_2.svg").default} /></div>
-                            </div>
-                          </div>
+                        <div className='flex_box'>
+                            <div className='left'><img src={require("@/img/materials/txt1_1@2x.png").default} /></div>
+                            <div className='right'><img src={require("@/img/materials/txt1_2.svg").default} /></div>
                         </div>
-                      
                     </FancyBox2>
                     <div className='b_line'></div>
                   </div>
                   <div className='box2 box'>
                     <img className='logo' src={require("@/img/materials/logo_m_2.svg")} />
                     <FancyBox2 thumbUrl={require("@/img/materials/img_m_2.jpg").default}>
-                      <img className='img' src={require("@/img/materials/img_m_2.jpg").default} />
+                        <div className='flex_box'>
+                            <div className='left'><img src={require("@/img/materials/txt1_1@2x.png").default} /></div>
+                            <div className='right'><img src={require("@/img/materials/txt1_2.svg").default} /></div>
+                        </div>
                     </FancyBox2>
                   </div>
                   <div className='box3 box'>
                     <img className='logo' src={require("@/img/materials/logo_m_3.svg")} />
                     <FancyBox2 thumbUrl={require("@/img/materials/img_m_3.jpg").default}>
-                      <img className='img' src={require("@/img/materials/img_m_3.jpg").default} />
+                        <div className='flex_box'>
+                            <div className='left'><img src={require("@/img/materials/txt1_1@2x.png").default} /></div>
+                            <div className='right'><img src={require("@/img/materials/txt1_2.svg").default} /></div>
+                        </div>
                     </FancyBox2>
                     <div className='b_line'></div>
                     <div className='b_line'></div>
@@ -66,20 +64,29 @@ export default function Materials() {
                   <div className='box4 box'>
                     <img className='logo' src={require("@/img/materials/logo_m_4.svg")} />
                     <FancyBox2 thumbUrl={require("@/img/materials/img_m_4.jpg").default}>
-                      <img className='img' src={require("@/img/materials/img_m_4.jpg").default} />
+                        <div className='flex_box'>
+                            <div className='left'><img src={require("@/img/materials/txt1_1@2x.png").default} /></div>
+                            <div className='right'><img src={require("@/img/materials/txt1_2.svg").default} /></div>
+                        </div>
                     </FancyBox2>
                   </div>
                   <div className='box5 box'>
                     <img className='logo' src={require("@/img/materials/logo_m_5.svg")} />
                     <FancyBox2 thumbUrl={require("@/img/materials/img_m_5.jpg").default}>
-                      <img className='img' src={require("@/img/materials/img_m_5.jpg").default} />
+                        <div className='flex_box'>
+                            <div className='left'><img src={require("@/img/materials/txt1_1@2x.png").default} /></div>
+                            <div className='right'><img src={require("@/img/materials/txt1_2.svg").default} /></div>
+                        </div>
                     </FancyBox2>
                     <div className='b_line'></div>
                   </div>
                   <div className='box6 box'>
                     <img className='logo' src={require("@/img/materials/logo_m_6.svg")} />
                     <FancyBox2 thumbUrl={require("@/img/materials/img_m_6.jpg").default}>
-                      <img className='img' src={require("@/img/materials/img_m_6.jpg").default} />
+                        <div className='flex_box'>
+                            <div className='left'><img src={require("@/img/materials/txt1_1@2x.png").default} /></div>
+                            <div className='right'><img src={require("@/img/materials/txt1_2.svg").default} /></div>
+                        </div>
                     </FancyBox2>
                     <div className='b_line'></div>
                   </div>
@@ -101,7 +108,10 @@ export default function Materials() {
                   <div className='box9 box'>
                     <img className='logo' src={require("@/img/materials/logo_m_9.svg")} />
                     <FancyBox2 thumbUrl={require("@/img/materials/img_m_9.jpg").default}>
-                      <img className='img' src={require("@/img/materials/img_m_9.jpg").default} />
+                        <div className='flex_box'>
+                            <div className='left'><img src={require("@/img/materials/txt1_1@2x.png").default} /></div>
+                            <div className='right'><img src={require("@/img/materials/txt1_2.svg").default} /></div>
+                        </div>
                     </FancyBox2>
                     <div className='b_line'></div>
                     <div className='b_line'></div>

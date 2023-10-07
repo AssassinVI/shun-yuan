@@ -170,7 +170,7 @@ export default function Exterior() {
     return (
         <section className="floorShot" ref={animateRef}>
 
-                <img className="logo" src={require("../../../img/life/2x/logo@2x.png").default} />
+                <img className="logo" src={require("../../../img/config/logo@2x.png").default} />
 
                 <div className='txtBox'>
                     <h2>FLOOR DISTANCE <span className='s_line'></span> </h2>
@@ -181,7 +181,7 @@ export default function Exterior() {
                                 <button type="button" key={`item${index}`} onClick={() => {setNowType(item.type)}}>
                                         <img
                                             className="icon"
-                                            src={require("../../../img/life/2x/list_icon.png").default}
+                                            src={require("../../../img/config/list_icon.png").default}
                                             style={{ transform: nowType == item.type ? "rotate(180deg)" : "rotate(0deg)" }}
                                         />
                                         <span className="title" style={{ transform: nowType == item.type ? "translateX(15px)" : "translateX(0px)", color: nowType == item.type ? "#2d6473" : "#000" }} >{item.title}</span>
