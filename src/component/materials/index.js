@@ -45,8 +45,7 @@ export default function Materials() {
                     <img className='logo' src={require("@/img/materials/logo_m_2.svg").default} />
                     <FancyBox2 thumbUrl={require("@/img/materials/img_m_2.jpg").default}>
                         <div className='flex_box'>
-                            <div className='left'><img src={require("@/img/materials/txt1_1@2x.png").default} /></div>
-                            <div className='right'><img src={require("@/img/materials/txt1_2.svg").default} /></div>
+                            <div className='left'><img src={require("@/img/materials/txt2_1@2x.png").default} style={{padding:'9vw'}} /></div>
                         </div>
                     </FancyBox2>
                   </div>
@@ -54,8 +53,8 @@ export default function Materials() {
                     <img className='logo' src={require("@/img/materials/logo_m_3.svg").default} />
                     <FancyBox2 thumbUrl={require("@/img/materials/img_m_3.jpg").default}>
                         <div className='flex_box'>
-                            <div className='left'><img src={require("@/img/materials/txt1_1@2x.png").default} /></div>
-                            <div className='right'><img src={require("@/img/materials/txt1_2.svg").default} /></div>
+                            <div className='left'><img src={require("@/img/materials/txt3_1@2x.webp").default} /></div>
+                            <div className='right'><img src={require("@/img/materials/txt3_2@2x.png").default} style={{padding: '4vw 4vw 4vw 0vw'}} /></div>
                         </div>
                     </FancyBox2>
                     <div className='b_line'></div>
@@ -65,8 +64,8 @@ export default function Materials() {
                     <img className='logo' src={require("@/img/materials/logo_m_4.svg").default} />
                     <FancyBox2 thumbUrl={require("@/img/materials/img_m_4.jpg").default}>
                         <div className='flex_box'>
-                            <div className='left'><img src={require("@/img/materials/txt1_1@2x.png").default} /></div>
-                            <div className='right'><img src={require("@/img/materials/txt1_2.svg").default} /></div>
+                            <div className='left' style={{flex:'1 1 35%'}}><img src={require("@/img/materials/txt4_1@2x.png").default} style={{padding:'9vw 4vw'}} /></div>
+                            <div className='right'><img src={require("@/img/materials/txt4_2@2x.png").default} /></div>
                         </div>
                     </FancyBox2>
                   </div>
@@ -74,18 +73,18 @@ export default function Materials() {
                     <img className='logo' src={require("@/img/materials/logo_m_5.svg").default} />
                     <FancyBox2 thumbUrl={require("@/img/materials/img_m_5.jpg").default}>
                         <div className='flex_box'>
-                            <div className='left'><img src={require("@/img/materials/txt1_1@2x.png").default} /></div>
-                            <div className='right'><img src={require("@/img/materials/txt1_2.svg").default} /></div>
+                            <div className='left'><img src={require("@/img/materials/txt5_1@2x.png").default} style={{padding: '8vw 4vw'}} /></div>
+                            <div className='right'><img src={require("@/img/materials/txt5_2@2x.png").default} /></div>
                         </div>
                     </FancyBox2>
                     <div className='b_line'></div>
                   </div>
                   <div className='box6 box'>
                     <img className='logo' src={require("@/img/materials/logo_m_6.svg").default} />
-                    <FancyBox2 thumbUrl={require("@/img/materials/img_m_6.jpg").default}>
+                    <FancyBox2 thumbUrl={require("@/img/materials/img_m_6.jpg").default} width={'80%'}>
                         <div className='flex_box'>
-                            <div className='left'><img src={require("@/img/materials/txt1_1@2x.png").default} /></div>
-                            <div className='right'><img src={require("@/img/materials/txt1_2.svg").default} /></div>
+                            <div className='left' style={{flex:'1 1 43%'}}><img src={require("@/img/materials/txt6_1@2x.png").default} style={{padding:'4vw 0'}} /></div>
+                            <div className='right' style={{flex:'1 1 40%'}}><img src={require("@/img/materials/txt6_2@2x.png").default} style={{padding:'3vw 3.5vw'}} /></div>
                         </div>
                     </FancyBox2>
                     <div className='b_line'></div>
