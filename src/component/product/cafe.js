@@ -61,7 +61,7 @@ export default function Cafe() {
     return (
         <section className='cafe' ref={animateRef}>
             <div className="left">
-                <img src={require("../../../img/product/cafe/svg/000-cafe-logo.svg")} />
+                <img src={require("../../../img/product/cafe/svg/000-cafe-logo.svg").default} />
                 <div className="paraBox">
                     <h4>Mori Café森 花園秘境中的特調咖啡</h4>
                     <p>融入林口AI科技元宇宙新基因，獨棟圓形「Mori Café森」水晶玻璃屋，整個蛋型平面配置獨樹一格，透明帷幕外牆當陽光透過玻璃閃爍著秘境中的珠寶，五感交織在充滿綠色植感花園秘境之中讓人心情愉悅，等一個人的咖啡，工作中場醒腦、二樓平台吹風…滿滿的咖啡因讓美好上癮！</p>
@@ -87,7 +87,7 @@ export default function Cafe() {
                     </div > */}
                 </div>
                 <div className="bg">
-                    <img src={require("../../../img/product/cafe/svg/001-gray-bg.svg")} />
+                    <img src={require("../../../img/product/cafe/svg/001-gray-bg.svg").default} />
                 </div>
             </div>
         </section>

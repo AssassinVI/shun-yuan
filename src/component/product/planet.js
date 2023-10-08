@@ -130,7 +130,7 @@ function PlanetView({ type, setType, fadeOut }) {
             {data.map((item, i) => {
                 return (
                     <div className="right" style={{ display: type == item.type ? "block" : "none" }}>
-                        <ScaleDrag maxRatio={2} zoomImg1={require("../../../img/urban/svg/001-plus-button.svg")} zoomImg2={require("../../../img/urban/svg/002-minus-button.svg")}>
+                        <ScaleDrag maxRatio={2} zoomImg1={require("../../../img/urban/svg/001-plus-button.svg").default} zoomImg2={require("../../../img/urban/svg/002-minus-button.svg").default}>
                             <img src={item.img} />
                         </ScaleDrag>
                     </div>
@@ -139,10 +139,10 @@ function PlanetView({ type, setType, fadeOut }) {
             {typeof (type) == "number" &&
                 <div className="navBox" style={{ display: "flex", justifyContent: "space-between", position: "absolute", zIndex: 30, bottom: "7.5vw", left: "33%", width: "9.5vw", pointerEvents: "auto", height: "1.5vw", opacity: 0 }}>
                     <div className="prev" onClick={handlePrev} style={{ padding: "1.5vw 0 3vw 3vw", pointerEvents: "auto", cursor: "pointer" }}>
-                        <img src={require("../../../img/product/planet/svg/001-arrow.svg")} style={{ ...navStyle }} />
+                        <img src={require("../../../img/product/planet/svg/001-arrow.svg").default} style={{ ...navStyle }} />
                     </div>
                     <div className="next" onClick={handleNext} style={{ padding: "1.5vw 3vw 3vw 0", pointerEvents: "auto", cursor: "pointer" }}>
-                        <img src={require("../../../img/product/planet/svg/001-arrow.svg")} style={{ ...navStyle, transform: "rotate(180deg)" }} />
+                        <img src={require("../../../img/product/planet/svg/001-arrow.svg").default} style={{ ...navStyle, transform: "rotate(180deg)" }} />
                     </div>
                 </div >
 

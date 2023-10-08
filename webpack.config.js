@@ -19,6 +19,19 @@ module.exports = {
     devServer: {
         historyApiFallback: true,
     },
+
+    plugins:[
+        //-- 這將源目录的的圖像包含資料夾，一併複製到目标目录 --
+        new CopyWebpackPlugin({
+            patterns: [
+              {
+                from: 'img',  // 源目录：你的图像文件所在的文件夹
+                to: 'images',     // 目标目录：输出目录中的文件夹名
+              },
+            ],
+          }),
+    ],
+
     module: {
         rules: [
             {
@@ -44,22 +57,24 @@ module.exports = {
                     },
                 ],
             },
+
+
+            // {
+            //     test: /\.svg$/,
+            //     use: [
+            //         {
+            //             loader: 'svg-url-loader',
+            //             options: {
+            //                 name: '[name].[ext]',
+            //                 outputPath: 'images/svg',
+            //                 quality: 100,
+            //                 limit: 10000,
+            //             },
+            //         },
+            //     ],
+            // },
             {
-                test: /\.svg$/,
-                use: [
-                    {
-                        loader: 'svg-url-loader',
-                        options: {
-                            name: '[name].[ext]',
-                            outputPath: 'images/svg',
-                            quality: 100,
-                            limit: 10000,
-                        },
-                    },
-                ],
-            },
-            {
-                test: /\.(png|jpe?g|gif|webp)$/i,
+                test: /\.(png|jpe?g|gif|webp|svg)$/i,
                 use: [
                     {
                         loader: 'webp-loader',
@@ -70,14 +85,15 @@ module.exports = {
                     {
                         loader: 'file-loader',
                         options: {
-                            name: '[name].[ext]',
-                            outputPath: 'images/webp',
+                            name: '[path][name].[ext]',
+                            outputPath: 'images',
                             quality: 100
                         },
                     },
 
                 ],
             },
+
             {
                 test: /\.mp4$/,
                 use: [

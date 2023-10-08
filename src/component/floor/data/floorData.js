@@ -91,25 +91,25 @@ export const sortData = [
             {
                 class: "entry-gate",
                 fancyImg: [require("@/img/floor/webp/entry-gate1.jpg").default, require("@/img/floor/webp/entry-gate2.jpg").default],
-                thumb: require("@/img/life/SVG/point_icon_new.svg"),
+                thumb: require("@/img/life/SVG/point_icon_new.svg").default,
                 title: "接待大廳"
             },
             {
                 class: "kitchen",
                 fancyImg: [require("@/img/floor/webp/kitchen.jpg").default],
-                thumb: require("@/img/life/SVG/point_icon_new.svg"),
+                thumb: require("@/img/life/SVG/point_icon_new.svg").default,
                 title: "生活廚房"
             }, 
             {
                 class: "gym",
                 fancyImg: [require("@/img/floor/webp/gym.jpg").default],
-                thumb: require("@/img/life/SVG/point_icon_new.svg"),
+                thumb: require("@/img/life/SVG/point_icon_new.svg").default,
                 title: "健身房"
             }, 
             {
                 class: "space-1f",
                 fancyImg: [require("@/img/floor/webp/space-1f.jpg").default],
-                thumb: require("@/img/life/SVG/point_icon_new.svg"),
+                thumb: require("@/img/life/SVG/point_icon_new.svg").default,
                 title: "一樓景觀"
             }, 
            
@@ -128,37 +128,37 @@ export const sortData = [
             {
                 class: "a1-standard",
                 fancyImg: [require("@/img/floor/webp/funiture/A1@2x.webp").default],
-                thumb: require("@/img/life/SVG/point_icon_new.svg"),
+                thumb: require("@/img/life/SVG/point_icon_new.svg").default,
                 title: "A1",
             },
             {
                 class: "a2-standard",
                 fancyImg: [require("@/img/floor/webp/funiture/A2@2x.webp").default],
-                thumb: require("@/img/life/SVG/point_icon_new.svg"),
+                thumb: require("@/img/life/SVG/point_icon_new.svg").default,
                 title: "A2",
             },
             {
                 class: "a3-standard",
                 fancyImg: [require("@/img/floor/webp/funiture/A3@2x.webp").default],
-                thumb: require("@/img/life/SVG/point_icon_new.svg"),
+                thumb: require("@/img/life/SVG/point_icon_new.svg").default,
                 title: "A3",
             },
             {
                 class: "b1-standard",
                 fancyImg: [require("@/img/floor/webp/funiture/B1@2x.webp").default],
-                thumb: require("@/img/life/SVG/point_icon_new.svg"),
+                thumb: require("@/img/life/SVG/point_icon_new.svg").default,
                 title: "B1",
             },
             {
                 class: "b2-standard",
                 fancyImg: [require("@/img/floor/webp/funiture/B2@2x.webp").default],
-                thumb: require("@/img/life/SVG/point_icon_new.svg"),
+                thumb: require("@/img/life/SVG/point_icon_new.svg").default,
                 title: "B2",
             },
             {
                 class: "b3-standard",
                 fancyImg: [require("@/img/floor/webp/funiture/B3@2x.webp").default],
-                thumb: require("@/img/life/SVG/point_icon_new.svg"),
+                thumb: require("@/img/life/SVG/point_icon_new.svg").default,
                 title: "B3",
             },
                 

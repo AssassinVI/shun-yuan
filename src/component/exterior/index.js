@@ -70,8 +70,8 @@ export default function Exterior() {
                 <div className='txt_box'>
                     <h1>職人手感精質地標<br/>生活疆界全面換新 <span className='line'></span></h1>
                     <p>街隱中興，大器退縮靜巷林蔭，敲開光與綠的空隙。庭院森深以樹為籬，保有居住隱密自在，回應鄰里友善餘裕。</p>
-                    <button className='sun_btn' onClick={()=>{change_day('day')}}> <img src={require('@/img/exterior/sun_btn.svg')} /></button>
-                    <button className='night_btn' onClick={()=>{change_day('night'); setNextHouseShow(true)}}> <img src={require('@/img/exterior/night_btn.svg')} /></button>
+                    <button className='sun_btn' onClick={()=>{change_day('day')}}> <img src={require('@/img/exterior/sun_btn.svg').default} /></button>
+                    <button className='night_btn' onClick={()=>{change_day('night'); setNextHouseShow(true)}}> <img src={require('@/img/exterior/night_btn.svg').default} /></button>
                 </div>
 
                 <div className='house'>

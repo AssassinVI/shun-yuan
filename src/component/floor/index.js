@@ -52,8 +52,8 @@ function FloorPlanImg({ floor, type }) {
     <div className="floor-plan-img">
       <ScaleDrag
         maxRatio={2.4}
-        zoomImg1={require("../../../img/urban/svg/001-plus-button.svg")}
-        zoomImg2={require("../../../img/urban/svg/002-minus-button.svg")}
+        zoomImg1={require("../../../img/urban/svg/001-plus-button.svg").default}
+        zoomImg2={require("../../../img/urban/svg/002-minus-button.svg").default}
       >
         <TransitionGroup>
           <CSSTransition key={`${floor}2`} timeout={1000} classNames="fade">
@@ -176,8 +176,7 @@ function FloorPlanImg({ floor, type }) {
                                 height: "100%",
                               }}
                               src={
-                                require("@/img/product/floor/floorPlan/webp/1f-colored.webp")
-                                  .default
+                                require("@/img/product/floor/floorPlan/webp/1f-colored.webp").default
                               }
                             />
                           </FancyBox>
@@ -216,10 +215,10 @@ function NavBox({ carousel, setCarousel, limit }) {
   return (
     <div className="navBox" onClick={() => setCarousel(0)}>
       <div className="prev" onClick={handleClick}>
-        <img src={require("@/img/equipment/svg/003-arrow.svg")} />
+        <img src={require("@/img/equipment/svg/003-arrow.svg").default} />
       </div>
       <div className="next" onClick={handleClick}>
-        <img src={require("@/img/equipment/svg/003-arrow.svg")} />
+        <img src={require("@/img/equipment/svg/003-arrow.svg").default} />
       </div>
     </div>
   );
@@ -247,8 +246,8 @@ const FunitureFancyBox = ({ item, configurationGraph }) => {
           <div className="right">
             <ScaleDrag
               maxRatio={2.2}
-              zoomImg1={require("../../../img/urban/svg/001-plus-button.svg")}
-              zoomImg2={require("../../../img/urban/svg/002-minus-button.svg")}
+              zoomImg1={require("../../../img/urban/svg/001-plus-button.svg").default}
+              zoomImg2={require("../../../img/urban/svg/002-minus-button.svg").default}
             >
               <img src={item.fancyImg[0]} />
             </ScaleDrag>

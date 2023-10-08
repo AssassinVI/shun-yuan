@@ -228,11 +228,11 @@ export default function Life() {
                 })}
                 {data && data[i].img.length >= 2 && <>
                     <div className="prev" onClick={prev} style={{ ...navStyle, left: "1.5vw" }}>
-                        <img src={require("@/img/config/002-arrow-left.svg")} style={{ width: "100%", height: "100%", pointerEvents: "none" }} />
+                        <img src={require("@/img/config/002-arrow-left.svg").default} style={{ width: "100%", height: "100%", pointerEvents: "none" }} />
 
                     </div>
                     <div className="next" onClick={next} style={{ ...navStyle, right: "5.5vw" }}>
-                        <img src={require("@/img/config/001-arrow-right.svg")} style={{ width: "100%", height: "100%", pointerEvents: "none" }} />
+                        <img src={require("@/img/config/001-arrow-right.svg").default} style={{ width: "100%", height: "100%", pointerEvents: "none" }} />
                     </div>
                 </>}
             </>
@@ -279,8 +279,8 @@ export default function Life() {
           <div className="map_box">
             <ScaleDrag
               maxRatio={2.5}
-              zoomImg1={require("../../../img/urban/svg/001-plus-button.svg")}
-              zoomImg2={require("../../../img/urban/svg/002-minus-button.svg")}
+              zoomImg1={require("../../../img/urban/svg/001-plus-button.svg").default}
+              zoomImg2={require("../../../img/urban/svg/002-minus-button.svg").default}
             >
               <img
                 className="map"
@@ -298,7 +298,7 @@ export default function Life() {
                       // return <img src={require("@/img/urban/svg/002-spot.svg")} />
                       return (
                         <FancyBox
-                          thumbUrl={require("@/img/life/SVG/point_icon_new.svg")}
+                          thumbUrl={require("@/img/life/SVG/point_icon_new.svg").default}
                         >
                           <FancyChildren data={item.fancy} i={i} />
                         </FancyBox>

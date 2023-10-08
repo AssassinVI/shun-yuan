@@ -143,10 +143,10 @@ function RotatingBox() {
                 </div>
                 <div className="nav-btn">
                     <div className="left" onClick={prevFunc}>
-                        <img src={require("../../../../img/product/planet/svg/001-arrow.svg")} />
+                        <img src={require("../../../../img/product/planet/svg/001-arrow.svg").default} />
                     </div>
                     <div className="right" onClick={nextFunc}>
-                        <img src={require("../../../../img/product/planet/svg/001-arrow.svg")} />
+                        <img src={require("../../../../img/product/planet/svg/001-arrow.svg").default} />
                     </div>
                 </div>
             </div>

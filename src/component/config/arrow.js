@@ -19,7 +19,7 @@ export default function Arrow({ slide, setSlide, length }) {
                 }
                 setSlide(--newIndex)
             }} style={{ ...arrowStyle, left: "3vw", pointerEvents: "auto" }}>
-                <img src={require("../../../img/team/design/svg/015-arrow-left.svg")} style={{ width: "1.5vw", height: "1.5vw" }} />
+                <img src={require("../../../img/team/design/svg/015-arrow-left.svg").default} style={{ width: "1.5vw", height: "1.5vw" }} />
             </div>
             <div className="next" onClick={(e) => {
                 e.stopPropagation();
@@ -31,7 +31,7 @@ export default function Arrow({ slide, setSlide, length }) {
                 }
 
             }} style={{ ...arrowStyle, right: "3vw", pointerEvents: "auto" }}>
-                <img src={require("../../../img/team/design/svg/014-arrow-right.svg")} style={{ width: "1.5vw", height: "1.5vw", pointerEvents: "none" }} />
+                <img src={require("../../../img/team/design/svg/014-arrow-right.svg").default} style={{ width: "1.5vw", height: "1.5vw", pointerEvents: "none" }} />
             </div>
         </>
 

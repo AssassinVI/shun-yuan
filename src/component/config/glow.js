@@ -1,5 +1,5 @@
 import React from 'react'
-const glowBg = require("../../../img/lifefunction/webp/001-glowing-area.webp").default
+const glowBg = require("../../../img/config/001-glowing-area.webp").default
 export default function Glow({ number, color }) {
     const styles = {
         glow: {

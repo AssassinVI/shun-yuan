@@ -106,10 +106,10 @@ export function FloorNav({ building, flag = true }) {
         </div>
       </div>
       <div className="top" onClick={handleTop}>
-        <img src={svg[0]} />
+        <img src={svg[0].default} />
       </div>
       <div className="bottom" onClick={handleBottom}>
-        <img src={svg[1]} />
+        <img src={svg[1].default} />
       </div>
     </section>
   );

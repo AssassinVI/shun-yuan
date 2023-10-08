@@ -197,8 +197,8 @@ export default function Exterior() {
                 <div className='mapBox'>
                     <ScaleDrag
                         maxRatio={2.5}
-                        zoomImg1={require("../../../img/urban/svg/001-plus-button.svg")}
-                        zoomImg2={require("../../../img/urban/svg/002-minus-button.svg")}
+                        zoomImg1={require("../../../img/urban/svg/001-plus-button.svg").default}
+                        zoomImg2={require("../../../img/urban/svg/002-minus-button.svg").default}
                     >
 
                         <div className='photoBox'>
@@ -207,7 +207,7 @@ export default function Exterior() {
 
                                 return(
                                     <div className={`photo_btn ${item.type}`} key={`photo${item.type}`}>
-                                        <FancyBox thumbUrl={require("@/img/floorShot/photo.svg")} >
+                                        <FancyBox thumbUrl={require("@/img/floorShot/photo.svg").default} >
                                           <div className='photo_box'>
                                             <div className='floor_list'>
                                               <button onClick={(e)=>{e.stopPropagation(); setNowfloorNum(0)}} style={{ backgroundColor: nowfloorNum==0 ? '#fff':'#306677', color: nowfloorNum==0 ? '#306677' : '#fff'}}>4F</button>
@@ -226,7 +226,7 @@ export default function Exterior() {
                           }
                         </div>
                         <div className='distanceBox'>
-                           <img src={require("@/img/floorShot/distance/distance.svg")} />
+                           <img src={require("@/img/floorShot/distance/distance.svg").default} />
                         </div>
                         
                         <div className='map_div'>

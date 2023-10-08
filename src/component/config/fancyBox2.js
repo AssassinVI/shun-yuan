@@ -156,7 +156,7 @@ function Modal({ setOpen, width, thumbBox, box1Url, box1Type, children }) {
             }, 1500);
           }}
         >
-          <img src={require("@/img/config/close_icon.svg")} />
+          <img src={require("@/img/config/close_icon.svg").default} />
         </button>
         <div className="all_box">
           <div className='box1' ref={box1_content}>
