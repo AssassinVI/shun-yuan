@@ -3,7 +3,7 @@ import FancyBox from "@/src/component/config/fancyBox";
 import ScaleDrag from "../config/scaleDrag";
 import { gsap } from 'gsap';
 
-export default function Exterior() {
+export default function FloorShot() {
 
     const [nowType, setNowType]=useState(1);
     const [nowfloorNum, setNowfloorNum]=useState(0);

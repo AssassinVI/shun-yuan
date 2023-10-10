@@ -148,6 +148,7 @@ function MenuContent({ open, setOpen }) {
         backgroundRepeat: "no-repeat",
       }}
     >
+      {/* LOGO返回首頁 */}
       <div className="menu-logo">
         <Link
           to={"/"}
@@ -160,6 +161,8 @@ function MenuContent({ open, setOpen }) {
           <img src={require("@/img/index/svg/logo-white.svg").default} />
         </Link>
       </div>
+
+      {/* 選項 */}
       <div className="menu-option">
         {menu_obj.map((menu, i) => {
           return (

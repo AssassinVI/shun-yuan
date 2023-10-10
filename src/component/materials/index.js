@@ -1,7 +1,7 @@
 import React, {useRef, useEffect, useLayoutEffect, useState} from 'react'
 import FancyBox2 from "@/src/component/config/fancyBox2"
+import { Outlet, Link } from "react-router-dom";
 import { gsap } from 'gsap';
-import CloudEffect from '../config/cloudEffect';
 
 export default function Materials() {
 
@@ -12,20 +12,21 @@ export default function Materials() {
             let gg = gsap.timeline({ delay: 0.6 })
             gg.from(".txt_box h2, .txt_box p", {x: -20, opacity:0, filter:'blur(15px)', stagger:0.3, duration: 1.5,})
               .from(".img_box .b_line", {width: '0%', height: '0%', stagger:0.15, duration: 1,}, '<+=0.5')
-              .from(".img_box .thumbBox", { opacity:0, filter:'brightness(3)', stagger:0.2, duration: 1,}, '<+=0.8')
+              .from(".img_box .thumbBox", { opacity:0, filter:'brightness(3)', stagger:0.2, duration: 1,}, '<+=1')
               .from(".img_box .logo", {x: -20, opacity:0, filter:'blur(15px)', duration: 1,}, '<+=1')
               
         }, [animateRef])
         return () => ctx.revert()
     }, []);
 
-
-
-
     return (
         <section className="materials" ref={animateRef}>
+
+          {/* 子分頁輸出 */}
+          <Outlet />
+
             <div className='box'>
-                <img className="logo" src={require("../../../img/config/logo@2x.png").default} />
+                <img className="mainLogo" src={require("../../../img/config/logo@2x.png").default} />
                 <div className='txt_box'>
                   <h2>CONSTRUCTION<br/>EQUIPMENT</h2>
                   <p>現代簡約造型風格，講究沈穩優雅品味，深淺色系建材運用及垂直線條分割，增加立面高聳感，適度調和深淺色調搭配，產生層次感。</p>
@@ -98,24 +99,25 @@ export default function Materials() {
                   </div>
                   <div className='box8 box'>
                     <img className='logo' src={require("@/img/materials/logo_m_8.svg").default} />
-                    <FancyBox2 thumbUrl={require("@/img/materials/img_m_8.jpg").default}>
-                      <img className='img' src={require("@/img/materials/img_m_8.jpg").default} />
-                    </FancyBox2>
+                      <div className='thumbBox'>
+                        <Link to={"/materials/bathroom"}>
+                          <img className='img' src={require("@/img/materials/img_m_8.jpg").default} />
+                        </Link>
+                      </div>
                     <div className='b_line'></div>
                     <div className='b_line'></div>
                   </div>
                   <div className='box9 box'>
                     <img className='logo' src={require("@/img/materials/logo_m_9.svg").default} />
-                    <FancyBox2 thumbUrl={require("@/img/materials/img_m_9.jpg").default}>
-                        <div className='flex_box'>
-                            <div className='left'><img src={require("@/img/materials/txt1_1@2x.png").default} /></div>
-                            <div className='right'><img src={require("@/img/materials/txt1_2.svg").default} /></div>
-                        </div>
-                    </FancyBox2>
+                    <div className='thumbBox'>
+                      <Link to={"/materials/eHome"}>
+                         <img className='img' src={require("@/img/materials/img_m_9.jpg").default} />
+                      </Link>
+                    </div>
+
                     <div className='b_line'></div>
                     <div className='b_line'></div>
                   </div>
-
                 </div>
             </div>
         </section>

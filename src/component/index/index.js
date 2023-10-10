@@ -11,11 +11,12 @@ import { useEffect, useRef } from 'react';
 import { connect, } from 'react-redux';
 import { slideChangeAction } from '../redux/action/slideChange';
 //引入swiper
-import Swiper, { EffectCreative } from 'swiper';
+import Swiper from 'swiper';
 import 'swiper/css';
-import SwiperCore, { Mousewheel, EffectFade } from "swiper/core";
+
 import preloadImage from "../config/preload"
-SwiperCore.use([Mousewheel, EffectFade]);
+
+
 const requireWebp1 = require.context("../../../img", true, /^\.\/.*\.webp$/);
 const allWebp = requireWebp1.keys().map(requireWebp1);
 //組合成首頁
@@ -28,17 +29,14 @@ function Home({ slideChangeAction, myState, teamState }) {
 
         if (swiperRef.current) {
 
-            Swiper.use([EffectCreative]); // Import the EffectCreative module
+            //Swiper.use([EffectCreative]); // Import the EffectCreative module
             swiper1 = new Swiper(swiperRef.current, {
                 // Optional parameters
                 direction: 'vertical',
                 // If you want to enable mousewheel support
-                mousewheel: true,
                 speed: 700,
                 effect: "fade",
-                fadeEffect: { // configure the fade effect options
-                    crossFade: true // enable cross-fading between slides
-                },
+                
                 on: {
 
                     slideChangeTransitionStart: function (e) {
