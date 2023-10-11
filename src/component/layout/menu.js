@@ -10,6 +10,18 @@ import { slideChangeAction } from "../redux/action/slideChange";
 export default function Menu() {
   const [open, setOpen] = useState(false);
 
+  function fullScreen () {
+    if (document.documentElement.requestFullscreen) {
+        document.documentElement.requestFullscreen();
+    } else if (document.documentElement.mozRequestFullScreen) { /* Firefox */
+        document.documentElement.mozRequestFullScreen();
+    } else if (document.documentElement.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+        document.documentElement.webkitRequestFullscreen();
+    } else if (document.documentElement.msRequestFullscreen) { /* IE/Edge */
+        document.documentElement.msRequestFullscreen();
+    }
+  }
+
   return (
     <div
       className="menu"
@@ -19,7 +31,15 @@ export default function Menu() {
         pointerEvents: open == true ? "auto" : "none",
       }}
     >
+
+
       <ToggleButton open={open} setOpen={setOpen} />
+       <button className="fullScreen_btn" type="button" onClick={fullScreen}>
+        <svg width="800px" height="800px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" >
+          <polyline points="7.49 26 7.49 7.5 25.99 7.5"/><polyline points="56.51 26 56.51 7.5 38.01 7.5"/>
+          <polyline points="7.53 38 7.53 56.5 26.02 56.5"/><polyline points="56.51 38 56.51 56.5 38.01 56.5"/>
+        </svg>
+       </button>
       <MenuContent open={open} setOpen={setOpen} />
 
       
@@ -113,7 +133,7 @@ function MenuContent({ open, setOpen }) {
             slide: 4,
         },
         {
-          id: "/p3",
+          id: "/habitability",
           ch: "適居方案",
           slide: 4,
         },

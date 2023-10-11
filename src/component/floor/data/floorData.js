@@ -23,45 +23,10 @@ const data = [
     },
     {
         type: "3~12f",
-        text: "3F",
+        text: "3F~12F",
 
     },
-    {
-        type: "3~12f",
-        text: "4F"
-    },
-    {
-        type: "3~12f",
-        text: "5F"
-    },
-    {
-        type: "3~12f",
-        text: "6F"
-    },
-    {
-        type: "3~12f",
-        text: "7F"
-    },
-    {
-        type: "3~12f",
-        text: "8F"
-    },
-    {
-        type: "3~12f",
-        text: "9F"
-    },
-    {
-        type: "3~12f",
-        text: "10F"
-    },
-    {
-        type: "3~12f",
-        text: "11F"
-    },
-    {
-        type: "3~12f",
-        text: "12F"
-    },
+    
     {
         type: "rf",
         text: "RF",
@@ -88,11 +53,18 @@ export const sortData = [
         type: "1F",
         img: require("@/img/floor/webp/1F@2x.webp").default,
         anchor: [
+            
             {
                 class: "entry-gate",
-                fancyImg: [require("@/img/floor/webp/entry-gate1.jpg").default, require("@/img/floor/webp/entry-gate2.jpg").default],
+                fancyImg: [require("@/img/floor/webp/entry-gate1.jpg").default],
                 thumb: require("@/img/life/SVG/point_icon_new.svg").default,
                 title: "接待大廳"
+            },
+            {
+                class: "reading-room",
+                fancyImg: [require("@/img/floor/webp/entry-gate2.jpg").default],
+                thumb: require("@/img/life/SVG/point_icon_new.svg").default,
+                title: "閱覽室"
             },
             {
                 class: "kitchen",

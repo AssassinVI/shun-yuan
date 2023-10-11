@@ -1,7 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef, forwardRef, useImperativeHandle } from 'react'
 import ReactDOM from 'react-dom';
-export default function FancyBox({ thumbUrl, text, children }) {
+
+const FancyBox= forwardRef(({ thumbUrl, text, children }, ref)=>{
+
     const [open, setOpen] = useState(false);
+
+    useImperativeHandle(ref, ()=>({
+        open,
+        chOpen(type){
+            setOpen(type);
+        }
+    }),[open])
 
     const imgStyle = {
         width: "100%",
@@ -23,12 +32,11 @@ export default function FancyBox({ thumbUrl, text, children }) {
             </div>
             {open ? <Modal open={open} setOpen={setOpen} children={children} /> : null}
 
-
-
         </>
-
     )
-}
+});
+
+export default FancyBox;
 
 function Modal({ setOpen, children }) {
     const [trans, setTrans] = useState(false)

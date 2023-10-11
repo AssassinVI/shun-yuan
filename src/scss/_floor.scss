@@ -156,7 +156,10 @@
                                         left: 45.6%;
                                         top: 36%;
                                     }
-    
+                                    .reading-room{
+                                        left: 59%;
+                                        top: 34%;
+                                    }
                                     .kitchen {
                                         left: 23%;
                                         top: 35%;
@@ -168,8 +171,8 @@
                                     }
     
                                     .space-1f {
-                                        left: 48%;
-                                        top: 22%;
+                                        left: 52%;
+                                        top: 65%;
                                     }
     
     
@@ -271,7 +274,7 @@
         z-index: 15;
 
         @include tablet{
-            height: 38vw;
+            height: 27vw;
             bottom: 0;
         }
 
@@ -353,31 +356,6 @@
             bottom: -4vw;
         }
     }
-}
-
-#floor_Standard{
-
-
-    rect{
-        fill: none;
-        stroke: #306374;
-        stroke-miterlimit: 10;
-    }
-
-    .A1 {
-        fill: #fff;
-    }
-    .A1_rect {
-        fill: #306374;
-    }
-
-    text {
-        font-family: MinionConceptRoman-Medium, 'Minion Variable Concept';
-        font-size: 36px;
-        font-variation-settings: 'wght' 500, 'opsz' 11;
-        fill: #306374;
-    }
-
 }
 
 
@@ -505,7 +483,7 @@
             }
 
             svg {
-                width: 100%;
+                width: 121%;
             }
 
         
@@ -513,9 +491,9 @@
 
         .right {
             position: relative;
-            width: pxConvertor(1087.8);
-            height: 50vw;
-            padding-right: 6vw;
+            width: 65vw;
+            height: 51vw;
+            padding-right: 0vw;
 
             .imgBox {
                 width: 100%;
@@ -529,7 +507,7 @@
                     height: 100%;
 
                     img {
-                        height: 80%;
+                        height: 100%;
                         width: auto;
                     }
                 }

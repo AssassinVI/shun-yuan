@@ -93,9 +93,9 @@
 
     .mapBox{
         position: absolute;
-        top: 0%;
-        left: -17%;
-        width: 103%;
+        top: 9%;
+        left: -14%;
+        width: 80%;
         height: 100%;
 
         .imgBox{
@@ -125,8 +125,8 @@
                 z-index: 1;
 
                 &:nth-of-type(1){
-                    top: 42%;
-                    left: 20%;
+                    top: 47%;
+                    left: 21%;
                 }
                 &:nth-of-type(2){
                     top: 29%;
@@ -134,15 +134,15 @@
                 }
                 &:nth-of-type(3){
                     top: 31%;
-                    left: 43%;
+                    left: 48%;
                 }
                 &:nth-of-type(4){
-                    top: 55%;
-                    left: 43%;
+                    top: 54%;
+                    left: 48%;
                 }
                 &:nth-of-type(5){
                     top: 64%;
-                    left: 30.5%;
+                    left: 34.5%;
                 }
                 &:nth-of-type(6){
                     top: 43%;
@@ -150,19 +150,12 @@
                 }
                 &:nth-of-type(7){
                     top: 30.5%;
-                    left: 67.5%;
+                    left: 65%;
                 }
+                
                 &:nth-of-type(8){
-                    top: 31%;
-                    left: 53%;
-                }
-                &:nth-of-type(9){
-                    top: 55%;
-                    left: 53.5%;
-                }
-                &:nth-of-type(10){
                     top: 64%;
-                    left: 65.8%;
+                    left: 61.8%;
                 }
             }
         }
@@ -186,8 +179,8 @@
             display: flex;
             flex-direction: column;
             position: absolute;
-            right: -12.5%;
-            bottom: 34%;
+            right: -41%;
+            bottom: 43%;
 
             &> :nth-child(1) {
                 margin-bottom: 0.8vw;

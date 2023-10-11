@@ -57,7 +57,7 @@ export default function FloorShot() {
                 require('../../../img/floorShot/photo/A2_top_8F.jpg').default, 
                 require('../../../img/floorShot/photo/A2_top_12F.jpg').default, 
             ],
-            text: "A2北向",
+            text: "A2&B2北向",
         },
         {
             type: 'A2_down',
@@ -66,7 +66,7 @@ export default function FloorShot() {
                 require('../../../img/floorShot/photo/A2_down_8F.jpg').default, 
                 require('../../../img/floorShot/photo/A2_down_12F.jpg').default, 
             ],
-            text: "A2南向",
+            text: "A2&B2南向",
         },
         {
             type: 'A3_down',
@@ -94,24 +94,6 @@ export default function FloorShot() {
                 require('../../../img/floorShot/photo/B1_top_12F.jpg').default, 
             ],
             text: "B1北向",
-        },
-        {
-            type: 'B2_top',
-            img: [
-                require('../../../img/floorShot/photo/A2_top_4F.jpg').default, 
-                require('../../../img/floorShot/photo/A2_top_8F.jpg').default, 
-                require('../../../img/floorShot/photo/A2_top_12F.jpg').default, 
-            ],
-            text: "B2北向",
-        },
-        {
-            type: 'B2_down',
-            img: [
-                require('../../../img/floorShot/photo/A2_down_4F.jpg').default, 
-                require('../../../img/floorShot/photo/A2_down_8F.jpg').default, 
-                require('../../../img/floorShot/photo/A2_down_12F.jpg').default, 
-            ],
-            text: "B2南向",
         },
         {
             type: 'B3_down',
@@ -210,9 +192,9 @@ export default function FloorShot() {
                                         <FancyBox thumbUrl={require("@/img/floorShot/photo.svg").default} >
                                           <div className='photo_box'>
                                             <div className='floor_list'>
-                                              <button onClick={(e)=>{e.stopPropagation(); setNowfloorNum(0)}} style={{ backgroundColor: nowfloorNum==0 ? '#fff':'#306677', color: nowfloorNum==0 ? '#306677' : '#fff'}}>4F</button>
-                                              <button onClick={(e)=>{e.stopPropagation(); setNowfloorNum(1)}} style={{ backgroundColor: nowfloorNum==1 ? '#fff':'#306677', color: nowfloorNum==1 ? '#306677' : '#fff'}}>8F</button>
                                               <button onClick={(e)=>{e.stopPropagation(); setNowfloorNum(2)}} style={{ backgroundColor: nowfloorNum==2 ? '#fff':'#306677', color: nowfloorNum==2 ? '#306677' : '#fff'}}>12F</button>
+                                              <button onClick={(e)=>{e.stopPropagation(); setNowfloorNum(1)}} style={{ backgroundColor: nowfloorNum==1 ? '#fff':'#306677', color: nowfloorNum==1 ? '#306677' : '#fff'}}>8F</button>
+                                              <button onClick={(e)=>{e.stopPropagation(); setNowfloorNum(0)}} style={{ backgroundColor: nowfloorNum==0 ? '#fff':'#306677', color: nowfloorNum==0 ? '#306677' : '#fff'}}>4F</button>
                                             </div>
                                             <div className="text">
                                                 <p>{`${item.text}`}</p>
