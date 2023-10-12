@@ -92,9 +92,11 @@ export default function Materials() {
                   </div>
                   <div className='box7 box'>
                     <img className='logo' src={require("@/img/materials/logo_m_7.svg").default} />
-                    <FancyBox2 thumbUrl={require("@/img/materials/img_m_7.jpg").default}>
+
+                    <div className='thumbBox'>
                       <img className='img' src={require("@/img/materials/img_m_7.jpg").default} />
-                    </FancyBox2>
+                    </div>
+
                     <div className='b_line'></div>
                   </div>
                   <div className='box8 box'>

@@ -11,7 +11,8 @@ export default function Habitability() {
     useLayoutEffect(() => {
         let ctx = gsap.context(() => {
             let gg = gsap.timeline({ delay: 0.6 })
-            gg.from(".house_box .txt_box h1, .house_box .txt_box p, .house_box .txt_box button", {y: 40, opacity:0, filter:'blur(15px)', stagger:0.3, duration: 1.5,})
+            gg.from(".left .cloudEffect", {maskSize: 20, opacity:0, duration: 1.5,})
+              .from(".right .enTitle, .right h1, .right ul li, .right .svg_box", {opacity:0, x:40, filter:'blur(15px)', stagger:0.2,  duration: 1,}, '<+=0.5')
               
         }, [animateRef])
         return () => ctx.revert()

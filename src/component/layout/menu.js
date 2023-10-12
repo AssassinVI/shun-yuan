@@ -123,7 +123,7 @@ function MenuContent({ open, setOpen }) {
       },
       item: [
         {
-          id: "/p1",
+          id: "/ems",
           ch: "接軌國際",
           slide: 4,
         },

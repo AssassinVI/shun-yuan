@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 902.22 417.59">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #efeeef;
+        opacity: .8;
+      }
+
+      .cls-2 {
+        letter-spacing: .1em;
+      }
+
+      .cls-2, .cls-3 {
+        font-family: NotoSerifTC-Medium-90ms-RKSJ-H, 'Noto Serif TC';
+      }
+
+      .cls-2, .cls-4 {
+        font-size: 18px;
+      }
+
+      .cls-2, .cls-5 {
+        fill: #040000;
+      }
+
+      .cls-6 {
+        fill: #bbc5c7;
+        mix-blend-mode: multiply;
+        opacity: .7;
+      }
+
+      .cls-7 {
+        isolation: isolate;
+      }
+
+      .cls-8, .cls-9 {
+        fill: #2f6577;
+      }
+
+      .cls-10 {
+        fill: #898989;
+      }
+
+      .cls-3 {
+        letter-spacing: .1em;
+      }
+
+      .cls-11 {
+        fill: none;
+        stroke: #898989;
+        stroke-miterlimit: 10;
+        stroke-width: .5px;
+      }
+
+      .cls-12 {
+        font-family: CascadiaMonoRoman-Light, 'Cascadia Mono';
+        font-variation-settings: 'wght' 300;
+        letter-spacing: .1em;
+      }
+
+      .cls-4 {
+        fill: #3e3a39;
+        font-family: MicrosoftJhengHeiRegular, 'Microsoft JhengHei';
+        letter-spacing: .07em;
+      }
+
+      .cls-13 {
+        font-family: NotoSerifTC-Bold-90ms-RKSJ-H, 'Noto Serif TC';
+      }
+
+      .cls-13, .cls-14 {
+        fill: #fff;
+        font-size: 21px;
+        letter-spacing: .1em;
+      }
+
+      .cls-14 {
+        font-family: NotoSerifTC-SemiBold-90ms-RKSJ-H, 'Noto Serif TC';
+      }
+
+      .cls-9 {
+        fill-rule: evenodd;
+      }
+
+      .cls-5 {
+        font-size: 24px;
+      }
+    </style>
+  </defs>
+  <g class="cls-7">
+    <g id="_圖層_2" data-name="圖層 2">
+      <g id="_圖層_2-2" data-name="圖層 2">
+        <g>
+          
+          <line class="cls-11" x1="1" y1="69.07" x2="902.22" y2="69.07"/>
+          <rect class="cls-1" x="274.47" width="312.33" height="417.59"/>
+          <rect class="cls-1" x="589.88" width="312.33" height="417.59"/>
+          <rect class="cls-10" x="274.47" y=".3" width="312.33" height="68.46"/>
+          <rect class="cls-10" x="589.57" y=".3" width="312.33" height="68.46"/>
+          <rect class="cls-6" x="1" width="271.38" height="417.59"/>
+          <rect class="cls-8" x="1" y=".3" width="271.37" height="68.46"/>
+          <text class="cls-14" transform="translate(112.55 42.8)"><tspan x="0" y="0">品名</tspan></text>
+          <text class="cls-2" transform="translate(105.95 384.43)"><tspan x="0" y="0">安全性</tspan></text>
+          <text class="cls-2" transform="translate(115.85 302.56)"><tspan x="0" y="0">電費</tspan></text>
+          <text class="cls-2" transform="translate(115.85 107.5)"><tspan x="0" y="0">外觀</tspan></text>
+          <text class="cls-2" transform="translate(86.15 170.72)"><tspan x="0" y="0">充電擴充性</tspan></text>
+          <text class="cls-2" transform="translate(66.35 232.93)"><tspan x="0" y="0">公共範圍使用權</tspan></text>
+          <text class="cls-4" transform="translate(319.86 107.58)"><tspan x="0" y="0">線路凌亂</tspan></text>
+          <text class="cls-4" transform="translate(319.85 369.53)"><tspan x="0" y="0">當用戶充電設施，接裝於</tspan><tspan x="0" y="30">各自電錶時，較有安全感</tspan></text>
+          <text class="cls-4" transform="translate(319.99 170.86)"><tspan x="0" y="0">低</tspan></text>
+          <text class="cls-4" transform="translate(319.45 287.71)"><tspan x="0" y="0">自家電費共同計算，</tspan><tspan x="0" y="30">電費較高</tspan></text>
+          <text class="cls-14" transform="translate(360.85 42.84)"><tspan x="0" y="0">自家電錶拉線</tspan></text>
+          <text class="cls-4" transform="translate(321.05 233.08)"><tspan x="0" y="0">較有爭議</tspan></text>
+          <text class="cls-4" transform="translate(639.65 107.64)"><tspan x="0" y="0">電路整理布設</tspan></text>
+          <text class="cls-4" transform="translate(640.07 368.5)"><tspan x="0" y="0">線路整體規劃、導入電能</tspan><tspan x="0" y="30">管理系統(EMS)，安全度高</tspan></text>
+          <text class="cls-4" transform="translate(640.05 170.86)"><tspan x="0" y="0">彈性續增</tspan></text>
+          <text class="cls-4" transform="translate(640.14 287.66)"><tspan x="0" y="0">參與新時間電價，</tspan><tspan x="0" y="30">減少電費支出</tspan></text>
+          <text class="cls-13" transform="translate(677.83 42.81)"><tspan x="0" y="0">專設一戶供電</tspan></text>
+          <text class="cls-4" transform="translate(641.25 233.09)"><tspan x="0" y="0">無爭議</tspan></text>
+          <path class="cls-9" d="M626.61,97.08c.25,.23,.27,.62,.04,.87l-8.22,9.09-4.97-4.75c-.25-.23-.25-.62-.02-.87,.23-.25,.62-.25,.87-.02l4.06,3.87,7.37-8.15c.23-.25,.62-.27,.87-.04Z"/>
+          <path class="cls-9" d="M626.61,159.08c.25,.23,.27,.62,.04,.87l-8.22,9.09-4.97-4.75c-.25-.23-.25-.62-.02-.87,.23-.25,.62-.25,.87-.02l4.06,3.87,7.37-8.15c.23-.25,.62-.27,.87-.04Z"/>
+          <path class="cls-9" d="M626.61,223.08c.25,.23,.27,.62,.04,.87l-8.22,9.09-4.97-4.75c-.25-.23-.25-.62-.02-.87,.23-.25,.62-.25,.87-.02l4.06,3.87,7.37-8.15c.23-.25,.62-.27,.87-.04Z"/>
+          <path class="cls-9" d="M626.61,293.08c.25,.23,.27,.62,.04,.87l-8.22,9.09-4.97-4.75c-.25-.23-.25-.62-.02-.87,.23-.25,.62-.25,.87-.02l4.06,3.87,7.37-8.15c.23-.25,.62-.27,.87-.04Z"/>
+          <path class="cls-9" d="M626.61,375.08c.25,.23,.27,.62,.04,.87l-8.22,9.09-4.97-4.75c-.25-.23-.25-.62-.02-.87,.23-.25,.62-.25,.87-.02l4.06,3.87,7.37-8.15c.23-.25,.62-.27,.87-.04Z"/>
+          <line class="cls-11" x1="1" y1="255.4" x2="902.22" y2="255.4"/>
+          <line class="cls-11" y1="336.4" x2="901.22" y2="336.4"/>
+          <line class="cls-11" x1="1" y1="193.93" x2="902.22" y2="193.93"/>
+          <line class="cls-11" x1="1" y1="131.38" x2="902.22" y2="131.38"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

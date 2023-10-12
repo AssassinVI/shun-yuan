@@ -12,6 +12,7 @@ import Materials from './component/materials';
 import Bathroom from './component/materials/bathroom';
 import EHome from './component/materials/eHome';
 import Habitability from './component/habitability';
+import Ems from './component/ems';
 
 import Layout from './component/layout';
 import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
@@ -96,6 +97,7 @@ function Content() {
                     <Route path="eHome" element={<EHome />} />
                 </Route>
                 <Route path="/habitability" element={<Habitability />} />
+                <Route path="/ems" element={<Ems />} />
                 {/* 
                 
                 <Route path="/urban" element={<Urban />} />

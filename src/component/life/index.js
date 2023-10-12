@@ -1,13 +1,25 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState, useLayoutEffect } from "react";
 import FancyBox from "@/src/component/config/fancyBox";
 import ScaleDrag from "../config/scaleDrag";
+import { gsap } from 'gsap';
 
 export default function Life() {
-  // const vr720Ref = useRef(undefined);
 
-  // useEffect(()=>{
-  //     vr720Ref.current.scrollLeft=200;
-  // }, [vr720Ref]);
+  const animateRef = useRef(null);
+
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+        let gg = gsap.timeline({ delay: 0.2 })
+        gg.from(".life_section .logo", {opacity:0, filter: 'blur(15px)', duration: 1.5,})
+          .from(".life_section .txt1", {opacity:0, filter: 'blur(15px)', x:-20, duration: 1.5,}, '<+=0.4')
+          .from(".life_section .line", { width:0, duration: 1.5,}, '<+=1')
+          .from(".life_section .list button", {opacity:0, filter: 'blur(15px)', x:-20, stagger:0.2, duration: 1,}, '<')
+          .from(".life_section .map_box .imgBox", {opacity:0,  duration: 1,}, '<+=1');
+          
+    }, [animateRef])
+    return () => ctx.revert()
+}, []);
+
 
   const requireTraffic = require.context("../../../img/life/traffic", false, /^\.\/.*\.jpg$/);
   const Traffic = requireTraffic.keys().map(requireTraffic);
@@ -241,7 +253,7 @@ export default function Life() {
     }
 
   return (
-    <section className="life_section">
+    <section className="life_section" ref={animateRef}>
       {/* <div className='vr720_btn'>
                 <FancyBox text={`720環景`}>
                   <iframe src="https://www.720yun.com/t/adakn9qwzr7?scene_id=112286084" frameborder="0"></iframe>

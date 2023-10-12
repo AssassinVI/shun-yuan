@@ -119,7 +119,7 @@ export default function FloorShot() {
     useEffect(()=>{
         let gg = gsap.timeline();
         if(nowType==2 || nowType==3){
-            gg.to('.mapBox .map_div .map', {rotate: '-14deg', scale:1.2, x:'-10%', y:'-3%', duration: 0.8});
+            gg.to('.mapBox .map_div .map', {rotate: '-14deg', scale:1.2, x:'-3%', y:'-3%', duration: 0.8});
 
             if(nowType==2){
                 gg.to('.mapBox .distanceBox', {opacity: 0, visibility: 'hidden'}, '<')
