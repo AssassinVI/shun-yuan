@@ -70,6 +70,7 @@
                 right: 5%;
                 width: auto;
                 height: 8%;
+                z-index: 1;
             }
             .thumbBox{
                 filter: brightness(1);
@@ -238,8 +239,8 @@
 
         .slide_menu{
             position: absolute;
-            left: 1%;
-            bottom: 2%;
+            right: 3%;
+            bottom: 5%;
             display: flex;
 
             .menu_btn{

@@ -96,13 +96,13 @@ function Modal({ setOpen, width, children }) {
     if(trans){
 
       gg.from(".fancyBox", { opacity:0, duration: 0.5})
-        .from(".fancyBox .content_box", {x:'100%', duration: 0.8}, '<+=0.2')
-        .from(".fancyBox .content_box .close_btn", {x:'7vw', duration: 0.3}, '>-=0.1');
+        .from(".fancyBox .content_box", {x:'-100%', duration: 0.8}, '<+=0.2')
+        .from(".fancyBox .content_box .close_btn", {x:'-7vw', duration: 0.3}, '>-=0.1');
     }
     //-- 關視窗動態 --
     else{
-      gg.to(".fancyBox .content_box .close_btn", {x:'7vw', duration: 0.3})
-        .to(".fancyBox .content_box", {x:'100%', duration: 0.5}, '<')
+      gg.to(".fancyBox .content_box .close_btn", {x:'-7vw', duration: 0.3})
+        .to(".fancyBox .content_box", {x:'-100%', duration: 0.5}, '<')
         .to(".fancyBox", { opacity:0, duration: 0.3});
     }
         

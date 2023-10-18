@@ -43,7 +43,7 @@ export default function Floor() {
           </div>
         </div>
 
-        <p className="remark">平面圖僅供參考，依核准執照圖說及合約附圖為準</p>
+        <p className="remark">平面圖僅供參考，實際依房地預定買賣契約書為準</p>
       </div>
     </section>
   );
@@ -297,7 +297,7 @@ const FunitureFancyBox = ({ all, item, setNowHouse, nowHouse }) => {
               <img src={itemImg} />
             </ScaleDrag>
           </div>
-          <p>本圖僅供俱配置示意參考,實際之格局、建材依合約附圖及建材表為準。</p>
+          <p>本圖僅為傢俱配置參考，實際依房地預定買賣契約書為準。</p>
         </div>
       </FancyBoxRef>
       <div className="radiation">

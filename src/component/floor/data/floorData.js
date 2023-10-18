@@ -22,8 +22,8 @@ const data = [
         text: "2F",
     },
     {
-        type: "3~12f",
-        text: "3F~12F",
+        type: "3~11f",
+        text: "3F",
 
     },
     
@@ -93,7 +93,7 @@ export const sortData = [
         img: require("@/img/floor/webp/2F@2x.webp").default,
     },
     {
-        type: "3~12F",
+        type: "3~11F",
         img: require("@/img/floor/webp/3-12F@2x.webp").default,
         configurationGraph: "standard",
         anchor: [

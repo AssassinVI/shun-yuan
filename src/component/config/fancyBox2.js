@@ -123,13 +123,13 @@ function Modal({ setOpen, width, thumbBox, box1Url, box1Type, children }) {
           duration: 0.8
         }, '>-=0.2')
         .to(".fancyBox .content_box", {opacity:1, duration: 0.5}, '>-=0.1')
-        .from(".fancyBox .content_box .close_btn", {x:'7vw', duration: 0.3}, '<+=0.1')
+        .from(".fancyBox .content_box .close_btn", {x:'-7vw', duration: 0.3}, '<+=0.1')
         .to(".fancyBox .thumbBox_content", {opacity:0, duration: 0.1});
     }
     //-- 關視窗動態 --
     else{
       gg.to(".fancyBox .thumbBox_content", {opacity:1, duration: 0.1})
-        .to(".fancyBox .content_box .close_btn", {x:'7vw', duration: 0.3})
+        .to(".fancyBox .content_box .close_btn", {x:'-7vw', duration: 0.3})
         .to(".fancyBox .content_box", {opacity:0, duration: 0.3}, '<')
         .to(".fancyBox .thumbBox_content", 
         { width: thumbBoxRect.width, 

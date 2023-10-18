@@ -11,8 +11,8 @@ export default function Life() {
     let ctx = gsap.context(() => {
         let gg = gsap.timeline({ delay: 0.2 })
         gg.from(".life_section .logo", {opacity:0, filter: 'blur(15px)', duration: 1.5,})
-          .from(".life_section .txt1", {opacity:0, filter: 'blur(15px)', x:-20, duration: 1.5,}, '<+=0.4')
-          .from(".life_section .line", { width:0, duration: 1.5,}, '<+=1')
+          .from(".life_section .txt1", {opacity:0, filter: 'blur(15px)', x:-20, duration: 1.5,}, '<+=0.2')
+          .from(".life_section .line", { width:0, duration: 1.5,}, '<+=0.5')
           .from(".life_section .list button", {opacity:0, filter: 'blur(15px)', x:-20, stagger:0.2, duration: 1,}, '<')
           .from(".life_section .map_box .imgBox", {opacity:0,  duration: 1,}, '<+=1');
           
@@ -21,10 +21,7 @@ export default function Life() {
 }, []);
 
 
-  const requireTraffic = require.context("../../../img/life/traffic", false, /^\.\/.*\.jpg$/);
-  const Traffic = requireTraffic.keys().map(requireTraffic);
-  const requirePark = require.context("../../../img/life/park", false, /^\.\/.*\.jpg$/);
-  const Park = requirePark.keys().map(requirePark);
+
   const requireEntertainment = require.context("../../../img/life/entertainment", false, /^\.\/.*\.jpg$/);
   const Entertainment = requireEntertainment.keys().map(requireEntertainment);
   const requireSchool = require.context("../../../img/life/school", false, /^\.\/.*\.jpg$/);
@@ -70,23 +67,35 @@ export default function Life() {
       anchor: 5,
       fancy: [
         {
-          img: [Traffic[0].default, Traffic[1].default],
+          img: [
+            require('@/img/life/traffic/t011.jpg').default, 
+            require('@/img/life/traffic/t012.jpg').default
+          ],
           text: "台74德芳南路匝道",
         },
         {
-          img: [Traffic[2].default, Traffic[3].default],
+          img: [
+            require('@/img/life/traffic/t021.jpg').default,
+            require('@/img/life/traffic/t022.jpg').default
+          ],
           text: "軟體園區",
         },
         {
-          img: [Traffic[4].default],
+          img: [require('@/img/life/traffic/t03.jpg').default],
           text: "大里工業區",
         },
         {
-          img: [Traffic[5].default, Traffic[6].default],
+          img: [
+            require('@/img/life/traffic/t041.jpg').default,
+            require('@/img/life/traffic/t042.jpg').default
+          ],
           text: "台中車站",
         },
         {
-          img: [Traffic[7].default, Traffic[8].default],
+          img: [
+            require('@/img/life/traffic/t051.jpg').default,
+            require('@/img/life/traffic/t052.jpg').default
+          ],
           text: "五權車站",
         },
       ],
@@ -98,19 +107,34 @@ export default function Life() {
       anchor: 1,
       fancy: [
         {
-            img: [Park[0].default],
+            img: [
+              require('@/img/life/park/pk04.jpg').default,
+              require('@/img/life/park/pk03.jpg').default,
+            ],
             text: "大里國民運動中心",
         },
         {
-            img: [Park[1].default],
+            img: [
+              require('@/img/life/park/pk01.jpg').default,
+              require('@/img/life/park/pk02.jpg').default,
+              require('@/img/life/park/pk05.jpg').default,
+              require('@/img/life/park/pk06.jpg').default,
+              require('@/img/life/park/pk07.jpg').default,
+            ],
             text: "大里運動公園",
         },
         {
-            img: [Park[2].default],
+            img: [
+              require('@/img/life/park/pk015.jpg').default,
+            ],
             text: "大里親子館",
         },
         {
-            img: [Park[3].default],
+            img: [
+              require('@/img/life/park/pk010.jpg').default,
+              require('@/img/life/park/pk011.jpg').default,
+              require('@/img/life/park/pk012.jpg').default,
+            ],
             text: "康橋公園",
         },
 
@@ -123,27 +147,37 @@ export default function Life() {
       anchor: 9,
       fancy: [
         {
-            img: [Entertainment[0].default],
+            img: [
+              require('@/img/life/entertainment/en01.jpg').default,
+              require('@/img/life/entertainment/en02.jpg').default,
+            ],
             text: "寶雅",
         },
         {
-            img: [Entertainment[1].default],
+            img: [
+              require('@/img/life/entertainment/en04.jpg').default,
+            ],
             text: "肯德基",
         },
         {
-            img: [Entertainment[2].default],
+            img: [
+              require('@/img/life/entertainment/en06.jpg').default
+            ],
             text: "好樂迪",
         },
         {
-            img: [Entertainment[3].default],
+            img: [require('@/img/life/entertainment/en09.jpg').default],
             text: "麥當勞",
         },
         {
-            img: [Entertainment[4].default],
+            img: [require('@/img/life/entertainment/en018.jpg').default],
             text: "大買家",
         },
         {
-            img: [Entertainment[5].default],
+            img: [
+              require('@/img/life/entertainment/en019.jpg').default,
+              require('@/img/life/entertainment/en020.jpg').default,
+            ],
             text: "內新市場",
         },
       ],
@@ -155,27 +189,33 @@ export default function Life() {
       anchor: 5,
       fancy: [
         {
-            img: [School[0].default],
+            img: [
+              require('@/img/life/school/sc01.jpg').default,
+              require('@/img/life/school/sc02.jpg').default,
+            ],
             text: "內新國小",
         },
         {
-            img: [School[1].default],
+            img: [require('@/img/life/school/sc03.jpg').default,],
             text: "益民國小",
         },
         {
-            img: [School[2].default],
+            img: [require('@/img/life/school/sc04.jpg').default,],
             text: "光榮國中",
         },
         {
-            img: [School[3].default],
+            img: [require('@/img/life/school/sc05.jpg').default,],
             text: "立人高中",
         },
         {
-            img: [School[4].default],
+            img: [require('@/img/life/school/sc06.jpg').default,],
             text: "國立興大附中",
         },
         {
-            img: [School[5].default],
+            img: [
+              require('@/img/life/school/sc07.jpg').default,
+              require('@/img/life/school/sc08.jpg').default,
+            ],
             text: "中興大學",
         },
       ],
@@ -187,11 +227,16 @@ export default function Life() {
       anchor: 3,
       fancy: [
         {
-            img: [Hospital[0].default],
+            img: [
+              require('@/img/life/hospital/hos01.jpg').default,
+              require('@/img/life/hospital/hos02.jpg').default,
+            ],
             text: "仁愛醫院",
         },
         {
-            img: [Hospital[1].default],
+            img: [
+              require('@/img/life/hospital/hos03.jpg').default,
+            ],
             text: "新菩提醫院",
         },
       ],
@@ -209,8 +254,13 @@ export default function Life() {
             width: "3vw",
             height: "3vw",
             pointerEvents: "auto",
-            cursor: "pointer"
+            cursor: "pointer",
+            padding: '0.5vw',
+            backgroundColor: 'rgba(255, 255, 255, 0.8)',
+            borderRadius: '100%',
+            boxShadow: '1px 1px 5px rgb(0 0 0 / 50%)'
         }
+
         const next = (e) => {
             e.stopPropagation();
             let newIndex = slide
@@ -231,7 +281,7 @@ export default function Life() {
             <>
                 {data && data[i].img.map((itemInner, innerI) => {
                     return (
-                        <div className='wrapper' style={{ position: "absolute", left: 0, top: 0, width: "100%", height: "100%", opacity: slide == innerI ? 1 : 0 }}>
+                        <div className='wrapper' style={{ position: "absolute", left: 0, top: 0, width: "100%", height: "100%", transition: 'opacity 0.5s', opacity: slide == innerI ? 1 : 0 }}>
                             <img src={itemInner} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                             <p style={{ position: "absolute", right: "1.5vw", bottom: "1vw", color: "#fff", fontSize: "0.8vw", letterSpacing: "0.1em", filter: "drop-shadow(0 0 3px #000)" }}>{data[i].text}</p>
                         </div>
@@ -240,11 +290,10 @@ export default function Life() {
                 })}
                 {data && data[i].img.length >= 2 && <>
                     <div className="prev" onClick={prev} style={{ ...navStyle, left: "1.5vw" }}>
-                        <img src={require("@/img/config/002-arrow-left.svg").default} style={{ width: "100%", height: "100%", pointerEvents: "none" }} />
-
+                        <img src={require("@/img/equipment/svg/003-arrow.svg").default} style={{ width: "100%", height: "100%", pointerEvents: "none"  ,transform: 'rotateY(180deg)',}} />
                     </div>
                     <div className="next" onClick={next} style={{ ...navStyle, right: "5.5vw" }}>
-                        <img src={require("@/img/config/001-arrow-right.svg").default} style={{ width: "100%", height: "100%", pointerEvents: "none" }} />
+                        <img src={require("@/img/equipment/svg/003-arrow.svg").default} style={{ width: "100%", height: "100%", pointerEvents: "none", }} />
                     </div>
                 </>}
             </>
