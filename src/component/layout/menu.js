@@ -59,7 +59,7 @@ function MenuContent({ open, setOpen }) {
       },
       item: [
         {
-          id: "/dayuan",
+          id: "/brand",
           ch: "舜元建設",
           slide: 1,
         },
