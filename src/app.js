@@ -100,6 +100,8 @@ function Content() {
                 <Route path="/habitability" element={<Habitability />} />
                 <Route path="/ems" element={<Ems />} />
                 <Route path="/brand/*" element={<Brand />} />
+
+                <Route path="/areaCase" element={<AreaCase />} />
                 {/* 
                 <Route path="/urban" element={<Urban />} />
                 <Route path="/calculator" element={<Calculate />} />

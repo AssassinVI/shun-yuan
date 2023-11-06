@@ -59,7 +59,7 @@ function MenuContent({ open, setOpen }) {
       },
       item: [
         {
-          id: "/brand",
+          id: "/brand/s1",
           ch: "舜元建設",
           slide: 1,
         },

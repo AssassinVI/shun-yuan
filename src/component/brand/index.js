@@ -36,7 +36,7 @@ export default function Brand() {
                <Link className={location.pathname.indexOf('s1')!=-1 ? 'active':''} to={'/brand/s1'}>品牌理念</Link>
                <Link className={location.pathname.indexOf('s2')!=-1 ? 'active':''} to={'/brand/s2'}>歷年業績</Link>
                <Link className={location.pathname.indexOf('s3')!=-1 ? 'active':''} to={'/brand/s3'}>客戶服務</Link>
-               <Link className={location.pathname.indexOf('s4')!=-1 ? 'active':''} to={'/brand/s4'}>HOMICS專享服務</Link>
+               <Link className={location.pathname.indexOf('s4')!=-1 ? 'active':''} to={'/brand/s4'}>HOMIES專享服務</Link>
             </div>
 
             <Routes>

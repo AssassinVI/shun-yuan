@@ -25,6 +25,11 @@ export default function Brand() {
             <div className='s1' style={{width:'100%', height:'100%'}}>
               <img src={require('@/img/brand/brand_txt1.svg').default} style={{position:'absolute' , width: '50%',top: '37%', left: '26%'}} />
               <img src={require('@/img/brand/brand_bg1.jpg').default} style={{display:'block', width:'100%', height:'100%', objectFit:'cover'}} />
+
+                <div className="bg">
+                    <img className="cloud1" src={require('../../../img/menu/menu_cloud@2x.webp').default} />
+                    <img className="cloud2" src={require('../../../img/menu/menu_cloud@2x.webp').default} />
+                </div>
             </div>
         </section>
     )
