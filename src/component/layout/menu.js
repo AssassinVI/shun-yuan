@@ -146,7 +146,7 @@ function MenuContent({ open, setOpen }) {
       },
       item: [
         {
-          id: "/n1",
+          id: "/areaCase",
           ch: "區域個案",
           slide: 5,
         },
