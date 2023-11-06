@@ -14,8 +14,7 @@ import EHome from './component/materials/eHome';
 import Habitability from './component/habitability';
 import Ems from './component/ems';
 import Brand from './component/brand';
-
-
+import AreaCase from './component/areaCase';
 import Layout from './component/layout';
 import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import gsap from 'gsap';
@@ -107,6 +106,8 @@ function Content() {
                 <Route path="/product/*" element={<Product />} />
                 <Route path="/news" element={<News />} />
                 <Route path="/equipment/*" element={<Equipment />} />
+                <Route path="/areaCase" element={<AreaCase />} />
+                {/* 
                 <Route path="/information" element={<Information />} /> */}
                 <Route path="*" element={<><h1 style={{ width: "100%", height: "100vh", display: "flex", justifyContent: "center", alignItems: "center" }}>目前頁面正在製作中，請點選右上角X回首頁</h1><MoveBack /></>} />
             </Routes>
