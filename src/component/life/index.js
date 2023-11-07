@@ -315,10 +315,7 @@ export default function Life() {
             className="logo"
             src={require("../../../img/config/logo@2x.png").default}
           />
-          <img
-            className="txt1"
-            src={require("../../../img/life/SVG/life_txt.svg").default}
-          />
+          <h2 className="txt1">SURROUNDING<br />MAP</h2>
           <div className="line"></div>
           <div className="list">
             {map_list.map((item, index) => {

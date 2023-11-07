@@ -54,8 +54,8 @@ function MenuContent({ open, setOpen }) {
   const menu_obj = [
     {
       title: {
-        ch: "底蘊雲在",
-        en: "BRAND",
+        ch: "典範出采",
+        en: "ABOUT",
       },
       item: [
         {
@@ -70,38 +70,38 @@ function MenuContent({ open, setOpen }) {
         },
         {
           id: "/prospect",
-          ch: "默契共砌",
+          ch: "設計團隊",
           slide: 1,
         },
       ],
     },
     {
       title: {
-        ch: "食尚雲集",
-        en: "LIFE",
+        ch: "便捷出行",
+        en: "LOCATION",
       },
       item: [
         {
           id: "/vr720", //"/traffic",
-          ch: "環境空拍",
+          ch: "鳥瞰環景",
           slide: 2,
         },
         {
           id: "/life", //"/lifefunction",
-          ch: "生活綠洲",
+          ch: "生活機能",
           slide: 2,
         },
       ],
     },
     {
       title: {
-        ch: "建築雲想",
-        en: "BUILDING",
+        ch: "建築出塵",
+        en: "DESIGN",
       },
       item: [
         {
           id: "/exterior",
-          ch: "雋雅外觀",
+          ch: "立面外觀",
           slide: 3,
         },
         {
@@ -111,25 +111,25 @@ function MenuContent({ open, setOpen }) {
         },
         {
             id: "/floorShot",
-            ch: "樓層空拍",
+            ch: "視野模擬",
             slide: 3,
         },
       ],
     },
     {
       title: {
-        ch: "悠然雲居",
-        en: "EQUIPMENT",
+        ch: "建材出眾",
+        en: "FEATURES",
       },
       item: [
         {
           id: "/ems",
-          ch: "接軌國際",
+          ch: "永續環保",
           slide: 4,
         },
         {
             id: "/materials",
-            ch: "五感建材",
+            ch: "五感選材",
             slide: 4,
         },
         {
@@ -141,8 +141,8 @@ function MenuContent({ open, setOpen }) {
     },
     {
       title: {
-        ch: "自在雲遊",
-        en: "NEWS",
+        ch: "擘畫出色",
+        en: "INFO",
       },
       item: [
         {

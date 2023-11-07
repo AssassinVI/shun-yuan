@@ -14,7 +14,7 @@ $ch_p_font:'Microsoft JhengHei';
 
 
 @function pxConvertor($args) {
-    @return $args/1920*100vw;
+    @return calc($args/1920*100vw);
 }
 
 :root {

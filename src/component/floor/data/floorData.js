@@ -58,31 +58,31 @@ export const sortData = [
                 class: "entry-gate",
                 fancyImg: [require("@/img/floor/webp/entry-gate1.jpg").default],
                 thumb: require("@/img/life/SVG/point_icon_new.svg").default,
-                title: "接待大廳"
+                title: "出雲大廳"
             },
             {
                 class: "reading-room",
                 fancyImg: [require("@/img/floor/webp/entry-gate2.jpg").default],
                 thumb: require("@/img/life/SVG/point_icon_new.svg").default,
-                title: "閱覽室"
+                title: "交誼書閣"
             },
             {
                 class: "kitchen",
                 fancyImg: [require("@/img/floor/webp/kitchen.jpg").default],
                 thumb: require("@/img/life/SVG/point_icon_new.svg").default,
-                title: "生活廚房"
+                title: "生活講堂"
             }, 
             {
                 class: "gym",
                 fancyImg: [require("@/img/floor/webp/gym.jpg").default],
                 thumb: require("@/img/life/SVG/point_icon_new.svg").default,
-                title: "健身房"
+                title: "沛能健身"
             }, 
             {
                 class: "space-1f",
                 fancyImg: [require("@/img/floor/webp/space-1f.jpg").default],
                 thumb: require("@/img/life/SVG/point_icon_new.svg").default,
-                title: "一樓景觀"
+                title: "疊翠綠廊"
             }, 
            
         ],

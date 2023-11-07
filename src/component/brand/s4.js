@@ -25,10 +25,10 @@ export default function Brand() {
         <section className="brand" style={{width:'100%', height:'100%'}} ref={animateRef}>
            <div className='s4' style={{width:'100%', height:'100%'}}>
               <div className='img_box'>
-                <img src={require('@/img/brand/brand_img4.webp').default} />
+                <img src={require('@/img/brand/brand_img4@2x.webp').default} />
               </div>
               <div className='txt_box'>
-                <img src={require('@/img/brand/brand_txt4.png').default} />
+                <img src={require('@/img/brand/brand_txt4@2x.webp').default} />
               </div>
             </div>
         </section>

@@ -25,11 +25,14 @@
             }
             .txt1{
 
-                width: 12vw;
+                font-family: $en_font1;
                 margin-bottom: 1.5vw;
+                font-size: 3.5vw;
+                font-weight: 500;
+                line-height: 1;
 
                 @include tablet{
-                    width: 18vw;
+                    
                     margin-bottom: 2vw;
                 }
             }

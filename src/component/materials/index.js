@@ -28,8 +28,8 @@ export default function Materials() {
             <div className='box'>
                 <img className="mainLogo" src={require("../../../img/config/logo@2x.png").default} />
                 <div className='txt_box'>
-                  <h2>CONSTRUCTION<br/>EQUIPMENT</h2>
-                  <p>現代簡約造型風格，講究沈穩優雅品味，深淺色系建材運用及垂直線條分割，增加立面高聳感，適度調和深淺色調搭配，產生層次感。</p>
+                  <h2>MATERIALS & EQUIPMENTS</h2>
+                  <p>優越的品質，來自對細節的講究<br/>嚴選機能建材，打造每一方寸都深得人心的住宅<br/>化繁為簡，讓生活舒心自在</p>
                 </div>
                 <div className='img_box'>
                   <div className='box1 box'>

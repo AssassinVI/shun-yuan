@@ -31,7 +31,7 @@ export default function Habitability() {
                  </CloudEffect>
                </div>
                <div className='right'>
-                 <h2 className='enTitle'>LIGHT INTERIOR <br />DESIGN</h2>
+                 <h2 className='enTitle'>COMFORT LIVING SOLUTION</h2>
                  <h1>適居方案</h1>
                  <ul>
                     <li>全室空調</li>

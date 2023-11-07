@@ -30,7 +30,7 @@ export default function Brand() {
                 </CloudEffect>
               </div>
               <div className='txt_box'>
-                <img src={require('@/img/brand/brand_txt3.png').default} />
+                <img src={require('@/img/brand/brand_txt3@2x.webp').default} />
               </div>
             </div>
         </section>

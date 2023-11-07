@@ -14,19 +14,19 @@ export default function FloorShot() {
         {
             type: 1,
             title: '現況套繪',
-            en: 'BUILDING SPACING',
+            en: 'SPACE ALLOCATION',
             map: 'floor_dis_map@2x.webp',
         },
         {
             type: 2,
             title: '樓層空拍',
-            en: 'FLOOR PHOTOGRAPHY',
+            en: 'DRONE VIEW',
             map: 'map2@2x.webp',
         },
         {
             type: 3,
             title: '鄰房棟距',
-            en: 'BUILDING DISTANCE',
+            en: 'SIDE YARD WIDTH',
             map: 'map2@2x.webp',
         },
     ];
@@ -155,7 +155,7 @@ export default function FloorShot() {
                 <img className="logo" src={require("../../../img/config/logo@2x.png").default} />
 
                 <div className='txtBox'>
-                    <h2>FLOOR DISTANCE <span className='s_line'></span> </h2>
+                    <h2>SIGHTLINE <span className='s_line'></span> </h2>
                     <div className='list'>
                       {
                         map_list.map((item, index)=>{
