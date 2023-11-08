@@ -4,6 +4,7 @@ import FancyBox2 from "@/src/component/config/fancyBox2"
 import { gsap } from 'gsap';
 //引入swiper
 import {Swiper, SwiperSlide} from 'swiper/react'
+
 import 'swiper/css';
 
 

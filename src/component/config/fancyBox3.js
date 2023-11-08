@@ -11,7 +11,7 @@ import { gsap } from 'gsap';
  * @param {string} children-DOM 
  * @returns 按鈕+視窗DOM
  */
-export default function FancyBox({ thumbUrl, text, width = "70%", box1Type='image', children }) {
+export default function FancyBox({ thumbUrl, text, width = "70%", box1Type='image', onClose, children }) {
   const [open, setOpen] = useState(false);
   const thumbBox= useRef(null);
 
@@ -47,8 +47,7 @@ export default function FancyBox({ thumbUrl, text, width = "70%", box1Type='imag
           open={open}
           setOpen={setOpen}
           width={width}
-          thumbBox={thumbBox}
-          box1Type={box1Type}
+          onClose={onClose}
           children={children}
         />
       ) : null}
@@ -62,11 +61,10 @@ export default function FancyBox({ thumbUrl, text, width = "70%", box1Type='imag
  * 彈出視窗
  * @param {boolean} setOpen-開關視窗判斷 
  * @param {string} width-視窗寬度 
- * @param {string} box1Type-banner類別(圖、影片)
  * @param {string} children-DOM 
  * @returns 視窗DOM
  */
-function Modal({ setOpen, width, children }) {
+function Modal({ open, setOpen, width, onClose, children }) {
 
   const [trans, setTrans] = useState(true);
 
@@ -87,6 +85,14 @@ function Modal({ setOpen, width, children }) {
     zIndex: 1,
     pointerEvents:'none'
   }
+
+  const handleClose = () => {
+    setTrans(false);
+    setTimeout(() => {
+      setOpen(false);
+    }, 1000);
+    onClose();
+  };
 
 
   useEffect(() => {
@@ -117,12 +123,7 @@ function Modal({ setOpen, width, children }) {
       <div className="content_box" style={{ width: width }}>
         <button
           className="close_btn"
-          onClick={() => {
-            setTrans(false);
-            setTimeout(() => {
-              setOpen(false);
-            }, 1000);
-          }}
+          onClick={handleClose}
         >
           <img src={require("@/img/config/close_icon.svg").default} />
         </button>
