@@ -342,7 +342,7 @@ export default function Life() {
             >
               <img
                 className="map"
-                src={require("../../../img/life/map@2x.png").default}
+                src={require("../../../img/life/map@2x.jpg").default}
               />
 
               {map_list.map((item, index) => {

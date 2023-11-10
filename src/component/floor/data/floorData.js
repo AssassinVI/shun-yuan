@@ -51,7 +51,7 @@ export const sortData = [
     },
     {
         type: "1F",
-        img: require("@/img/floor/webp/1F@2x.webp").default,
+        img: require("@/img/floor/webp/1F_floor@2x.webp").default,
         anchor: [
             
             {

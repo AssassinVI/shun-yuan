@@ -66,7 +66,7 @@ export default function Page() {
             </Link>
             
             <div className='bg'>
-               <h1>DEAIGN</h1>
+               <h1>DESIGN</h1>
             </div>
 
             <div className='slide_box'>

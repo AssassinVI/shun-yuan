@@ -64,12 +64,12 @@ function MenuContent({ open, setOpen }) {
           slide: 1,
         },
         {
-          id: "/construction",
+          id: "/work/s1",
           ch: "順億營造",
           slide: 1,
         },
         {
-          id: "/prospect",
+          id: "/team",
           ch: "設計團隊",
           slide: 1,
         },
@@ -151,7 +151,7 @@ function MenuContent({ open, setOpen }) {
           slide: 5,
         },
         {
-          id: "/method/waterProof",
+          id: "/calculator",
           ch: "房貸試算",
           slide: 5,
         },

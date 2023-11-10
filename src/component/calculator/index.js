@@ -1,24 +1,25 @@
 import React, { useEffect, useRef, useState } from 'react'
 
-const requireWebp = require.context("../../../img/calculator/webp", false, /^\.\/.*\.webp$/);
-const webp = requireWebp.keys().map(requireWebp);
+
 export default function Calculate() {
     const [inputValues, setInputValues] = useState({
-        loanYear: "",
-        totalPrice: "",
-        interestRatio: "",
-        allowancePeriod: "",
-        houseType: "",
-        ping: ""
+        loanYear: "30", //貸款年限
+        totalPrice: "", //總價
+        interestRatio: "2.06", //利率
+        allowancePeriod: "0", //寬限期
+        houseType: "", //戶別
+        ping: "", //權狀坪數
+        loanRatio: "0.75" //貸款成數
     });
     return (
         <section className='calculate'>
+            <img className="logo" src={require("../../../img/config/logo@2x.png").default} />
             <VirtualKeyboard inputValues={inputValues} setInputValues={setInputValues}>
                 <Calculator inputValues={inputValues} setInputValues={setInputValues} />
             </VirtualKeyboard>
 
             <div className="imgBox">
-                <img src={webp[0].default} />
+                <img src={require('@/img/calculator/bg-100.jpg').default} />
             </div>
         </section>
     )
@@ -28,12 +29,13 @@ function Calculator({ onFocus, inputValues, setInputValues }) {
     const [resultValues, setResultValues] = useState({
         deposit: "",
         sign: "",
-        firstFloor: "",
-        eighthFloor: "",
-        sixteenThFloor: "",
-        construction: "",
-        license: "",
-        delivery: "",
+        ProjectPayment:'',
+        //firstFloor: "",
+        //eighthFloor: "",
+        //sixteenThFloor: "",
+        //construction: "",
+        //license: "",
+        //delivery: "",
         ownMoney: "",
         loanMoney: "",
         monthlyCost: "",
@@ -44,22 +46,24 @@ function Calculator({ onFocus, inputValues, setInputValues }) {
 
     const handleClearClick = () => {
         setInputValues({
-            loanYear: '',
+            loanYear: '30',
             totalPrice: '',
-            interestRatio: '',
-            allowancePeriod: '',
+            interestRatio: '2.06',
+            allowancePeriod: '0',
             houseType: "",
-            ping: ""
+            ping: "",
+            loanRatio: "0.75"
         });
         setResultValues({
             deposit: "",
             sign: "",
-            firstFloor: "",
-            eighthFloor: "",
-            sixteenThFloor: "",
-            construction: "",
-            license: "",
-            delivery: "",
+            ProjectPayment:'',
+            //firstFloor: "",
+            //eighthFloor: "",
+            //sixteenThFloor: "",
+            //construction: "",
+            //license: "",
+            //delivery: "",
             ownMoney: "",
             loanMoney: "",
             monthlyCost: "",
@@ -69,6 +73,7 @@ function Calculator({ onFocus, inputValues, setInputValues }) {
     };
     const handleResult = () => {
         const monthRatio = inputValues.interestRatio / 12 / 100;
+        const loanRatio= parseFloat(inputValues.loanRatio);
         //-- 寬限年>0 --
         let loanMonth;
         let periodMoney;
@@ -77,14 +82,14 @@ function Calculator({ onFocus, inputValues, setInputValues }) {
         if ((inputValues.allowancePeriod) > 0) {
             //-- 月數= (貸款年限*12)-(寬限年*12) --
             loanMonth = ((inputValues.loanYear) * 12) - ((inputValues.allowancePeriod) * 12);
-            periodMoney = ((inputValues.totalPrice * 0.75) * monthRatio) * 10000;
+            periodMoney = ((inputValues.totalPrice * loanRatio) * monthRatio) * 10000;
             avgMonthRatio = ((Math.pow((1 + monthRatio), loanMonth)) * monthRatio) / ((Math.pow(1 + monthRatio, loanMonth)) - 1);
         } else {
             //-- 月數= 貸款年限*12 --
             loanMonth = (inputValues.loanYear) * 12;
             avgMonthRatio = ((Math.pow((1 + monthRatio), loanMonth)) * monthRatio) / ((Math.pow(1 + monthRatio, loanMonth)) - 1);
 
-            totalMoney = Math.floor(inputValues.totalPrice * 0.75 * avgMonthRatio * 10000 * loanMonth)
+            totalMoney = Math.floor(inputValues.totalPrice * loanRatio * avgMonthRatio * 10000 * loanMonth)
         }
         let licenseCorrect = 0;
         if (inputValues.totalPrice * 0.05 != Math.floor(inputValues.totalPrice * 0.05)) {
@@ -97,27 +102,28 @@ function Calculator({ onFocus, inputValues, setInputValues }) {
         if (inputValues.totalPrice * 0.02 != Math.floor(inputValues.totalPrice * 0.02)) {
             licenseCorrect = licenseCorrect - (Math.ceil(inputValues.totalPrice * 0.02) - inputValues.totalPrice * 0.02) * 4
         }
-        if (inputValues.totalPrice * 0.75 != Math.floor(inputValues.totalPrice * 0.75)) {
-            licenseCorrect = licenseCorrect + (inputValues.totalPrice * 0.75 - Math.floor(inputValues.totalPrice * 0.75))
+        if (inputValues.totalPrice * loanRatio != Math.floor(inputValues.totalPrice * loanRatio)) {
+            licenseCorrect = licenseCorrect + (inputValues.totalPrice * loanRatio - Math.floor(inputValues.totalPrice * loanRatio))
         }
         const toMoneyStyle = (num) => {
             return num.toLocaleString('zh-TW', { minimumFractionDigits: 0, maximumFractionDigits: 0 })
         }
         setResultValues({
-            deposit: 10,
-            sign: toMoneyStyle(Math.ceil(inputValues.totalPrice * 0.1 - 10)),
-            firstFloor: toMoneyStyle(Math.ceil(inputValues.totalPrice * 0.02)),
-            eighthFloor: toMoneyStyle(Math.ceil(inputValues.totalPrice * 0.02)),
-            sixteenThFloor: toMoneyStyle(Math.ceil(inputValues.totalPrice * 0.02)),
-            construction: toMoneyStyle(Math.ceil(inputValues.totalPrice * 0.02)),
-            license: toMoneyStyle(inputValues.totalPrice * 0.02 + licenseCorrect),
-            delivery: toMoneyStyle(Math.ceil(inputValues.totalPrice * 0.05)),
-            ownMoney: toMoneyStyle(Math.ceil(inputValues.totalPrice * 0.25)),
-            loanMoney: toMoneyStyle(Math.floor((inputValues.totalPrice * 0.75))),
-            monthlyCost: toMoneyStyle(Math.floor(inputValues.totalPrice * 0.75 * avgMonthRatio * 10000)),
-            interestRepayment: toMoneyStyle((totalMoney - inputValues.totalPrice * 0.75 * 10000) / loanMonth),
+            deposit: 30, //訂金
+            sign: toMoneyStyle(Math.ceil(inputValues.totalPrice * 0.1 - 30)), //簽約金
+            ProjectPayment: toMoneyStyle(Math.floor(inputValues.totalPrice * (1-loanRatio-0.1))), //工程期款
+            //firstFloor: toMoneyStyle(Math.ceil(inputValues.totalPrice * 0.02)),
+            //eighthFloor: toMoneyStyle(Math.ceil(inputValues.totalPrice * 0.02)),
+            //sixteenThFloor: toMoneyStyle(Math.ceil(inputValues.totalPrice * 0.02)),
+            //construction: toMoneyStyle(Math.ceil(inputValues.totalPrice * 0.02)),
+            //license: toMoneyStyle(inputValues.totalPrice * 0.02 + licenseCorrect),
+            //delivery: toMoneyStyle(Math.ceil(inputValues.totalPrice * 0.05)), //交屋款
+            ownMoney: toMoneyStyle(Math.floor(inputValues.totalPrice * (1-loanRatio))), //自備款
+            loanMoney: toMoneyStyle(Math.floor((inputValues.totalPrice * loanRatio))) , //貸款
+            monthlyCost: toMoneyStyle(Math.floor(inputValues.totalPrice * loanRatio * avgMonthRatio * 10000)),
+            interestRepayment: toMoneyStyle((totalMoney - inputValues.totalPrice * loanRatio * 10000) / loanMonth),
             allowancePeriodCost: toMoneyStyle(Math.floor(periodMoney)),
-            afterAllowancePeriodCost: toMoneyStyle(Math.floor(inputValues.totalPrice * 0.75 * avgMonthRatio * 10000))
+            afterAllowancePeriodCost: toMoneyStyle(Math.floor(inputValues.totalPrice * loanRatio * avgMonthRatio * 10000))
         });
     };
     const year = new Date().getFullYear();
@@ -126,7 +132,7 @@ function Calculator({ onFocus, inputValues, setInputValues }) {
     return (
         <section className="calculator">
             <div className="tobe">
-                <div className="box">
+                {/* <div className="box">
                     <label>戶別:</label>
                     <input type="text" autoComplete="off" onClick={onFocus} readOnly value={inputValues.houseType} name="houseType" />
                 </div>
@@ -134,22 +140,14 @@ function Calculator({ onFocus, inputValues, setInputValues }) {
                     <label>權狀坪數:</label>
                     <input type="text" autoComplete="off" onClick={onFocus} readOnly value={inputValues.ping} name="ping" />
                     <label>坪</label>
-                </div>
+                </div> */}
             </div>
             <div className="title">
+                <h2 className='chTitle'>房貸試算</h2>
                 <h2>CALCULATION</h2>
             </div>
             <div className="parameters">
-                <div className="box">
-                    <label>
-                        <p>貸款年限</p>
-                        <div className="unitBox">
-                            <input type="text" autoComplete="off" onClick={onFocus} readOnly name="loanYear" value={inputValues.loanYear} />
-                            <span>年</span>
-                        </div>
-
-                    </label>
-                </div>
+                
                 <div className="box">
                     <label>
                         <p>總價</p>
@@ -162,10 +160,18 @@ function Calculator({ onFocus, inputValues, setInputValues }) {
                 </div>
                 <div className="box">
                     <label>
-                        <p>年利率</p>
+                        <p>貸款年限</p>
                         <div className="unitBox">
-                            <input type="text" autoComplete="off" onClick={onFocus} readOnly name="interestRatio" value={inputValues.interestRatio} />
-                            <span>%</span>
+                            {/* <input type="text" autoComplete="off" onClick={onFocus} readOnly name="loanYear" value={inputValues.loanYear} /> */}
+                            <select name="loanYear" id="loanYear" onChange={(e)=>{
+                                setInputValues({...inputValues, loanYear:e.target.value})
+                               
+                            }}>
+                                <option value="20">20年</option>
+                                <option value="30" selected>30年</option>
+                                <option value="40">40年</option>
+                            </select>
+                            {/* <span>年</span> */}
                         </div>
 
                     </label>
@@ -174,12 +180,50 @@ function Calculator({ onFocus, inputValues, setInputValues }) {
                     <label>
                         <p>寬限期</p>
                         <div className="unitBox">
-                            <input type="text" autoComplete="off" onClick={onFocus} readOnly name="allowancePeriod" value={inputValues.allowancePeriod} />
-                            <span>年</span>
+                            {/* <input type="text" autoComplete="off" onClick={onFocus} readOnly name="allowancePeriod" value={inputValues.allowancePeriod} /> */}
+                            <select name="allowancePeriod" id="allowancePeriod" onChange={(e)=>{
+                                setInputValues({...inputValues, allowancePeriod:e.target.value})
+                               
+                            }}>
+                                <option value="0">0年</option>
+                                <option value="1">1年</option>
+                                <option value="2">2年</option>
+                                <option value="3">3年</option>
+                                <option value="4">4年</option>
+                                <option value="5">5年</option>
+                            </select>
+                            {/* <span>年</span> */}
                         </div>
 
                     </label>
                 </div>
+                <div className="box">
+                    <label>
+                        <p>貸款成數</p>
+                        <div className="unitBox">
+                            <select name="loanRatio" id="loanRatio" onChange={(e)=>{
+                                setInputValues({...inputValues, loanRatio:e.target.value})
+                               
+                            }}>
+                                <option value="0.7">70%</option>
+                                <option value="0.75" selected>75%</option>
+                                <option value="0.8">80%</option>
+                            </select>
+                        </div>
+
+                    </label>
+                </div>
+                <div className="box">
+                    <label>
+                        <p>年利率</p>
+                        <div className="unitBox">
+                            <input type="text" autoComplete="off" readOnly name="interestRatio" value={inputValues.interestRatio} />
+                            <span>%</span>
+                        </div>
+
+                    </label>
+                </div>
+                
             </div>
             <div className="button">
                 <div className="calc" onClick={() => {
@@ -192,11 +236,11 @@ function Calculator({ onFocus, inputValues, setInputValues }) {
                 <div className="delete" onClick={handleClearClick}>
                     <p>清除</p>
                 </div>
-                <div className="print" onClick={() => {
+                {/* <div className="print" onClick={() => {
                     window.print()
                 }}>
                     <p>列印</p>
-                </div>
+                </div> */}
             </div>
             <div className="result">
                 <div className="left">
@@ -207,6 +251,9 @@ function Calculator({ onFocus, inputValues, setInputValues }) {
                         <p>簽約金:</p><span>{resultValues.sign}</span><p>萬元</p>
                     </div>
                     <div className="box">
+                        <p>工程期款:</p><span>{resultValues.ProjectPayment}</span><p>萬元</p>
+                    </div>
+                    {/* <div className="box">
                         <p>1樓底板:</p><span>{resultValues.firstFloor}</span><p>萬元</p>
                     </div>
                     <div className="box">
@@ -220,16 +267,17 @@ function Calculator({ onFocus, inputValues, setInputValues }) {
                     </div>
                     <div className="box">
                         <p>使照申請:</p><span>{resultValues.license}</span><p>萬元</p>
-                    </div>
+                    </div> 
                     <div className="box">
                         <p>交屋款:</p><span>{resultValues.delivery}</span><p>萬元</p>
-                    </div>
-                </div>
-                <div className="right">
+                    </div> */}
                     <div className="box">
                         <p>自備款:</p><span>{resultValues.ownMoney}</span><p>萬元</p>
                     </div>
-                    <div className="box">
+                </div>
+                <div className="right">
+                    
+                    <div className="box loanMoney">
                         <p>貸款:</p><span>{resultValues.loanMoney}</span><p>萬元</p>
                     </div>
 
@@ -338,7 +386,7 @@ function VirtualKeyboard({ children, setInputValues, inputValues }) {
         border: "1px solid #ccc",
         cursor: "pointer",
         pointerEvents: "auto",
-        fontSize: "0.8vw",
+        fontSize: "1.3vw",
         color: "#1a1a1a",
         fontWeight: "600",
 
@@ -346,7 +394,7 @@ function VirtualKeyboard({ children, setInputValues, inputValues }) {
     const closeStyle = {
 
         position: "absolute",
-        backgroundColor: "#c3a457",
+        backgroundColor: "#306677",
         width: "100%", height: "1px",
         top: 0,
         right: 0,
@@ -416,7 +464,7 @@ function VirtualKeyboard({ children, setInputValues, inputValues }) {
     });
     return (
         <>
-            <ul className='keyboard' style={{ display: showKyb ? "block" : "none", width: "12vw", position: "absolute", zIndex: "25", padding: "2vw 0.5vw 0.5vw", borderRadius: "15px 15px 0 0", left: `calc(${kybPosition.x} + 2.5vw)`, top: `calc(${kybPosition.y} + 3vw)`, backgroundColor: "#f7f7f7", border: "1px solid #ccc", pointerEvents: "auto" }}>
+            <ul className='keyboard' style={{ display: showKyb ? "block" : "none", width: "17vw", position: "absolute", zIndex: "25", padding: "2.5vw 0.5vw 0.5vw", borderRadius: "15px 15px 0 0", left: `calc(${kybPosition.x} + 2.5vw)`, top: `calc(${kybPosition.y} + 3vw)`, backgroundColor: "#f7f7f7", border: "1px solid #ccc", pointerEvents: "auto" }}>
                 {/* 中文鍵盤 */}
                 <div className="number" style={{ display: !toggleEng ? "flex" : "none", flexWrap: "wrap", width: "100%" }}>
                     {[...Array(9)].map((item, i) => {
@@ -444,7 +492,7 @@ function VirtualKeyboard({ children, setInputValues, inputValues }) {
                     <li style={liStyle} onClick={() => setToggleEng(!toggleEng)}>{toggleEng ? "123" : "ABC"}</li>
                 </div>
                 {/* close area */}
-                <div className="close" style={{ position: "absolute", right: "0.4vw", top: "0.25vw", cursor: "pointer", pointerEvents: "auto", width: "1.5vw", height: "1.5vw" }} onClick={() => {
+                <div className="close" style={{ position: "absolute", right: "0.4vw", top: "0.25vw", cursor: "pointer", pointerEvents: "auto", width: "2vw", height: "2vw" }} onClick={() => {
                     setShowKyb(false)
                 }}>
                     <div className="line1" style={{ ...closeStyle, transform: "rotate(45deg)" }}></div>

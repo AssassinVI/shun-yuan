@@ -162,7 +162,7 @@ export default function Habitability() {
 
     useEffect(()=>{
         let gg = gsap.timeline()
-        gg.fromTo(`.slide_box`, {opacity:0, filter:'blur(15px)'}, {opacity:1, filter:'blur(0px)', duration: 1,})
+        gg.fromTo(`.slide_box`, {opacity:0, }, {opacity:1,  duration: 1,})
     }, [room])
 
 

@@ -14,7 +14,10 @@ import EHome from './component/materials/eHome';
 import Habitability from './component/habitability';
 import Ems from './component/ems';
 import Brand from './component/brand';
+import Team from './component/team';
+import Work from './component/work';
 import AreaCase from './component/areaCase';
+import Calculate from './component/calculator';
 import Layout from './component/layout';
 import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import gsap from 'gsap';
@@ -100,8 +103,11 @@ function Content() {
                 <Route path="/habitability" element={<Habitability />} />
                 <Route path="/ems" element={<Ems />} />
                 <Route path="/brand/*" element={<Brand />} />
+                <Route path="/team" element={<Team />} />
+                <Route path="/work/*" element={<Work />} />
 
                 <Route path="/areaCase" element={<AreaCase />} />
+                <Route path="/calculator" element={<Calculate />} />
                 {/* 
                 <Route path="/urban" element={<Urban />} />
                 <Route path="/calculator" element={<Calculate />} />
