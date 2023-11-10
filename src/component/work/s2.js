@@ -78,7 +78,7 @@ export default function Brand() {
                 <div className='card'>
                     <FancyBox thumbUrl={require("@/img/work/video2-100.jpg").default}>
                        <div className='workFancyBox'>
-                          <video src={require("@/img/work/video02.mp4").default} controls autoPlay muted></video></video>
+                          <video src={require("@/img/work/video02.mp4").default} controls autoPlay muted></video>
                        </div>
                     </FancyBox>
                     <h2>鋼筋彎曲測試</h2>
