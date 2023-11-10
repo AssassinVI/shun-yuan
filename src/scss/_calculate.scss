@@ -80,6 +80,7 @@
                 border-radius: 0;
                 border: none;
                 background-color: #f2f2f2;
+                color: #000;
                 height: pxConvertor(52);
                 width: pxConvertor(217);
                 padding-left: 0.5vw;
@@ -179,9 +180,9 @@
                     content: "交屋款為合約總價的5%";
                     position: absolute;
                     bottom: -70%;
-                    right: 0;
+                    left: 0;
                     font-size: 10px;
-                    color: #898989;
+                    color: #333;
                     letter-spacing: 0.1em;
                 }
             }

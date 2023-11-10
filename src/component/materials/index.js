@@ -94,7 +94,9 @@ export default function Materials() {
                     <img className='logo' src={require("@/img/materials/logo_m_7.svg").default} />
 
                     <div className='thumbBox'>
-                      <img className='img' src={require("@/img/materials/img_m_7.jpg").default} />
+                     <Link to={"/materials/kitchenware"}>
+                       <img className='img' src={require("@/img/materials/img_m_7.jpg").default} />
+                     </Link>
                     </div>
 
                     <div className='b_line'></div>

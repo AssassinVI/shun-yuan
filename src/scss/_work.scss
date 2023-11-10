@@ -102,9 +102,87 @@
             }
         }
     }
+
+    .s2{
+        display: flex;
+        .left{
+            flex: 1 1 65%;
+            position: relative;
+            .imgBox{
+                height: 100%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .thumbBox{
+                position: absolute;
+                bottom: 22.5%;
+                right: 3%;
+                width: 20%;
+            }
+
+            
+        }
+        .right{
+            flex: 1 1 30%;
+            padding-top: 10vw;
+            padding-right: 3vw;
+            text-align: center;
+
+            .title{
+                margin-bottom: 2vw;
+                h2{
+                    font-size: 1.7vw;
+                    font-weight: 600;
+                    letter-spacing: 0.1em;
+                    color: $main_color;
+                }
+                h4{
+                    color: $main_color;
+                }
+            }
+
+            .card{
+                margin-bottom: 2vw;
+                h2{
+                    font-size: 1.5vw;
+                    font-weight: 500;
+                    letter-spacing: 0.1em;
+                    color: $main_color;
+                    margin-top: 0.5vw;
+                }
+                video{
+                    width: 100%;
+                }
+            }
+        }
+    }
     
 }
 
+
+.fancyBox{
+    .workFancyBox{
+        video{
+            width: 100%;
+            height: 100vh;
+            background-color: #000;
+        }
+    }
+
+    .report{
+        width: 100%;
+        img{
+            width: 100%;
+            height: 100vh;
+            object-fit: contain;
+            background-color: #282828;
+        }
+    }
+}
 
 .fancyBox.sp2{
     .content_box{
@@ -146,6 +224,30 @@
                     left: 6vw;
                     top: 9.7vw;
                 }
+            }
+
+        }
+
+        .workFancyBox2{
+            .title{
+                margin: 8vw 0;
+                text-align: center;
+                h2{
+                    font-size: 1.8vw;
+                    font-weight: 600;
+                    letter-spacing: 0.1em;
+                    color: $main_color;
+                }
+            }
+            .paperBox{
+                display: flex;
+                padding: 0 3vw;
+                gap: 1vw;
+                .thumbBox{
+                    flex: 1 1 ;
+                }
+
+                
             }
         }
     }

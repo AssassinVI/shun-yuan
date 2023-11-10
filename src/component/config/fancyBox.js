@@ -62,11 +62,11 @@ function Modal({ setOpen, children }) {
     }, [])
     return ReactDOM.createPortal(
         <div className="fancyBox" style={fancyBoxStyle} onClick={(e) => {
-            e.stopPropagation()
-            setTrans(false);
-            setTimeout(() => {
-                setOpen(false);
-            }, 500)
+            // e.stopPropagation()
+            // setTrans(false);
+            // setTimeout(() => {
+            //     setOpen(false);
+            // }, 500)
 
 
         }}>

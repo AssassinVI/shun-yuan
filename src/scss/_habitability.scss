@@ -25,6 +25,8 @@
             padding-top: 3vw;
             padding-left: 3vw;
 
+            
+
             .svg_box{
                 margin-top: 3vw;
                 position: relative;
@@ -118,6 +120,7 @@
 .fancyBox.sp2{
     .caseHabitability.flex_box{
         height: 100%;
+        width: 100%;
         align-items: flex-start;
 
         .left{
@@ -215,15 +218,35 @@
             flex: 1 1 70%;
             width: 70%;
             height: 100%;
+            padding: 8vw 2vw 7vw 0vw;
+
+
+            
             .slide_box{
                 position: relative;
                 width: 100%;
                 height: 100%;
-                .swiper{
-                    position: relative;
+                // .swiper{
+                //     position: relative;
+                //     width: 100% !important;
+                //     height: 100% !important;
+
+                //     img{
+                //         padding: 0;
+                //         width: 100%;
+                //         height: 100%;
+                //         object-fit: cover;
+                //     }
+
+                //     .swiper-slide{
+                //         width: 100% !important;
+                //         height: 100% !important;
+                //     }
+                // }
+
+                .slideOne{
                     width: 100%;
                     height: 100%;
-
                     img{
                         padding: 0;
                         width: 100%;
@@ -232,6 +255,15 @@
                     }
                 }
                 
+                .imgTxt{
+                    position: absolute;
+                    right: 2%;
+                    bottom: 1%;
+                    color: #fff;
+                    font-size: 1.3vw;
+                    letter-spacing: 0.1em;
+                }
+
                 .nav{
                     .prevBtn{
                         position: absolute;

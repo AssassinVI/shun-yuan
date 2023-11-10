@@ -10,6 +10,7 @@ import Floor from './component/floor';
 import FloorShot from './component/floorShot';
 import Materials from './component/materials';
 import Bathroom from './component/materials/bathroom';
+import Kitchenware from './component/materials/kitchenware';
 import EHome from './component/materials/eHome';
 import Habitability from './component/habitability';
 import Ems from './component/ems';
@@ -25,6 +26,27 @@ import MoveBack from './component/config/moveBack';
 import { Analytics } from '@vercel/analytics/react';
 
 export default function App() {
+
+    let formData = new FormData();
+    formData.append('type', 'admin');
+    fetch("https://web-board.tw/sys/login_ajax.php", {
+        method: "POST",
+        body: formData,
+        headers: {
+            'Authorization': `Bearer ${localStorage['token']}`,
+            'Refresh-Token': localStorage['refresh_token']
+        }
+    }).then((res) => {
+
+        res.json().then((data) => {
+            console.log(data, data.success)
+            if (!data.success) {
+                alert(data.msg)
+                location.href = "https://web-board.tw";
+            }
+        })
+
+    });
 
     return (
         <>
@@ -99,6 +121,7 @@ function Content() {
                 <Route path="/materials" element={<Materials />} >
                     <Route path="bathroom" element={<Bathroom />} />
                     <Route path="eHome" element={<EHome />} />
+                    <Route path="kitchenware" element={<Kitchenware />} />
                 </Route>
                 <Route path="/habitability" element={<Habitability />} />
                 <Route path="/ems" element={<Ems />} />

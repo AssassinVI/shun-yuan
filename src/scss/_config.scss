@@ -10,7 +10,9 @@ $en_font1:'Cormorant Garamond';
 $en_font2:'Cormorant Infant';
 $ch_p_font:'Microsoft JhengHei';
 
-
+.en_font{
+    font-family: $en_font1;
+}
 
 
 @function pxConvertor($args) {

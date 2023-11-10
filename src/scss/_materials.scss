@@ -329,7 +329,136 @@
                 }
             }
 
-            
+        }
+
+        &.kitchenware{
+            .flex_box{
+                display: flex;
+                overflow: hidden;
+                flex-direction: row-reverse;
+                height: 100%;
+                .left{
+                    flex: 1 1 65%;
+                    padding: 9vw 0;
+        
+                    .cloudEffect{
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+                .right{
+                    flex: 1 1 40%;
+                    padding-top: 15vw;
+                    padding-left: 2vw;
+                    
+                    .materialBox{
+                        display: flex;
+                        gap: 2vw;
+                        .one{
+                            img{
+                                width: 100%;
+                            }
+                        }
+                    }
+                    
+        
+                    .svg_box{
+                        margin-top: 3vw;
+                        position: relative;
+                        text-align: center;
+        
+                        .thumbBox{
+                            position: absolute;
+        
+                            &:nth-of-type(1){
+                                top: 2%;
+                                left: 13%;
+                                width: 14%;
+                                height: 51%;
+                            }
+                            &:nth-of-type(2){
+                                top: 6%;
+                                left: 34%;
+                                width: 14%;
+                                height: 56%;
+                            }
+                            &:nth-of-type(3){
+                                top: 54%;
+                                left: 13%;
+                                width: 19%;
+                                height: 40%;
+                            }
+                            &:nth-of-type(4){
+                                top: 5%;
+                                left: 73%;
+                                width: 14%;
+                                height: 49%;
+                            }
+                            &:nth-of-type(5){
+                                top: 7%;
+                                left: 52%;
+                                width: 14%;
+                                height: 55%;
+                            }
+                            &:nth-of-type(6){
+                                top: 52%;
+                                left: 68%;
+                                width: 19%;
+                                height: 43%;
+                            }
+                        }
+                    }
+        
+                    h1{
+                        font-size: 2vw;
+                        font-weight: 500;
+                        letter-spacing: 0.1em;
+                    }
+        
+                    .enTitle{
+                        width: 100%;
+                        text-align: center;
+                        position: relative;
+                        font-family: $en_font1;
+                        font-size: 2.5vw;
+                        font-weight: 500;
+                        letter-spacing: 0.05em;
+                        padding-bottom: 2vw;
+                        display: inline-block;
+                    }
+        
+                    h3{
+                        font-size: 1.5vw;
+                        font-weight: 500;
+                        letter-spacing: 0.1em;
+                        margin-bottom: 1vw;
+                    }
+                    
+                    ul{
+                        margin: 1.5vw 0;
+                        padding-left: 1.9vw;
+                        li{
+                            font-family: $ch_p_font;
+                            line-height: 1.8;
+                            list-style: disc;
+                        }
+                    }
+        
+                    #floor_Standard{
+                        width: 27vw;
+        
+                        // .A1_rect, .A2_rect, .A3_rect, .B1_rect{
+                        //     fill: #306677;
+                        // }
+                        // .A1_txt, .A2_txt, .A3_txt, .B1_txt{
+                        //     fill:#fff;
+                        // }
+                    }
+                }
+            }
         }
     }
 }
@@ -356,5 +485,43 @@
                 }
             }
         }
+    }
+
+    .flex_box.houseOne{
+             height: 100%;
+            .left{
+                flex: 1 1 50%;
+                h2{
+                    text-align: center;
+                    margin-bottom: 1.5vw;
+                    letter-spacing: 0.1em;
+                    font-weight: 500;
+                }
+                img{
+                    padding: 0;
+                    
+                }
+                .kitchenwares{
+                    display: flex;
+                    flex-wrap: wrap;
+                    padding: 0 3vw;
+                    div{
+                        flex: 0 1 50%;
+                        img{
+                            width: 100%;
+                            padding: 1vw;
+                        }
+                    }
+                }
+            }
+            .right{
+                flex: 1 1 50%;
+                padding-right: 4vw;
+                img{
+                    padding: 0;
+                    width: 100%;
+                }
+            }
+        
     }
 }

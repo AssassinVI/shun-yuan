@@ -15,6 +15,9 @@ export default function Habitability() {
 
     const [room, setRoom]=useState('livingRoom');
 
+    const [slide, setSlide]=useState(0);
+
+
     const house_list=[
         {
             'houseName':'A1',
@@ -23,7 +26,8 @@ export default function Habitability() {
                 'livingRoom':{
                     imgTxt:'A1客餐廳3D示意圖',
                     img:[
-                        require("@/img/habitability/A1/A1_livingRoom1.jpg").default
+                        require("@/img/habitability/A1/A1_livingRoom1.jpg").default,
+                        require("@/img/habitability/A1/A1_door1.jpg").default
                     ]
                 },
                 'MasterBedroom':{
@@ -45,12 +49,12 @@ export default function Habitability() {
                         require("@/img/habitability/A1/A1_Bedroom22.jpg").default
                     ]
                 },
-                'door':{
-                    imgTxt:'A1玄關櫃3D示意圖',
-                    img:[
-                        require("@/img/habitability/A1/A1_door1.jpg").default
-                    ]
-                }
+                // 'door':{
+                //     imgTxt:'A1玄關櫃3D示意圖',
+                //     img:[
+                //         require("@/img/habitability/A1/A1_door1.jpg").default
+                //     ]
+                // }
             }
         },
         {
@@ -163,7 +167,15 @@ export default function Habitability() {
     useEffect(()=>{
         let gg = gsap.timeline()
         gg.fromTo(`.slide_box`, {opacity:0, }, {opacity:1,  duration: 1,})
+        setSlide(0)
     }, [room])
+
+
+    //-- 輪播 --
+    useEffect(()=>{
+        let gg = gsap.timeline()
+        gg.fromTo(`.slideOne`, {opacity:0, }, {opacity:1,  duration: 1,})
+    }, [slide])
 
 
     return (
@@ -237,7 +249,7 @@ export default function Habitability() {
                                     </div>
                                     <div className='right'>
                                         <div className='slide_box'>
-                                            <Swiper 
+                                            {/* <Swiper 
                                                 speed={1000}  
                                                 modules={[Navigation]}
                                                 navigation={{
@@ -260,10 +272,27 @@ export default function Habitability() {
                                                    ''
                                                 }
                                                 
-                                            </Swiper>
+                                            </Swiper> */}
+                                            <div className='slideOne'>
+                                                <img src={house.roomList[room].img[slide]} />
+                                                <span className='imgTxt'>{house.roomList[room].imgTxt}</span>
+                                            </div>
+                                           
                                             <div className='nav'>
-                                                <div className='prevBtn'><img src={require('@/img/habitability/slideNav.svg').default} /></div>
-                                                <div className='nextBtn'><img src={require('@/img/habitability/slideNav.svg').default} /></div>
+                                                <div className='prevBtn' style={{display: house.roomList[room].img.length==1 ? 'none':'block'}} onClick={()=>{
+                                                    if(slide!=0){
+                                                        setSlide(slide-1)
+                                                    }
+                                                }}>
+                                                    <img src={require('@/img/habitability/slideNav.svg').default} />
+                                                </div>
+                                                <div className='nextBtn' style={{display: house.roomList[room].img.length==1 ? 'none':'block'}} onClick={()=>{
+                                                    if(slide!=house.roomList[room].img.length-1){
+                                                        setSlide(slide+1)
+                                                    }
+                                                }}>
+                                                    <img src={require('@/img/habitability/slideNav.svg').default} />
+                                                </div>
                                             </div>
                                         </div>
                                         

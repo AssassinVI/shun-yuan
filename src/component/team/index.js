@@ -23,7 +23,7 @@ export default function Exterior() {
         <section className="team" ref={animateRef}>
               <img className='logo' src={require('@/img/config/logo@2x.png').default} alt="" />
               <div className='title'>
-                <h1>TEAM</h1>
+                <h1>PROJECT TEAM</h1>
                 <h2>建築團隊</h2>
               </div>
               <div className='teamBox'>

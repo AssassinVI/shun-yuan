@@ -97,7 +97,7 @@ export default function Brand() {
                             </div>
                         </div>
                     </FancyBox3>
-                    <FancyBox3 text={''} width={'70%'}>
+                    <FancyBox3 text={''} width={'60%'}>
                         <div className='workFancyBox'>
                             <div className='img_box'>
                                 <img src={require("@/img/work/work6.jpg").default} />
@@ -107,7 +107,7 @@ export default function Brand() {
 
                             <h2>總存水彎</h2>
                             <div className='workLine'></div>
-                            <p>來自浴室所有排水孔的毛髮髒污，都集中在總存水彎，設有提籠方便清潔；<br/>另外達成水封作用，水管異味、泡沫不亂竄。</p>
+                            <p>來自浴室所有排水孔的毛髮髒污，都集中在總存水彎，設有提籠方便清潔；另外達成水封作用，水管異味、泡沫不亂竄。</p>
                             
                             </div>
                         </div>
