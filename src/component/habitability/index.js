@@ -24,26 +24,29 @@ export default function Habitability() {
             'houseMap':require('@/img/habitability/A1_map@2x.png').default,
             'roomList':{
                 'livingRoom':{
-                    imgTxt:'A1客餐廳3D示意圖',
+                    imgTxt:'A1客餐廳-3D示意圖',
                     img:[
                         require("@/img/habitability/A1/A1_livingRoom1.jpg").default,
                         require("@/img/habitability/A1/A1_door1.jpg").default
                     ]
                 },
                 'MasterBedroom':{
-                    imgTxt:'A1主臥3D示意圖',
+                    imgTxt:'A1主臥-3D示意圖',
                     img:[
                         require("@/img/habitability/A1/A1_MBedroom1.jpg").default
                     ]
                 },
                 'Bedroom1':{
-                    imgTxt:'A1次臥13D示意圖',
+                    imgTxt:'A1次臥1-3D示意圖',
                     img:[
                         require("@/img/habitability/A1/A1_Bedroom11.jpg").default
                     ]
                 },
                 'Bedroom2':{
-                    imgTxt:'A1次臥23D示意圖',
+                    imgTxt:[
+                        'A1次臥2-3D示意圖',
+                        'A1次臥2(雙人床)-3D示意圖'
+                    ],
                     img:[
                         require("@/img/habitability/A1/A1_Bedroom21.jpg").default,
                         require("@/img/habitability/A1/A1_Bedroom22.jpg").default
@@ -62,25 +65,28 @@ export default function Habitability() {
             'houseMap':require('@/img/habitability/A2_map@2x.png').default,
             'roomList':{
                 'livingRoom':{
-                    imgTxt:'A2客餐廳3D示意圖',
+                    imgTxt:'A2客餐廳-3D示意圖',
                     img:[
                         require("@/img/habitability/A2/livingRoom1.jpg").default
                     ]
                 },
                 'MasterBedroom':{
-                    imgTxt:'A2主臥3D示意圖',
+                    imgTxt:'A2主臥-3D示意圖',
                     img:[
                         require("@/img/habitability/A2/MBedroom1.jpg").default
                     ]
                 },
                 'Bedroom1':{
-                    imgTxt:'A2次臥13D示意圖',
+                    imgTxt:'A2次臥1-3D示意圖',
                     img:[
                         require("@/img/habitability/A2/Bedroom11.jpg").default
                     ]
                 },
                 'Bedroom2':{
-                    imgTxt:'A2次臥23D示意圖',
+                    imgTxt:[
+                        'A2次臥2-3D示意圖',
+                        'A2次臥2(雙人床)-3D示意圖'
+                    ],
                     img:[
                         require("@/img/habitability/A2/Bedroom21.jpg").default,
                         require("@/img/habitability/A2/Bedroom22.jpg").default
@@ -93,25 +99,28 @@ export default function Habitability() {
             'houseMap':require('@/img/habitability/A3_map@2x.png').default,
             'roomList':{
                 'livingRoom':{
-                    imgTxt:'A3客餐廳3D示意圖',
+                    imgTxt:'A3客餐廳-3D示意圖',
                     img:[
                         require("@/img/habitability/A3/livingRoom1.jpg").default
                     ]
                 },
                 'MasterBedroom':{
-                    imgTxt:'A3主臥3D示意圖',
+                    imgTxt:'A3主臥-3D示意圖',
                     img:[
                         require("@/img/habitability/A3/MBedroom1.jpg").default
                     ]
                 },
                 'Bedroom1':{
-                    imgTxt:'A3次臥13D示意圖',
+                    imgTxt:'A3次臥1-3D示意圖',
                     img:[
                         require("@/img/habitability/A3/Bedroom11.jpg").default
                     ]
                 },
                 'Bedroom2':{
-                    imgTxt:'A3次臥23D示意圖',
+                    imgTxt:[
+                        'A3次臥2-3D示意圖',
+                        'A3次臥2(雙人床)-3D示意圖'
+                    ],
                     img:[
                         require("@/img/habitability/A3/Bedroom21.jpg").default,
                         require("@/img/habitability/A3/Bedroom22.jpg").default
@@ -124,25 +133,28 @@ export default function Habitability() {
             'houseMap':require('@/img/habitability/B1_map@2x.png').default,
             'roomList':{
                 'livingRoom':{
-                    imgTxt:'B1客餐廳3D示意圖',
+                    imgTxt:'B1客餐廳-3D示意圖',
                     img:[
                         require("@/img/habitability/B1/livingRoom1.jpg").default
                     ]
                 },
                 'MasterBedroom':{
-                    imgTxt:'B1主臥3D示意圖',
+                    imgTxt:'B1主臥-3D示意圖',
                     img:[
                         require("@/img/habitability/B1/MBedroom1.jpg").default
                     ]
                 },
                 'Bedroom1':{
-                    imgTxt:'B1次臥13D示意圖',
+                    imgTxt:'B1次臥1-3D示意圖',
                     img:[
                         require("@/img/habitability/B1/Bedroom11.jpg").default
                     ]
                 },
                 'Bedroom2':{
-                    imgTxt:'B1次臥23D示意圖',
+                    imgTxt:[
+                        'B1次臥2-3D示意圖',
+                        'B1次臥2(雙人床)-3D示意圖'
+                    ],
                     img:[
                         require("@/img/habitability/B1/Bedroom21.jpg").default,
                         require("@/img/habitability/B1/Bedroom22.jpg").default
@@ -236,7 +248,10 @@ export default function Habitability() {
                                             <div className="s_line"></div>
                                         </div>
                                         <div className={`mapBox ${house.houseName}`}>
-                                            <i className='livingRoom'></i>
+                                            <i className='livingRoom' style={{opacity:room=='livingRoom' ? 1:0}}></i>
+                                            <i className='MasterBedroom' style={{opacity:room=='MasterBedroom' ? 1:0}}></i>
+                                            <i className='Bedroom1' style={{opacity:room=='Bedroom1' ? 1:0}}></i>
+                                            <i className='Bedroom2' style={{opacity:room=='Bedroom2' ? 1:0}}></i>
                                             <img src={house.houseMap} />
                                         </div>
                                         <div className='toolBox'>
@@ -275,7 +290,7 @@ export default function Habitability() {
                                             </Swiper> */}
                                             <div className='slideOne'>
                                                 <img src={house.roomList[room].img[slide]} />
-                                                <span className='imgTxt'>{house.roomList[room].imgTxt}</span>
+                                                <span className='imgTxt'>{Array.isArray(house.roomList[room].imgTxt) ? house.roomList[room].imgTxt[slide] : house.roomList[room].imgTxt}</span>
                                             </div>
                                            
                                             <div className='nav'>

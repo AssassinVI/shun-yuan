@@ -178,16 +178,118 @@
                     position: absolute;
                     background: rgb(201 160 99 / 40%);
                     display: block;
+                    opacity: 0;
+                    transition: all 0.5s;
+
                 }
                 &.A1{
                     .livingRoom{
-                        display: none;
-                        width: 12%;
-                        height: 13%;
-                        bottom: 16%;
-                        right: 9%;
+                        width: 38%;
+                        height: 26%;
+                        bottom: 9%;
+                        right: 14%;
+                    }
+                    .MasterBedroom{
+                        width: 35%;
+                        height: 29%;
+                        top: 19%;
+                        left: 14%;
+                    }
+                    .Bedroom1{
+                        width: 29%;
+                        height: 29%;
+                        top: 13%;
+                        right: 23%;
+                    }
+                    .Bedroom2{
+                        width: 35%;
+                        height: 19%;
+                        bottom: 34%;
+                        left: 14%;
                     }
                 }
+
+                &.A2{
+                    .livingRoom{
+                        width: 25%;
+                        height: 4%;
+                        bottom: 14%;
+                        left: 22%;
+                    }
+                    .MasterBedroom{
+                        width: 33%;
+                        height: 33%;
+                        top: 3%;
+                        right: 7%;
+                    }
+                    .Bedroom1{
+                        width: 29%;
+                        height: 25%;
+                        top: 3%;
+                        right: 40%;
+                    }
+                    .Bedroom2{
+                        width: 21%;
+                        height: 27%;
+                        top: 28%;
+                        left: 31%;
+                    }
+                }
+
+                &.A3{
+                    .livingRoom{
+                        width: 25%;
+                        height: 31%;
+                        bottom: 21%;
+                        right: 3%;
+                    }
+                    .MasterBedroom{
+                        width: 25%;
+                        height: 41%;
+                        top: 38%;
+                        left: 10%;
+                    }
+                    .Bedroom1{
+                        width: 21%;
+                        height: 31%;
+                        top: 48%;
+                        left: 35%;
+                    }
+                    .Bedroom2{
+                        width: 17%;
+                        height: 31%;
+                        top: 48%;
+                        left: 56%;
+                    }
+                }
+
+                &.B1{
+                    .livingRoom{
+                        width: 31%;
+                        height: 35%;
+                        bottom: 24%;
+                        left: 6%;
+                    }
+                    .MasterBedroom{
+                        width: 29%;
+                        height: 30%;
+                        top: 11%;
+                        left: 39%;
+                    }
+                    .Bedroom1{
+                        width: 33%;
+                        height: 25%;
+                        top: 50%;
+                        right: 7%;
+                    }
+                    .Bedroom2{
+                        width: 21%;
+                        height: 26%;
+                        top: 49%;
+                        left: 38%;
+                    }
+                }
+               
                 
             }
 

@@ -88,7 +88,7 @@ export const sortData = [
                 class: "space-1f2",
                 fancyImg: [require("@/img/floor/webp/space-1f2.jpg").default],
                 thumb: require("@/img/life/SVG/point_icon_new.svg").default,
-                title: "疊翠綠廊"
+                title: "香草雅集"
             }, 
            
         ],
