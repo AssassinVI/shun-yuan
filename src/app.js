@@ -27,26 +27,26 @@ import { Analytics } from '@vercel/analytics/react';
 
 export default function App() {
 
-    let formData = new FormData();
-    formData.append('type', 'admin');
-    fetch("https://web-board.tw/sys/login_ajax.php", {
-        method: "POST",
-        body: formData,
-        headers: {
-            'Authorization': `Bearer ${localStorage['token']}`,
-            'Refresh-Token': localStorage['refresh_token']
-        }
-    }).then((res) => {
+    // let formData = new FormData();
+    // formData.append('type', 'admin');
+    // fetch("https://web-board.tw/sys/login_ajax.php", {
+    //     method: "POST",
+    //     body: formData,
+    //     headers: {
+    //         'Authorization': `Bearer ${localStorage['token']}`,
+    //         'Refresh-Token': localStorage['refresh_token']
+    //     }
+    // }).then((res) => {
 
-        res.json().then((data) => {
-            console.log(data, data.success)
-            if (!data.success) {
-                alert(data.msg)
-                location.href = "https://web-board.tw";
-            }
-        })
+    //     res.json().then((data) => {
+    //         console.log(data, data.success)
+    //         if (!data.success) {
+    //             alert(data.msg)
+    //             location.href = "https://web-board.tw";
+    //         }
+    //     })
 
-    });
+    // });
 
     return (
         <>

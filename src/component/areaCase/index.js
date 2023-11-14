@@ -21,10 +21,11 @@ export default function AreaCase() {
 
     return (
         <section className="areaCase" ref={animateRef}>
-            {/* <div class="iframe_div">
+            <div class="iframe_div" style={{width:'100%',height:'100%',position:'relative',overflow:'hidden'}}>
                 <iframe src="https://www.leju.com.tw/page_search_result?oid=La7d1235760ea1e" frameborder="0" style={{width: '100%', height: '108vh', marginTop: '-61px'}}></iframe>
-            </div> */}
-            <img className="logo" src={require("../../../img/config/logo@2x.png").default} />
+            </div>
+
+            {/* <img className="logo" src={require("../../../img/config/logo@2x.png").default} />
             
             <div className='map_box'>
                 <ScaleDrag
@@ -34,7 +35,7 @@ export default function AreaCase() {
                 >
                     <img className="map" src={require("@/img/areaCase/areaCase.jpg").default} />
                 </ScaleDrag>
-            </div>
+            </div> */}
 
         </section>
     )
