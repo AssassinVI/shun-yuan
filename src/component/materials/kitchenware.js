@@ -124,6 +124,7 @@ export default function kitchenware() {
 
             <div className='flex_box'>
                <div className='left'>
+                 <img className='logo' src={require("@/img/materials/kitchenware/logo.svg").default} />
                  <CloudEffect start={true} style={{ height: "100%" }} maskSize={'100%'}>
                      <img src={require("@/img/materials/kitchenware/photo.jpg").default} />
                  </CloudEffect>
@@ -165,7 +166,6 @@ export default function kitchenware() {
                                 <FancyBox3 text={''} width={'90%'} onClose={()=>{setRoom('livingRoom')}} key={`house${index}`}>
                                     <div className={`flex_box houseOne ${house.houseName}`}>
                                         <div className='left'>
-                                           <h2>{house.houseName}平面圖</h2>
                                            <div className='kitchenwares'>
                                               {
                                                 house.kitchenwares.map((kOne)=>{
@@ -179,6 +179,13 @@ export default function kitchenware() {
                                            </div>
                                         </div>
                                         <div className='right'>
+                                            <div className='txtBox'>
+                                              <h2 >{house.houseName}</h2>
+                                              <div>
+                                                <p>廚具配置圖</p>
+                                                <h3 className='en_font'>KITCHEN PLAN</h3>
+                                              </div>
+                                            </div>
                                             <img src={house.kitchenMap} />
                                         </div>
                                     </div>

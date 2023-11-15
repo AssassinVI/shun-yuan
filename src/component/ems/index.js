@@ -33,8 +33,9 @@ export default function Exterior() {
                 <div className='btn_box'>
                   <FancyBox3 text={'優勢比較'} width={'90%'}>
                     <div className="all_box ems_page1">
-                        <div className='box1' >
+                        <div className='box1' style={{position:'relative'}}>
                            <img src={require('@/img/ems/ems_img1@2x.jpg').default} alt="" />
+                           <span style={{position: 'absolute', bottom: '1vw', right: '2vw', letterSpacing: '0.1em', fontSize: '1vw', zIndex: 1, color: '#fff'}}>情境示意圖</span>
                         </div>
                         <div className='box2'>
                            <h2 className='enTitle'>BEFORE&AFTER</h2>
@@ -46,8 +47,9 @@ export default function Exterior() {
                   </FancyBox3>
                   <FancyBox3 text={'規劃流程'} width={'90%'}>
                     <div className="all_box ems_page2">
-                        <div className='box1' >
+                        <div className='box1' style={{position:'relative'}}>
                            <img src={require('@/img/ems/ems_img2@2x.jpg').default} alt="" />
+                           <span style={{position: 'absolute', bottom: '1vw', right: '2vw', letterSpacing: '0.1em', fontSize: '1vw', zIndex: 1, color: '#fff'}}>情境示意圖</span>
                         </div>
                         <div className='box2'>
                            <img src={require('@/img/ems/ems_txt2.svg').default} alt="" />
@@ -58,6 +60,8 @@ export default function Exterior() {
                 </div>
               </div>
               <img className='bg' src={require('@/img/ems/EMS_bg@2x.jpg').default} alt="" />
+
+              <span style={{position: 'absolute', bottom: '1vw', right: '2vw', letterSpacing: '0.1em', fontSize: '1vw', zIndex: 1, color: '#fff'}}>情境示意圖</span>
         </section>
     )
 }

@@ -37,15 +37,15 @@ export default function Habitability() {
                     ]
                 },
                 'Bedroom1':{
-                    imgTxt:'A1次臥1-3D示意圖',
+                    imgTxt:'A1次臥一-3D示意圖',
                     img:[
                         require("@/img/habitability/A1/A1_Bedroom11.jpg").default
                     ]
                 },
                 'Bedroom2':{
                     imgTxt:[
-                        'A1次臥2-3D示意圖',
-                        'A1次臥2(雙人床)-3D示意圖'
+                        'A1次臥二-3D示意圖',
+                        'A1次臥二(雙人床)-3D示意圖'
                     ],
                     img:[
                         require("@/img/habitability/A1/A1_Bedroom21.jpg").default,
@@ -77,15 +77,15 @@ export default function Habitability() {
                     ]
                 },
                 'Bedroom1':{
-                    imgTxt:'A2次臥1-3D示意圖',
+                    imgTxt:'A2次臥一-3D示意圖',
                     img:[
                         require("@/img/habitability/A2/Bedroom11.jpg").default
                     ]
                 },
                 'Bedroom2':{
                     imgTxt:[
-                        'A2次臥2-3D示意圖',
-                        'A2次臥2(雙人床)-3D示意圖'
+                        'A2次臥二-3D示意圖',
+                        'A2次臥二(雙人床)-3D示意圖'
                     ],
                     img:[
                         require("@/img/habitability/A2/Bedroom21.jpg").default,
@@ -111,15 +111,15 @@ export default function Habitability() {
                     ]
                 },
                 'Bedroom1':{
-                    imgTxt:'A3次臥1-3D示意圖',
+                    imgTxt:'A3次臥一-3D示意圖',
                     img:[
                         require("@/img/habitability/A3/Bedroom11.jpg").default
                     ]
                 },
                 'Bedroom2':{
                     imgTxt:[
-                        'A3次臥2-3D示意圖',
-                        'A3次臥2(雙人床)-3D示意圖'
+                        'A3次臥二-3D示意圖',
+                        'A3次臥二(雙人床)-3D示意圖'
                     ],
                     img:[
                         require("@/img/habitability/A3/Bedroom21.jpg").default,
@@ -145,15 +145,15 @@ export default function Habitability() {
                     ]
                 },
                 'Bedroom1':{
-                    imgTxt:'B1次臥1-3D示意圖',
+                    imgTxt:'B1次臥一-3D示意圖',
                     img:[
                         require("@/img/habitability/B1/Bedroom11.jpg").default
                     ]
                 },
                 'Bedroom2':{
                     imgTxt:[
-                        'B1次臥2-3D示意圖',
-                        'B1次臥2(雙人床)-3D示意圖'
+                        'B1次臥二-3D示意圖',
+                        'B1次臥二(雙人床)-3D示意圖'
                     ],
                     img:[
                         require("@/img/habitability/B1/Bedroom21.jpg").default,
@@ -194,10 +194,11 @@ export default function Habitability() {
         <section className="habitability" ref={animateRef}>
             <img className="logo" src={require("../../../img/config/logo@2x.png").default} />
             <div className='flex_box'>
-               <div className='left'>
+               <div className='left' style={{position:'relative'}}>
                  <CloudEffect start={true} style={{ height: "100%" }} maskSize={'122%'}>
                      <img src={require("@/img/habitability/banner.jpg").default} />
                  </CloudEffect>
+                 <span style={{position: 'absolute', bottom: '1vw', left: '2vw', letterSpacing: '0.1em', fontSize: '1vw', zIndex: 1, color: '#333'}}>情境示意圖</span>
                </div>
                <div className='right'>
                  <h2 className='enTitle'>COMFORT LIVING SOLUTION</h2>
@@ -207,7 +208,7 @@ export default function Habitability() {
                     <li>全室天花板+崁燈</li>
                     <li>系統櫃</li>
                     <li>主浴鏡櫃</li>
-                    <li>客浴鏡櫃</li>
+                    <li>客浴浴櫃</li>
                  </ul>
 
                    <div className='svg_box'>
@@ -257,8 +258,8 @@ export default function Habitability() {
                                         <div className='toolBox'>
                                             <button type='button' className={room=='livingRoom' ? 'active':''} onClick={()=>{setRoom('livingRoom')}}>客餐廳</button>
                                             <button type='button' className={room=='MasterBedroom' ? 'active':''} onClick={()=>{setRoom('MasterBedroom')}}>主臥</button>
-                                            <button type='button' className={room=='Bedroom1' ? 'active':''} onClick={()=>{setRoom('Bedroom1')}}>臥室1</button>
-                                            <button type='button' className={room=='Bedroom2' ? 'active':''} onClick={()=>{setRoom('Bedroom2')}}>臥室2</button>
+                                            <button type='button' className={room=='Bedroom1' ? 'active':''} onClick={()=>{setRoom('Bedroom1')}}>臥室一</button>
+                                            <button type='button' className={room=='Bedroom2' ? 'active':''} onClick={()=>{setRoom('Bedroom2')}}>臥室二</button>
                                             <button type='button' className={room=='door' ? 'active':''} onClick={()=>{setRoom('door')}} style={{display: house.roomList.door==undefined ? 'none':'block'}}>玄關櫃</button>
                                         </div>
                                     </div>

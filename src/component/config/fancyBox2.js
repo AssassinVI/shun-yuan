@@ -114,13 +114,13 @@ function Modal({ setOpen, width, thumbBox, box1Url, box1Type, children }) {
       thumbBox_content.current.style.left=`${thumbBoxRect.left}px`;
       thumbBox_content.current.style.top=`${thumbBoxRect.top}px`;
 
-      gg.to(".fancyBox", { opacity:1, duration: 0.5})
+      gg.to(".fancyBox", { opacity:1, duration: 0.3})
         .to(".fancyBox .thumbBox_content", 
         { width: box1Rect.width, 
           height: box1Rect.height, 
           left: box1Rect.left, 
           top: box1Rect.top, 
-          duration: 0.8
+          duration: 0.7
         }, '>-=0.2')
         .to(".fancyBox .content_box", {opacity:1, duration: 0.5}, '>-=0.1')
         .from(".fancyBox .content_box .close_btn", {x:'-7vw', duration: 0.3}, '<+=0.1')
@@ -164,7 +164,11 @@ function Modal({ setOpen, width, thumbBox, box1Url, box1Type, children }) {
         <div className="all_box">
           <div className='box1' ref={box1_content}>
             {
-              box1Type=='image' ? <img src={box1Url} /> : <video controls src={box1Url}></video>
+              box1Type=='image' ? 
+              <div style={{position:'relative'}}>
+                <img src={box1Url} />
+                <span style={{position: 'absolute', bottom: '1vw', right: '2vw', letterSpacing: '0.1em', fontSize: '1vw', zIndex: 1, color: '#fff'}}>情境示意圖</span>
+              </div> : <video controls src={box1Url}></video>
             }
           </div>
           <div className='box2'>

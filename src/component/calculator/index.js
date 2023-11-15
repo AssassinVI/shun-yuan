@@ -20,6 +20,7 @@ export default function Calculate() {
 
             <div className="imgBox">
                 <img src={require('@/img/calculator/bg-100.jpg').default} />
+                <span style={{position: 'absolute', bottom: '1vw', right: '2vw', letterSpacing: '0.1em', fontSize: '1vw', zIndex: 1, color: '#fff'}}>情境示意圖</span>
             </div>
         </section>
     )

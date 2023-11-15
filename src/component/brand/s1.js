@@ -30,6 +30,14 @@ export default function Brand() {
                     <img className="cloud1" src={require('../../../img/menu/menu_cloud@2x.webp').default} />
                     <img className="cloud2" src={require('../../../img/menu/menu_cloud@2x.webp').default} />
                 </div>
+                <span style={{position: 'absolute',
+                    bottom: '1vw',
+                    right: '2vw',
+                    letterSpacing: '0.1em',
+                    fontSize: '1vw',
+                    zIndex: 1,
+                    color: '#fff'}}>
+                情境示意圖</span>
             </div>
         </section>
     )

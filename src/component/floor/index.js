@@ -29,7 +29,7 @@ export default function Floor() {
         <div className="title_box">
           <h1>{floor}</h1>
           <div>
-            <p>平面配置圖</p>
+            <p>{floor=='3~11F' ? '標準層':'平面配置圖'}</p>
             <h2>FLOOR PLAN</h2>
           </div>
         </div>

@@ -79,7 +79,7 @@ function Modal({ setOpen, children }) {
 
         }}>
             {children}
-            <div className="close" style={{ position: "absolute", right: "4vw", top: "2vw", cursor: "pointer", width: "3vw", height: "3vw", zIndex: 10 }} onClick={() => {
+            <div className="close" style={{ position: "absolute", right: "4vw", top: "2vw", cursor: "pointer", width: "5vw", height: "5vw", zIndex: 10 }} onClick={() => {
                 setTrans(false);
                 setTimeout(() => {
                     setOpen(false);

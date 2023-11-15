@@ -283,7 +283,7 @@ export default function Life() {
                     return (
                         <div className='wrapper' style={{ position: "absolute", left: 0, top: 0, width: "100%", height: "100%", transition: 'opacity 0.5s', opacity: slide == innerI ? 1 : 0 }}>
                             <img src={itemInner} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-                            <p style={{ position: "absolute", right: "1.5vw", bottom: "1vw", color: "#fff", fontSize: "0.8vw", letterSpacing: "0.1em", filter: "drop-shadow(0 0 3px #000)" }}>{data[i].text}</p>
+                            <p style={{ position: "absolute", right: "1.5vw", bottom: "1vw", color: "#fff", fontSize: "1vw", letterSpacing: "0.1em", filter: "drop-shadow(0 0 3px #000)" }}>{data[i].text}</p>
                         </div>
                     )
 

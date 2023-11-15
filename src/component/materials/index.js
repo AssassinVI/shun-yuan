@@ -12,7 +12,7 @@ export default function Materials() {
             let gg = gsap.timeline({ delay: 0.6 })
             gg.from(".txt_box h2, .txt_box p", {x: -20, opacity:0, filter:'blur(15px)', stagger:0.3, duration: 1.5,})
               .from(".img_box .b_line", {width: '0%', height: '0%', stagger:0.15, duration: 1,}, '<+=0.5')
-              .from(".img_box .thumbBox", { opacity:0, filter:'brightness(3)', stagger:0.2, duration: 1,}, '<+=1')
+              .from(".img_box .thumbBox", { opacity:0, filter:'brightness(3)', stagger:0.15, duration: 1,}, '<+=0.5')
               .from(".img_box .logo", {x: -20, opacity:0, filter:'blur(15px)', duration: 1,}, '<+=1')
               
         }, [animateRef])
@@ -36,7 +36,10 @@ export default function Materials() {
                     <img className='logo' src={require("@/img/materials/logo_m_1.svg").default} />
                     <FancyBox2 thumbUrl={require("@/img/materials/img_m_1.jpg").default}>
                         <div className='flex_box'>
-                            <div className='left'><img src={require("@/img/materials/txt1_1@2x.png").default} /></div>
+                            <div className='left'>
+                              <img src={require("@/img/materials/txt1_1@2x.png").default} />
+                              
+                            </div>
                             <div className='right'><img src={require("@/img/materials/txt1_2.svg").default} /></div>
                         </div>
                     </FancyBox2>
@@ -54,7 +57,10 @@ export default function Materials() {
                     <img className='logo' src={require("@/img/materials/logo_m_3.svg").default} />
                     <FancyBox2 thumbUrl={require("@/img/materials/img_m_3.jpg").default}>
                         <div className='flex_box'>
-                            <div className='left'><img src={require("@/img/materials/txt3_1@2x.webp").default} /></div>
+                            <div className='left'>
+                              <img src={require("@/img/materials/txt3_1@2x.webp").default} />
+                              
+                            </div>
                             <div className='right'><img src={require("@/img/materials/txt3_2@2x.png").default} style={{padding: '4vw 4vw 4vw 0vw'}} /></div>
                         </div>
                     </FancyBox2>
@@ -65,7 +71,10 @@ export default function Materials() {
                     <img className='logo' src={require("@/img/materials/logo_m_4.svg").default} />
                     <FancyBox2 thumbUrl={require("@/img/materials/img_m_4.jpg").default}>
                         <div className='flex_box'>
-                            <div className='left' style={{flex:'1 1 35%'}}><img src={require("@/img/materials/txt4_1@2x.png").default} style={{padding:'9vw 4vw'}} /></div>
+                            <div className='left' style={{flex:'1 1 35%'}}>
+                              <img src={require("@/img/materials/txt4_1@2x.png").default} style={{padding:'9vw 4vw'}} />
+                              
+                            </div>
                             <div className='right'><img src={require("@/img/materials/txt4_2@2x.png").default} /></div>
                         </div>
                     </FancyBox2>
@@ -74,7 +83,10 @@ export default function Materials() {
                     <img className='logo' src={require("@/img/materials/logo_m_5.svg").default} />
                     <FancyBox2 thumbUrl={require("@/img/materials/img_m_5.jpg").default}>
                         <div className='flex_box'>
-                            <div className='left'><img src={require("@/img/materials/txt5_1@2x.png").default} style={{padding: '8vw 4vw'}} /></div>
+                            <div className='left'>
+                              <img src={require("@/img/materials/txt5_1@2x.png").default} style={{padding: '8vw 4vw'}} />
+                              
+                            </div>
                             <div className='right'><img src={require("@/img/materials/txt5_2@2x.png").default} /></div>
                         </div>
                     </FancyBox2>

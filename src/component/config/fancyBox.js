@@ -49,7 +49,7 @@ function Modal({ setOpen, children }) {
     const closeStyle = {
 
         position: "absolute",
-        backgroundColor: "#306374",
+        backgroundColor: "#ffffff",
         width: "80%", height: "2px",
         top: 0,
         right: 0,
@@ -71,7 +71,7 @@ function Modal({ setOpen, children }) {
 
         }}>
             {children}
-            <div className="close" style={{ position: "absolute", right: "4vw", top: "2vw", cursor: "pointer", width: "3vw", height: "3vw", zIndex: 10 }} onClick={() => {
+            <div className="close" style={{ position: "absolute", right: "4vw", top: "2vw", cursor: "pointer", width: "5vw", height: "5vw", zIndex: 10, backgroundColor: 'rgb(48 99 116 / 50%)' }} onClick={() => {
                 setTrans(false);
                 setTimeout(() => {
                     setOpen(false);

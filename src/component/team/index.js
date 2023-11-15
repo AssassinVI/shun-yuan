@@ -48,6 +48,7 @@ export default function Exterior() {
                     <div className='flex_box teamFancyBox'>
                       <div className='left'>
                         <img src={require('@/img/team/img2-100.jpg').default} alt="" />
+                        <span className='img_txt'>情境示意圖</span>
                       </div>
                       <div className='right'>
                         <img src={require('@/img/team/txt2@2x.png').default} alt="" style={{padding:'0 2vw'}} />
@@ -62,6 +63,7 @@ export default function Exterior() {
                     <div className='flex_box teamFancyBox'>
                       <div className='left'>
                         <img src={require('@/img/team/img3-100.jpg').default} alt="" />
+                        <span className='img_txt'>情境示意圖</span>
                       </div>
                       <div className='right'>
                         <img src={require('@/img/team/txt3@2x.png').default} alt="" style={{padding:'0 2vw'}} />
@@ -76,6 +78,7 @@ export default function Exterior() {
                     <div className='flex_box teamFancyBox'>
                       <div className='left'>
                         <img src={require('@/img/team/img4-100.jpg').default} alt="" />
+                        <span className='img_txt'>作品圖</span>
                       </div>
                       <div className='right'>
                         <img src={require('@/img/team/txt4@2x.png').default} alt="" style={{padding:'0 2vw'}} />

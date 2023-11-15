@@ -79,6 +79,15 @@ export default function Exterior() {
                      <img src={require(`@/img/exterior/${dayAndNight}.jpg`).default} />
                    </CloudEffect>
                      <img className='next_house' style={{opacity: nextHouseShow ? 1 : 0}} src={require(`@/img/exterior/${NextdayAndNight}.jpg`).default} />
+
+                     <span style={{position: 'absolute',
+                        bottom: '1vw',
+                        right: '2vw',
+                        letterSpacing: '0.1em',
+                        fontSize: '1vw',
+                        zIndex: 1,
+                        color: '#fff'}}>
+                    3D外觀示意圖</span>
                 </div>
             </div>
         </section>
