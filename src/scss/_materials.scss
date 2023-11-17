@@ -62,18 +62,50 @@
                 position: absolute;
                 background-color: rgba(0, 0, 0, 0.15);
             }
+            
             .logo{
                 position: absolute;
-                top: auto;
-                left: auto;
-                bottom: 3%;
-                right: 5%;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                top: 0;
+                margin: auto;
                 width: auto;
                 height: 8%;
                 z-index: 1;
+                pointer-events: none;
             }
+
+            &:nth-of-type(1) .logo{
+                height: 12%;
+            }
+            &:nth-of-type(2) .logo{
+                height: 11%;
+            }
+            &:nth-of-type(3) .logo{
+                height: 10%;
+            }
+            &:nth-of-type(4) .logo{
+                height: 18%;
+            }
+            &:nth-of-type(5) .logo{
+                height: 14%;
+            }
+            &:nth-of-type(6) .logo{
+                height: 11%;
+            }
+            &:nth-of-type(7) .logo{
+                height: 14%;
+            }
+            &:nth-of-type(8) .logo{
+                height: 18%;
+            }
+            &:nth-of-type(9) .logo{
+                height: 8%;
+            }
+
             .thumbBox{
-                filter: brightness(1);
+                filter: brightness(0.7);
                 height: 100%;
             }
         }
