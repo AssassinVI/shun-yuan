@@ -125,7 +125,7 @@ export default function kitchenware() {
             <div className='flex_box'>
                <div className='left'>
                  <img className='logo' src={require("@/img/materials/kitchenware/logo.svg").default} />
-                 <CloudEffect start={true} style={{ height: "100%" }} maskSize={'100%'}>
+                 <CloudEffect start={true} style={{ height: "100%", width: '110%' }} maskSize={'100%'}>
                      <img src={require("@/img/materials/kitchenware/photo.jpg").default} />
                  </CloudEffect>
                </div>
@@ -134,6 +134,7 @@ export default function kitchenware() {
                  <div className='materialBox'>
                    <div className='one'><img src={require("@/img/materials/kitchenware/material1.png").default} alt="" /></div>
                    <div className='one'><img src={require("@/img/materials/kitchenware/material2.png").default} alt="" /></div>
+                   <div className='one'><img src={require("@/img/materials/kitchenware/material4.png").default} alt="" /></div>
                    <div className='one'><img src={require("@/img/materials/kitchenware/material3.png").default} alt="" /></div>
                  </div>
 

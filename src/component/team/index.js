@@ -77,7 +77,7 @@ export default function Exterior() {
                    <FancyBox3 thumbUrl={require('@/img/team/team4.webp').default} width={'90%'}>
                     <div className='flex_box teamFancyBox'>
                       <div className='left'>
-                        <img src={require('@/img/team/img4-100.jpg').default} alt="" />
+                        <img src={require('@/img/team/img4-100NEW.jpg').default} alt="" />
                         <span className='img_txt'>作品圖</span>
                       </div>
                       <div className='right'>

@@ -43,6 +43,7 @@ export default function Brand() {
                 require('@/img/brand/case41.jpg').default,
                 require('@/img/brand/case42.jpg').default, 
                 require('@/img/brand/case43.jpg').default, 
+                require('@/img/brand/case44.jpg').default, 
             ],
             text: "舜元知了",
         },

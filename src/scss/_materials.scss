@@ -388,18 +388,18 @@
                             height: 100%;
                             object-fit: cover;
                             position: relative;
-                            right: 4vw;
+                            right: 5vw;
                         }
                     }
                 }
                 .right{
-                    flex: 1 1 40%;
+                    flex: 1 1 44%;
                     padding-top: 15vw;
                     padding-left: 2vw;
                     
                     .materialBox{
                         display: flex;
-                        gap: 2vw;
+                        gap: 1vw;
                         .one{
                             img{
                                 width: 100%;
@@ -418,37 +418,37 @@
         
                             &:nth-of-type(1){
                                 top: 2%;
-                                left: 13%;
+                                left: 15%;
                                 width: 14%;
                                 height: 51%;
                             }
                             &:nth-of-type(2){
                                 top: 6%;
-                                left: 34%;
+                                left: 35%;
                                 width: 14%;
                                 height: 56%;
                             }
                             &:nth-of-type(3){
                                 top: 54%;
-                                left: 13%;
+                                left: 15%;
                                 width: 19%;
                                 height: 40%;
                             }
                             &:nth-of-type(4){
                                 top: 5%;
-                                left: 73%;
+                                left: 71%;
                                 width: 14%;
                                 height: 49%;
                             }
                             &:nth-of-type(5){
                                 top: 7%;
-                                left: 52%;
+                                left: 51%;
                                 width: 14%;
                                 height: 55%;
                             }
                             &:nth-of-type(6){
                                 top: 52%;
-                                left: 68%;
+                                left: 66%;
                                 width: 19%;
                                 height: 43%;
                             }

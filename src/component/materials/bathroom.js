@@ -109,7 +109,7 @@ export default function Page() {
                              <Close_svg line_style={slide_svg} />
                            </i>
                         </div>
-                        <h2>ALFA DIVERTA下崁盆</h2>
+                        <h2>ALFA DIVERTA下嵌盆</h2>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className='banner_box'>
@@ -160,7 +160,7 @@ export default function Page() {
 
             <div className='slide_menu'>
               <button className='menu_btn' type='button' onClick={() => setSlideNum(0)}>全自動電腦馬桶</button>
-              <button className='menu_btn' type='button' onClick={() => setSlideNum(1)}>下崁盆</button>
+              <button className='menu_btn' type='button' onClick={() => setSlideNum(1)}>下嵌盆</button>
               <button className='menu_btn' type='button' onClick={() => setSlideNum(2)}>一體式面盆</button>
               <button className='menu_btn' type='button' onClick={() => setSlideNum(3)}>淋浴龍頭</button>
               <button className='menu_btn' type='button' onClick={() => setSlideNum(4)}>單槍龍頭</button>

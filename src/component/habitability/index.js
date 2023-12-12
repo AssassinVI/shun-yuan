@@ -37,15 +37,15 @@ export default function Habitability() {
                     ]
                 },
                 'Bedroom1':{
-                    imgTxt:'A1次臥一-3D示意圖',
+                    imgTxt:'A1臥室-3D示意圖',
                     img:[
                         require("@/img/habitability/A1/A1_Bedroom11.jpg").default
                     ]
                 },
                 'Bedroom2':{
                     imgTxt:[
-                        'A1次臥二-3D示意圖',
-                        'A1次臥二(雙人床)-3D示意圖'
+                        'A1臥室-3D示意圖',
+                        'A1臥室(雙人床)-3D示意圖'
                     ],
                     img:[
                         require("@/img/habitability/A1/A1_Bedroom21.jpg").default,
@@ -77,15 +77,15 @@ export default function Habitability() {
                     ]
                 },
                 'Bedroom1':{
-                    imgTxt:'A2次臥一-3D示意圖',
+                    imgTxt:'A2臥室-3D示意圖',
                     img:[
                         require("@/img/habitability/A2/Bedroom11.jpg").default
                     ]
                 },
                 'Bedroom2':{
                     imgTxt:[
-                        'A2次臥二-3D示意圖',
-                        'A2次臥二(雙人床)-3D示意圖'
+                        'A2臥室-3D示意圖',
+                        'A2臥室(雙人床)-3D示意圖'
                     ],
                     img:[
                         require("@/img/habitability/A2/Bedroom21.jpg").default,
@@ -111,15 +111,15 @@ export default function Habitability() {
                     ]
                 },
                 'Bedroom1':{
-                    imgTxt:'A3次臥一-3D示意圖',
+                    imgTxt:'A3臥室-3D示意圖',
                     img:[
                         require("@/img/habitability/A3/Bedroom11.jpg").default
                     ]
                 },
                 'Bedroom2':{
                     imgTxt:[
-                        'A3次臥二-3D示意圖',
-                        'A3次臥二(雙人床)-3D示意圖'
+                        'A3臥室-3D示意圖',
+                        'A3臥室(雙人床)-3D示意圖'
                     ],
                     img:[
                         require("@/img/habitability/A3/Bedroom21.jpg").default,
@@ -145,15 +145,15 @@ export default function Habitability() {
                     ]
                 },
                 'Bedroom1':{
-                    imgTxt:'B1次臥一-3D示意圖',
+                    imgTxt:'B1臥室-3D示意圖',
                     img:[
                         require("@/img/habitability/B1/Bedroom11.jpg").default
                     ]
                 },
                 'Bedroom2':{
                     imgTxt:[
-                        'B1次臥二-3D示意圖',
-                        'B1次臥二(雙人床)-3D示意圖'
+                        'B1臥室-3D示意圖',
+                        'B1臥室(雙人床)-3D示意圖'
                     ],
                     img:[
                         require("@/img/habitability/B1/Bedroom21.jpg").default,
@@ -258,8 +258,8 @@ export default function Habitability() {
                                         <div className='toolBox'>
                                             <button type='button' className={room=='livingRoom' ? 'active':''} onClick={()=>{setRoom('livingRoom')}}>客餐廳</button>
                                             <button type='button' className={room=='MasterBedroom' ? 'active':''} onClick={()=>{setRoom('MasterBedroom')}}>主臥</button>
-                                            <button type='button' className={room=='Bedroom1' ? 'active':''} onClick={()=>{setRoom('Bedroom1')}}>臥室一</button>
-                                            <button type='button' className={room=='Bedroom2' ? 'active':''} onClick={()=>{setRoom('Bedroom2')}}>臥室二</button>
+                                            <button type='button' className={room=='Bedroom1' ? 'active':''} onClick={()=>{setRoom('Bedroom1')}}>臥室</button>
+                                            <button type='button' className={room=='Bedroom2' ? 'active':''} onClick={()=>{setRoom('Bedroom2')}}>臥室</button>
                                             <button type='button' className={room=='door' ? 'active':''} onClick={()=>{setRoom('door')}} style={{display: house.roomList.door==undefined ? 'none':'block'}}>玄關櫃</button>
                                         </div>
                                     </div>

@@ -47,7 +47,16 @@ export const sortData = [
     },
     {
         type: "B1",
-        img: require("@/img/floor/webp/B1_f.webp").default
+        img: require("@/img/floor/webp/B1_f.webp").default,
+        anchor: [
+            
+            {
+                class: "B1_door",
+                fancyImg: [require("@/img/floor/webp/B1_door.jpg").default],
+                thumb: require("@/img/life/SVG/point_icon_new.svg").default,
+                title: "第二門廳"
+            },
+        ],
     },
     {
         type: "1F",

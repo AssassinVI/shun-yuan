@@ -49,7 +49,7 @@ export default function Materials() {
                     <img className='logo' src={require("@/img/materials/logo_m_2.svg").default} />
                     <FancyBox2 thumbUrl={require("@/img/materials/img_m_2.jpg").default}>
                         <div className='flex_box'>
-                            <div className='left'><img src={require("@/img/materials/txt2_1@2x.png").default} style={{padding:'9vw'}} /></div>
+                            <div className='left'><img src={require("@/img/materials/txt2_1@2x.png").default} style={{padding:'5vw 2vw'}} /></div>
                         </div>
                     </FancyBox2>
                   </div>
