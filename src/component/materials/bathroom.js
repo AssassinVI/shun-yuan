@@ -101,7 +101,7 @@ export default function Page() {
                         <div className='banner_box'>
                           <FancyBox2 className='banner' thumbUrl={require('@/img/materials/bathroom/bathroom2@2x.jpg').default}>
                             <div className='flex_box'>
-                                <div className='left'><img style={{padding:'9vw 4vw'}} src={require("@/img/materials/bathroom/txt2_1@2x.png").default} /></div>
+                                <div className='left'><img style={{padding:'9vw 2vw'}} src={require("@/img/materials/bathroom/txt2_1@2x.png").default} /></div>
                                 <div className='right'><img style={{padding:'2vw'}} src={require("@/img/materials/bathroom/txt2_2@2x.png").default} /></div>
                             </div>
                           </FancyBox2>

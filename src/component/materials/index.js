@@ -96,7 +96,7 @@ export default function Materials() {
                     <img className='logo' src={require("@/img/materials/logo_m_6.svg").default} />
                     <FancyBox2 thumbUrl={require("@/img/materials/img_m_6.jpg").default} width={'80%'}>
                         <div className='flex_box'>
-                            <div className='left' style={{flex:'1 1 43%'}}><img src={require("@/img/materials/txt6_1@2x.png").default} style={{padding:'4vw 0'}} /></div>
+                            <div className='left' style={{flex:'1 1 43%'}}><img src={require("@/img/materials/txt6_1@2x.png").default} style={{padding:'3vw 0'}} /></div>
                             <div className='right' style={{flex:'1 1 40%'}}><img src={require("@/img/materials/txt6_2@2x.png").default} style={{padding:'3vw 3.5vw'}} /></div>
                         </div>
                     </FancyBox2>

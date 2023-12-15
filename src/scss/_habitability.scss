@@ -184,8 +184,8 @@
                 }
                 &.A1{
                     .livingRoom{
-                        width: 38%;
-                        height: 26%;
+                        width: 72%;
+                        height: 25%;
                         bottom: 9%;
                         right: 14%;
                     }
@@ -211,10 +211,11 @@
 
                 &.A2{
                     .livingRoom{
-                        width: 25%;
-                        height: 4%;
+                        width: 69%;
+                        height: 31%;
                         bottom: 14%;
                         left: 22%;
+                        clip-path: polygon(55% 0, 55% 20%, 100% 20%, 100% 100%, 0 100%, 0 0);
                     }
                     .MasterBedroom{
                         width: 33%;
@@ -238,10 +239,11 @@
 
                 &.A3{
                     .livingRoom{
-                        width: 25%;
-                        height: 31%;
+                        width: 49%;
+                        height: 73%;
                         bottom: 21%;
                         right: 3%;
+                        clip-path: polygon(0 0, 100% 0, 100% 100%, 51% 100%, 51% 45%, 0 45%);
                     }
                     .MasterBedroom{
                         width: 25%;
@@ -266,7 +268,7 @@
                 &.B1{
                     .livingRoom{
                         width: 31%;
-                        height: 35%;
+                        height: 63%;
                         bottom: 24%;
                         left: 6%;
                     }
