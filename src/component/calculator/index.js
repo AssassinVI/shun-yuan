@@ -109,17 +109,23 @@ function Calculator({ onFocus, inputValues, setInputValues }) {
         const toMoneyStyle = (num) => {
             return num.toLocaleString('zh-TW', { minimumFractionDigits: 0, maximumFractionDigits: 0 })
         }
+
+        
+        const sign=Math.round(inputValues.totalPrice * 0.1 - 30); //簽約金
+        const ownMoney=Math.ceil(inputValues.totalPrice * (1-loanRatio)); //自備款
+        const ProjectPayment=ownMoney-sign-30; //工程期款
+
         setResultValues({
             deposit: 30, //訂金
-            sign: toMoneyStyle(Math.ceil(inputValues.totalPrice * 0.1 - 30)), //簽約金
-            ProjectPayment: toMoneyStyle(Math.floor(inputValues.totalPrice * (1-loanRatio-0.1))), //工程期款
+            sign: toMoneyStyle(sign), //簽約金
+            ProjectPayment: toMoneyStyle(ProjectPayment), //工程期款
             //firstFloor: toMoneyStyle(Math.ceil(inputValues.totalPrice * 0.02)),
             //eighthFloor: toMoneyStyle(Math.ceil(inputValues.totalPrice * 0.02)),
             //sixteenThFloor: toMoneyStyle(Math.ceil(inputValues.totalPrice * 0.02)),
             //construction: toMoneyStyle(Math.ceil(inputValues.totalPrice * 0.02)),
             //license: toMoneyStyle(inputValues.totalPrice * 0.02 + licenseCorrect),
             //delivery: toMoneyStyle(Math.ceil(inputValues.totalPrice * 0.05)), //交屋款
-            ownMoney: toMoneyStyle(Math.floor(inputValues.totalPrice * (1-loanRatio))), //自備款
+            ownMoney: toMoneyStyle(ownMoney), //自備款
             loanMoney: toMoneyStyle(Math.floor((inputValues.totalPrice * loanRatio))) , //貸款
             monthlyCost: toMoneyStyle(Math.floor(inputValues.totalPrice * loanRatio * avgMonthRatio * 10000)),
             interestRepayment: toMoneyStyle((totalMoney - inputValues.totalPrice * loanRatio * 10000) / loanMonth),
