@@ -1,5 +1,6 @@
 import React, {useRef, useEffect, useLayoutEffect, useState} from 'react'
 import FancyBox2 from "@/src/component/config/fancyBox2"
+import FancyBox from "@/src/component/config/fancyBox"
 import { Outlet, Link } from "react-router-dom";
 import { gsap } from 'gsap';
 
@@ -37,8 +38,8 @@ export default function Materials() {
                     <FancyBox2 thumbUrl={require("@/img/materials/img_m_1.jpg").default}>
                         <div className='flex_box'>
                             <div className='left'>
-                              <img src={require("@/img/materials/txt1_1@2x.png").default} />
                               
+                              <img src={require("@/img/materials/txt1_1@2x.png").default} />
                             </div>
                             <div className='right'><img src={require("@/img/materials/txt1_2.svg").default} /></div>
                         </div>
@@ -58,8 +59,13 @@ export default function Materials() {
                     <FancyBox2 thumbUrl={require("@/img/materials/img_m_3.jpg").default}>
                         <div className='flex_box'>
                             <div className='left'>
-                              <img src={require("@/img/materials/txt3_1@2x.webp").default} />
                               
+                              <img style={{paddingBottom: '1vw'}} src={require("@/img/materials/txt3_1@2x.webp").default} />
+                              <FancyBox thumbUrl={require("@/img/materials/btn3.svg").default} imgStyle={{padding:'0vw 4vw', width: '90%'}}>
+                                <div className='workFancyBox'>
+                                  <video src={require("@/img/materials/video3.mp4").default} controls autoPlay muted></video>
+                                </div>
+                              </FancyBox>
                             </div>
                             <div className='right'><img src={require("@/img/materials/txt3_2@2x.png").default} style={{padding: '4vw 4vw 4vw 0vw'}} /></div>
                         </div>

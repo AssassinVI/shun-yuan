@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom';
-export default function FancyBox({ thumbUrl, text, children }) {
+export default function FancyBox({ thumbUrl, text, children, imgStyle=null }) {
     const [open, setOpen] = useState(false);
 
-    const imgStyle = {
+    const imgStyleNEW = imgStyle==null ? {
         width: "100%",
         height: "100%",
         objectFit: "cover",
         display: "block"
-    }
+    } : imgStyle;
 
     return (
         <>
@@ -17,7 +17,7 @@ export default function FancyBox({ thumbUrl, text, children }) {
                 setOpen(true)
             }}>
                 {thumbUrl ?
-                    <img src={thumbUrl} style={imgStyle} /> :
+                    <img src={thumbUrl} style={imgStyleNEW} /> :
                     text ? <p>{text}</p> : null
                 }
             </div>
