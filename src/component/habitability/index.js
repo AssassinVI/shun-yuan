@@ -205,7 +205,7 @@ export default function Habitability() {
                  <h1>適居方案</h1>
                  <ul>
                     <li>全室空調</li>
-                    <li>全室天花板+崁燈</li>
+                    <li>全室天花板+嵌燈</li>
                     <li>系統櫃</li>
                     <li>主浴鏡櫃</li>
                     <li>客浴浴櫃</li>

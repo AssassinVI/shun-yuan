@@ -5,7 +5,7 @@ export default function Calculate() {
     const [inputValues, setInputValues] = useState({
         loanYear: "30", //貸款年限
         totalPrice: "", //總價
-        interestRatio: "2.06", //利率
+        interestRatio: "2.185", //利率
         allowancePeriod: "0", //寬限期
         houseType: "", //戶別
         ping: "", //權狀坪數

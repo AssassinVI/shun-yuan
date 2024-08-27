@@ -23,7 +23,7 @@ export default function Exterior() {
               <img className='logo' src={require('@/img/config/logo_w@2x.png').default} alt="" />
               <div className='txt_box'>
                 <h2>EMS系統是什麼?</h2>
-                <p>今年3/28，歐盟正式拍板2035年禁售燃油車。</p>
+                <p>2023年3月28日，歐盟正式拍板2035年禁售燃油車。</p>
                 <ul>
                     <li>讓電動車實現獨立供電、使用者付費。</li>
                     <li>智能調控電量-守護社區用電安全。</li>
@@ -40,7 +40,7 @@ export default function Exterior() {
                         <div className='box2'>
                            <h2 className='enTitle'>BEFORE&AFTER</h2>
                            <h3>導入EMS系統前後差異</h3>
-                           <p>國内自2018年起，開放讓有充電樁設置需求的住戶，可採後拉的方式安裝，但該方案僅電動車發展初期的權宜作法，未來電動車數量持續增加，就可能面臨既有線路容量不足的問題。因此能一次到位的「專設一戶搭配MS電能管理系統」整合方案無論在用電安全、易於管理及線材集中設的美觀上，都更符合電動車發展的大趨勢，有助於提升社區競爭力與歸屬感。</p>
+                           <p>國内自2018年起，開放讓有充電樁設置需求的住戶，可採後拉的方式安裝，但該方案僅電動車發展初期的權宜作法，未來電動車數量持續增加，就可能面臨既有線路容量不足的問題。因此能一次到位的「專設一戶搭配EMS電能管理系統」整合方案無論在用電安全、易於管理及線材集中設的美觀上，都更符合電動車發展的大趨勢，有助於提升社區競爭力與歸屬感。</p>
                            <img src={require('@/img/ems/ems_txt1.svg').default} alt="" />
                         </div>
                     </div>
