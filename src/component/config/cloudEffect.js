@@ -7,8 +7,7 @@ export default function CloudEffect({ children, style, start, maskSize }) {
     return (
         <div className='cloudEffect' style={{
             position: "relative",
-            maskImage: `url(${require("@/img/index/webp/cloud-mask_2.webp").default})`,
-            WebkitMaskImage: `url(${require("@/img/index/webp/cloud-mask_2.webp").default})`,
+            
             WebkitMaskSize: start ? maskSize : "0%",
             WebkitMaskRepeat: "no-repeat",
             WebkitMaskPosition: "center",
